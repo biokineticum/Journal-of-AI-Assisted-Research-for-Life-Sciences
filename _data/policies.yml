@@ -1,0 +1,58 @@
+# Navigation labels and home-page summaries.
+# The rules themselves live only in docs/. These lines are signposts.
+
+- slug: aims-and-scope
+  en:
+    title: Aims and scope
+    summary: What the journal publishes, what “AI-assisted” means here, and what it does not publish.
+  pl:
+    title: Cele i zakres
+    summary: Co czasopismo publikuje, co oznacza tu wspomaganie przez AI i czego nie publikuje.
+
+- slug: ai-use-and-disclosure-policy
+  en:
+    title: AI use and disclosure policy
+    summary: Permitted and prohibited uses, authorship, data and images, privacy, and the journal’s own use of models.
+  pl:
+    title: Polityka wykorzystania i ujawniania AI
+    summary: Zastosowania dozwolone i zabronione, autorstwo, dane i obrazy, prywatność oraz własne użycie modeli przez czasopismo.
+
+- slug: ai-disclosure-statement
+  en:
+    title: AI Disclosure Statement
+    summary: The mandatory statement for every submission, including when no generative tool was used, and the fields the submission form repeats.
+  pl:
+    title: Oświadczenie o wykorzystaniu AI
+    summary: Obowiązkowe oświadczenie przy każdym zgłoszeniu, także gdy nie użyto narzędzia generatywnego, oraz pola, które powtarza formularz.
+
+- slug: peer-review-policy
+  en:
+    title: Peer review policy
+    summary: The two review rounds, confidentiality, the human decision, and the template for the AI preliminary-review report.
+  pl:
+    title: Polityka recenzji
+    summary: Dwie rundy recenzji, poufność, decyzja człowieka oraz wzór raportu wstępnej recenzji AI.
+
+- slug: author-guidelines
+  en:
+    title: Author guidelines
+    summary: Article types, data and ethics requirements, and the submission checklist.
+  pl:
+    title: Wytyczne dla autorów
+    summary: Rodzaje artykułów, wymagania dotyczące danych i etyki oraz lista kontrolna zgłoszenia.
+
+- slug: publication-ethics
+  en:
+    title: Publication ethics
+    summary: Duties of authors, editors, and reviewers, misconduct including undisclosed AI use, corrections, and retractions.
+  pl:
+    title: Etyka publikacyjna
+    summary: Obowiązki autorów, redaktorów i recenzentów, naruszenia — w tym nieujawnione użycie AI — sprostowania i retrakcje.
+
+- slug: launch-roadmap
+  en:
+    title: Launch roadmap
+    summary: Open decisions and the checklist before any public call for papers. Not a statement that any step is done.
+  pl:
+    title: Harmonogram uruchomienia
+    summary: Otwarte decyzje i lista czynności przed publicznym naborem. To nie jest stwierdzenie, że którykolwiek krok został wykonany.

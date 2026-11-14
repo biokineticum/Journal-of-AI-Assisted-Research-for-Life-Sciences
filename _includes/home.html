@@ -1,0 +1,56 @@
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign ui = site.data.ui[lang] -%}
+{%- assign aims_url = "" -%}
+{%- for candidate in site.pages -%}
+  {%- if candidate.lang == lang and candidate.name == "aims-and-scope.md" -%}
+    {%- assign aims_url = candidate.url -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<p class="lede">{{ ui.lede }}</p>
+
+<section aria-labelledby="mission">
+  <h2 id="mission">{{ ui.mission_heading }}</h2>
+  {%- for paragraph in ui.mission -%}
+  <p>{{ paragraph }}</p>
+  {%- endfor -%}
+  <p>{{ ui.scope_lead }} <a href="{{ aims_url | relative_url }}">{{ site.data.policies[0][lang].title }}</a>.</p>
+</section>
+
+<section aria-labelledby="principles">
+  <h2 id="principles">{{ ui.principles_heading }}</h2>
+  <ol class="principles">
+    {%- for item in ui.principles -%}
+    <li>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.text }}</p>
+    </li>
+    {%- endfor -%}
+  </ol>
+</section>
+
+<section aria-labelledby="documents">
+  <h2 id="documents">{{ ui.documents_heading }}</h2>
+  <ul class="doc-list">
+    {%- for item in site.data.policies -%}
+      {%- assign href = "" -%}
+      {%- assign slug_file = item.slug | append: ".md" -%}
+      {%- for candidate in site.pages -%}
+        {%- if candidate.lang == lang and candidate.name == slug_file -%}
+          {%- assign href = candidate.url -%}
+        {%- endif -%}
+      {%- endfor -%}
+    <li>
+      <a href="{{ href | relative_url }}">{{ item[lang].title }}</a>
+      <p>{{ item[lang].summary }}</p>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section aria-labelledby="status">
+  <h2 id="status">{{ ui.status_heading }}</h2>
+  {%- for paragraph in ui.status -%}
+  <p>{{ paragraph }}</p>
+  {%- endfor -%}
+</section>

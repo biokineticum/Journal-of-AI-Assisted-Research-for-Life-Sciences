@@ -1,0 +1,234 @@
+en:
+  og_locale: en_GB
+  skip: Skip to content
+  kicker: Diamond open access
+  tagline: Empirical research in the life sciences, with a focus on health and sport science.
+  home: Home
+  home_path: /
+  language_label: Language
+  repository: Repository
+  documents: Documents
+  back_to_top: Back to top
+  source_markdown: Markdown source of this draft
+  banner_strong: Draft for adoption, version 0.1 (14 November 2026).
+  banner: These texts are not in force until the publisher adopts them. The journal is not yet accepting submissions.
+  meta_description: >-
+    Draft founding documents, version 0.1 (14 November 2026), for the Journal
+    of AI-Assisted Research for Life Sciences. Not in force. The journal is
+    not yet accepting submissions.
+  lede: >-
+    Diamond open-access journal for empirical research in the life sciences,
+    with a focus on health and sport science. The working title is the title
+    of this repository.
+  mission_heading: Mission
+  mission:
+    - >-
+      People do the study. A generative tool may help write the paper from
+      the real data, the code, and the notes. It does not generate or modify
+      primary data, it is never an author, and it does not decide acceptance.
+      Raw data are deposited in a public repository.
+    - >-
+      Readers should be able to see what was done, who is accountable, which
+      tools were used, and where the raw data are. That is the journal’s
+      answer to unverified mass-generated text (“AI slop”) and to predatory
+      publishing: named humans, real data, public rules, and no metric the
+      journal has not earned.
+  scope_lead: The full scope, and what the journal does not publish, is set out in
+  principles_heading: Principles
+  principles:
+    - title: Human-conducted empirical research
+      text: >-
+        The experiment, collection, or analysis is carried out by people.
+        A reanalysis of an existing dataset is eligible when the authors had
+        the right to use it and the source is identified. A tool that writes
+        a plausible paper without that study is outside the journal’s scope.
+    - title: AI-assisted writing from real data
+      text: >-
+        Generative tools may help draft or revise text, edit language,
+        translate, write analysis code that a human reviews, and build plots
+        from the real dataset. They do not generate or modify primary data.
+        Primary-data images are original captures. Plots drawn from the real
+        data may be AI-assisted if that use is disclosed and a human has
+        checked them.
+    - title: Humans are the only authors
+      text: >-
+        Named people take responsibility for the content, the numbers, the
+        citations, and the interpretation, in line with COPE and ICMJE. A
+        model is never an author. Humans who qualify are listed even when a
+        tool drafted the prose.
+    - title: Mandatory AI disclosure
+      text: >-
+        Every submission includes a completed AI disclosure statement,
+        including when no AI tool was used. The statement names each tool,
+        the version, the access mode, what it was used for, and the people
+        who checked the facts, the numbers, and the citations.
+    - title: AI preliminary review, then human peer review
+      text: >-
+        Round 1 is an AI preliminary review, labelled as such, run only on a
+        local or enterprise model that does not train on submissions. A
+        person on the editorial staff checks the report before it is sent.
+        Round 2 is human expert review. A human editor makes the final
+        decision. A model does not accept, revise, or reject a manuscript.
+    - title: Diamond open access
+      text: >-
+        No submission fee and no article processing charge. The working
+        licence for articles is CC BY 4.0, and authors retain copyright.
+        Those are draft defaults until the publisher confirms them. The
+        journal does not display a metric it has not earned.
+  documents_heading: Documents
+  status_heading: Status of these texts
+  status:
+    - >-
+      These pages are drafts for adoption (version 0.1, 14 November 2026).
+      They are not in force until the publisher adopts them.
+    - >-
+      The journal is not yet accepting submissions. The launch roadmap is a
+      working checklist, not a statement that any step is done.
+    - >-
+      Nothing in this repository asserts that an editorial board already
+      exists, that an ISSN or a DOI prefix has been issued, or that the
+      journal is indexed anywhere. Do not describe it as a registered
+      journal, an indexed journal, or a journal with an appointed editor.
+    - >-
+      The concept — empirical work conducted by humans, AI allowed in
+      preparing the manuscript only with a full disclosure and with human
+      responsibility — was set by Dariusz Mosler, the owner of this
+      repository. No editorial board has been appointed. Names, emails, and
+      the legal publisher remain placeholders in the texts:
+      [EDITOR-IN-CHIEF NAME], [EMAIL], [PUBLISHER LEGAL NAME].
+    - >-
+      English and Polish texts are meant to say the same thing. If they
+      diverge, the publisher resolves the conflict before adoption. The
+      title filed with the Polish court and with the ISSN centre is the
+      English title above, unless the publisher deliberately chooses another
+      string first.
+    - >-
+      The publication language of articles is English. A Polish title and
+      abstract may be added. Policies are published in English and Polish.
+  footer: >-
+    Draft for adoption, version 0.1, 14 November 2026. Not in force, and not
+    accepting submissions. Not a registered journal, not an indexed journal,
+    and no editor has been appointed. Placeholders in the texts are
+    unresolved.
+
+pl:
+  og_locale: pl_PL
+  skip: Przejdź do treści
+  kicker: Diamentowy otwarty dostęp
+  tagline: Badania empiryczne w naukach o życiu, ze szczególnym uwzględnieniem nauk o zdrowiu i nauk o sporcie.
+  home: Strona główna
+  home_path: /pl/
+  language_label: Język
+  repository: Repozytorium
+  documents: Dokumenty
+  back_to_top: Do góry
+  source_markdown: Źródło Markdown tego projektu
+  banner_strong: Projekt do przyjęcia, wersja 0.1 (14 listopada 2026 r.).
+  banner: Teksty nie obowiązują, dopóki nie przyjmie ich wydawca. Czasopismo nie przyjmuje jeszcze zgłoszeń.
+  meta_description: >-
+    Projekty dokumentów założycielskich, wersja 0.1 (14 listopada 2026 r.),
+    czasopisma Journal of AI-Assisted Research for Life Sciences. Nie
+    obowiązują. Czasopismo nie przyjmuje jeszcze zgłoszeń.
+  lede: >-
+    Czasopismo diamentowego otwartego dostępu do badań empirycznych w naukach
+    o życiu, ze szczególnym uwzględnieniem nauk o zdrowiu i nauk o sporcie.
+    Tytuł roboczy jest zgodny z tym repozytorium. Oficjalny tytuł roboczy
+    jest angielski. Polski opis na tej stronie nie jest drugim tytułem
+    rejestrowym.
+  mission_heading: Cel
+  mission:
+    - >-
+      Badanie wykonują ludzie. Narzędzie generatywne może pomóc napisać
+      artykuł na podstawie rzeczywistych danych, kodu i notatek. Nie generuje
+      ani nie modyfikuje danych pierwotnych, nigdy nie jest autorem i nie
+      decyduje o przyjęciu. Dane surowe deponuje się w publicznym
+      repozytorium.
+    - >-
+      Czytelnik ma widzieć, co zostało zrobione, kto odpowiada za treść,
+      jakich narzędzi użyto i gdzie leżą dane surowe. Takie są zasady
+      czasopisma wobec niezweryfikowanej, masowo generowanej treści („AI
+      slop”) oraz wobec praktyk drapieżnych: nazwani ludzie, rzeczywiste
+      dane, publiczne zasady i żaden wskaźnik, którego czasopismo nie
+      uzyskało.
+  scope_lead: Pełny zakres i to, czego czasopismo nie publikuje, opisują
+  principles_heading: Zasady
+  principles:
+    - title: Badanie empiryczne przeprowadzone przez ludzi
+      text: >-
+        Eksperyment, zbieranie danych albo analiza są wykonane przez ludzi.
+        Ponowna analiza istniejącego zbioru jest dopuszczalna, gdy autorzy
+        mieli prawo z niego korzystać, a źródło jest wskazane. Narzędzie,
+        które pisze prawdopodobny artykuł bez takiego badania, leży poza
+        zakresem czasopisma.
+    - title: Pisanie wspomagane przez AI na podstawie rzeczywistych danych
+      text: >-
+        Narzędzia generatywne mogą pomóc szkicować lub poprawiać tekst,
+        redagować język, tłumaczyć, pisać kod analityczny sprawdzany przez
+        człowieka oraz sporządzać wykresy z rzeczywistego zbioru. Nie
+        generują ani nie modyfikują danych pierwotnych. Obrazy danych
+        pierwotnych są oryginalnymi zapisami. Wykresy z rzeczywistych danych
+        mogą powstawać ze wsparciem AI, jeżeli to wsparcie jest ujawnione, a
+        człowiek je sprawdził.
+    - title: Autorami są wyłącznie ludzie
+      text: >-
+        Wskazani z imienia i nazwiska ludzie odpowiadają za treść, liczby,
+        cytowania i interpretację, zgodnie ze stanowiskiem COPE i ICMJE.
+        Model nigdy nie jest autorem. Ludzie, którzy spełniają kryteria, są
+        wymienieni także wtedy, gdy narzędzie przygotowało szkic prozy.
+    - title: Obowiązkowe ujawnienie AI
+      text: >-
+        Do każdego zgłoszenia dołącza się wypełnione oświadczenie o
+        wykorzystaniu AI, także wtedy, gdy żadnego narzędzia nie użyto.
+        Oświadczenie wskazuje każde narzędzie, wersję, tryb dostępu,
+        zastosowanie oraz osoby, które sprawdziły fakty, liczby i cytowania.
+    - title: Wstępna recenzja AI, potem recenzja ekspercka człowieka
+      text: >-
+        Runda 1 to wstępna recenzja AI, wyraźnie tak nazwana, prowadzona
+        wyłącznie na modelu lokalnym albo korporacyjnym, który nie trenuje
+        się na zgłoszeniach. Osoba z redakcji sprawdza raport, zanim zostanie
+        wysłany. Runda 2 to ekspercka recenzja człowieka. Decyzję końcową
+        podejmuje redaktor będący człowiekiem. Model nie przyjmuje, nie
+        kieruje do poprawy i nie odrzuca maszynopisu.
+    - title: Diamentowy otwarty dostęp
+      text: >-
+        Brak opłaty za zgłoszenie i brak opłaty za przetworzenie artykułu.
+        Roboczą licencją artykułów jest CC BY 4.0, a prawa autorskie zostają
+        przy autorach. Są to ustalenia robocze projektu, dopóki wydawca ich
+        nie potwierdzi. Czasopismo nie eksponuje wskaźnika, którego nie
+        uzyskało.
+  documents_heading: Dokumenty
+  status_heading: Status tych tekstów
+  status:
+    - >-
+      Teksty są projektami do przyjęcia (wersja 0.1, 14 listopada 2026 r.).
+      Nie obowiązują, dopóki nie przyjmie ich wydawca.
+    - >-
+      Czasopismo nie przyjmuje jeszcze zgłoszeń. Harmonogram uruchomienia
+      jest listą roboczą, a nie stwierdzeniem, że którykolwiek krok został
+      wykonany.
+    - >-
+      Nic w tym repozytorium nie stwierdza, że rada redakcyjna już istnieje,
+      że nadano ISSN albo prefiks DOI, ani że czasopismo jest gdziekolwiek
+      indeksowane. Nie należy przedstawiać go jako czasopisma
+      zarejestrowanego, zindeksowanego albo z powołanym redaktorem.
+    - >-
+      Koncepcję — badanie empiryczne przeprowadzone przez ludzi, AI
+      dopuszczona przy przygotowaniu maszynopisu wyłącznie po pełnym
+      ujawnieniu i przy odpowiedzialności człowieka — określił Dariusz
+      Mosler, właściciel tego repozytorium. Rada redakcyjna nie została
+      powołana. Nazwiska, adresy e-mail i wydawca prawny pozostają polami
+      zastępczymi: [EDITOR-IN-CHIEF NAME], [EMAIL], [PUBLISHER LEGAL NAME].
+    - >-
+      Wersje angielska i polska mają mówić to samo. Jeżeli się rozjadą,
+      wydawca rozstrzyga różnicę przed przyjęciem zasad. Tytuł zgłaszany do
+      sądu i do ośrodka ISSN jest tytułem angielskim podanym wyżej, chyba że
+      wydawca świadomie wybierze wcześniej inne brzmienie.
+    - >-
+      Językiem publikacji artykułów jest angielski. Można dołączyć polski
+      tytuł i polskie streszczenie. Zasady czasopisma są publikowane po
+      angielsku i po polsku.
+  footer: >-
+    Projekt do przyjęcia, wersja 0.1, 14 listopada 2026 r. Nie obowiązuje i
+    nie przyjmuje zgłoszeń. To nie jest czasopismo zarejestrowane ani
+    zindeksowane i nie powołano redaktora. Pola zastępcze w tekstach
+    pozostają nierozstrzygnięte.
