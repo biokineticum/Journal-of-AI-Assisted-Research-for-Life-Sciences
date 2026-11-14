@@ -1,0 +1,94 @@
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign ui = site.data.ui[lang] -%}
+{%- assign en_url = page.url -%}
+{%- assign pl_url = "/pl/" -%}
+{%- if lang == "pl" -%}
+  {%- assign en_url = "/" -%}
+  {%- assign pl_url = page.url -%}
+{%- endif -%}
+{%- for candidate in site.pages -%}
+  {%- if candidate.name == page.name and candidate.lang == "en" -%}
+    {%- assign en_url = candidate.url -%}
+  {%- endif -%}
+  {%- if candidate.name == page.name and candidate.lang == "pl" -%}
+    {%- assign pl_url = candidate.url -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign description = page.description | default: ui.meta_description -%}
+{%- if page.description == nil and page.path contains "docs/" -%}
+  {%- capture description -%}{{ page.title }}. {{ ui.meta_description }}{%- endcapture -%}
+{%- endif -%}
+{%- assign page_title = page.title | default: site.title -%}
+{%- if page.name == "index.html" -%}
+  {%- assign full_title = site.title -%}
+{%- else -%}
+  {%- capture full_title -%}{{ page_title }} · {{ site.title }}{%- endcapture -%}
+{%- endif -%}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ full_title | strip }}</title>
+  <meta name="description" content="{{ description | strip }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" hreflang="en" href="{{ en_url | absolute_url }}">
+  <link rel="alternate" hreflang="pl" href="{{ pl_url | absolute_url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ en_url | absolute_url }}">
+  <meta property="og:title" content="{{ full_title | strip }}">
+  <meta property="og:description" content="{{ description | strip }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:locale" content="{{ ui.og_locale }}">
+  <meta name="theme-color" content="#1b2f29">
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">{{ ui.skip }}</a>
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <div class="identity">
+        <p class="kicker">
+          <img class="mark" src="{{ '/assets/favicon.svg' | relative_url }}" width="28" height="28" alt="">
+          <span>{{ ui.kicker }}</span>
+        </p>
+        <a class="wordmark" href="{{ ui.home_path | relative_url }}"><span translate="no">{{ site.title }}</span></a>
+        <p class="tagline">{{ ui.tagline }}</p>
+      </div>
+      <div class="masthead-tools">
+        <nav class="lang-switch" aria-label="{{ ui.language_label }}">
+          <a href="{{ en_url | relative_url }}" hreflang="en" lang="en"{% if lang == "en" %} aria-current="true"{% endif %}>English</a>
+          <a href="{{ pl_url | relative_url }}" hreflang="pl" lang="pl"{% if lang == "pl" %} aria-current="true"{% endif %}>Polski</a>
+        </nav>
+        <a class="repo-link" href="{{ site.github_repo }}">{{ ui.repository }}</a>
+      </div>
+    </div>
+  </header>
+  <div class="banner">
+    <div class="wrap">
+      <p><strong>{{ ui.banner_strong }}</strong> {{ ui.banner }}</p>
+    </div>
+  </div>
+  <div class="wrap shell">
+    <div class="sidebar">
+      {% include nav.html %}
+    </div>
+    <main id="main" class="content">
+      <article class="prose">
+        {{ content }}
+        {%- if page.path contains "docs/" -%}
+        <p class="back-top"><a href="#main">{{ ui.back_to_top }}</a></p>
+        <p class="source-note"><a href="{{ site.github_repo }}/blob/main/{{ page.path }}">{{ ui.source_markdown }}</a></p>
+        {%- endif -%}
+      </article>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>{{ ui.footer }}</p>
+      <p><a href="{{ site.github_repo }}">{{ site.github_repo }}</a></p>
+    </div>
+  </footer>
+</body>
+</html>

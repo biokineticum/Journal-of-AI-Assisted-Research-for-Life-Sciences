@@ -1,0 +1,61 @@
+# GitHub Pages site for the journal drafts.
+# The Markdown in docs/ and the repository README stay the text of record.
+# This file only configures how those files are rendered.
+
+title: Journal of AI-Assisted Research for Life Sciences
+description: >-
+  Draft founding documents (version 0.1) for a diamond open-access journal
+  of human-conducted empirical research in the life sciences.
+url: https://biokineticum.github.io
+baseurl: /Journal-of-AI-Assisted-Research-for-Life-Sciences
+github_repo: https://github.com/biokineticum/Journal-of-AI-Assisted-Research-for-Life-Sciences
+
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+  - jekyll-sitemap
+
+# Keep straight quotes and apostrophes as they are written in the policies.
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  syntax_highlighter: none
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+
+optional_front_matter:
+  remove_originals: true
+
+titles_from_headings:
+  enabled: true
+  strip_title: false
+  collections: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      lang: en
+  - scope:
+      path: docs/en
+    values:
+      layout: default
+      lang: en
+  - scope:
+      path: docs/pl
+    values:
+      layout: default
+      lang: pl
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - script
+  - vendor
+  - .bundle
+  - .ruby-version
+  - node_modules
