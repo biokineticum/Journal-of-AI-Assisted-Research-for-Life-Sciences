@@ -115,6 +115,8 @@ Recenzenci otrzymują:
 
 Proponowany termin raportu to 21 dni. Redakcja wysyła jedno przypomnienie. Recenzenta, który nie może skończyć, zastępuje się. Tożsamości zastępcy nie ujawnia się autorom, jeżeli recenzja jest anonimowa.
 
+Recenzent, który ukończy recenzję, otrzymuje voucher rabatowy na APC własnego przyszłego artykułu. Wysokość rabatu ustala redakcja i publikuje ją na stronie.
+
 ## 8. O co pyta się recenzentów
 
 Recenzenci wypowiadają się o tym:
@@ -157,7 +159,7 @@ Decyzję podejmuje redaktor będący człowiekiem i podpisuje list. Redaktor czy
 | Zasadnicze poprawki | Zmiany istotne. Ponowna recenzja ludzka jest zasadą. Przyjęcia się nie obiecuje. |
 | Odrzucenie | Maszynopis nie przechodzi dalej. Nowe zgłoszenie tego samego badania jest dopuszczalne tylko wtedy, gdy list redaktora tak stanowi. |
 
-Nie ma płatnego szybkiego toru i żadnej decyzji nie wymienia się na cytowanie albo opłatę.
+Nie ma płatnego szybkiego toru i żadnej decyzji nie wymienia się na cytowanie albo opłatę. Stała opłata za przetworzenie artykułu jest wystawiana dopiero po przyjęciu. Redaktorzy i recenzenci rozstrzygający pracę nie widzą statusu płatności.
 
 Redaktor nie rozstrzyga maszynopisu, który sam napisał, ani takiego, przy którym konflikt interesów czyni rzetelną decyzję nierozsądną. Taki plik prowadzi inny redaktor. Jeżeli każdy redaktor jest w konflikcie, czasopismo prosi redaktora gościnnego spoza rady i odnotowuje to rozwiązanie.
 

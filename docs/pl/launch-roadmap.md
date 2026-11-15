@@ -20,7 +20,7 @@ Zasady stosują poniższe **ustalenia robocze**. Wydawca każde z nich potwierdz
 | Tytuł krótki / bieżący | Nie wybrano. Nie wprowadza się publicznie skrótu, dopóki nie zostanie wybrany. |
 | Polski tytuł równoległy | Brak. Polski opis na stronie nie jest drugim tytułem rejestrowym. Osobne wydanie językowe zwykle wymaga własnego ISSN. |
 | Język artykułów | angielski, z fakultatywnym polskim tytułem i streszczeniem |
-| Model dostępu | diamentowy otwarty dostęp: brak opłaty za zgłoszenie, brak APC |
+| Model dostępu | złoty otwarty dostęp: brak opłaty za zgłoszenie; stałe APC 1000 zł po przyjęciu; brak zwolnień z opłat; vouchery rabatowe dla recenzentów (wysokość ustala redakcja i publikuje ją na stronie) |
 | Licencja artykułu | CC BY 4.0; prawa autorskie zostają przy autorach |
 | Model recenzji | pojedynczo anonimowa; dwóch recenzentów będących ludźmi po wstępnej recenzji AI |
 | Raport wstępnej recenzji AI | przekazywany autorom, recenzentom i redaktorom; niepublikowany wraz z artykułem |
@@ -72,7 +72,7 @@ Należy użyć aktualnego, wspieranego wydania Open Journal Systems (PKP). Hosti
 - [ ] Język angielski jako język publikacji oraz polska wersja językowa dla zasad publicznych i interfejsu.
 - [ ] Stopka: tytuł, wydawca, adres, redaktor naczelny, rada, [EMAIL], ISSN po nadaniu.
 - [ ] Publikacja przyjętych celów i zakresu, polityki AI, wzoru oświadczenia, polityki recenzji, wytycznych dla autorów i etyki publikacyjnej w obu językach.
-- [ ] Informacja na stronie: diamentowy otwarty dostęp, APC = 0, licencja CC BY 4.0, prawa autorskie przy autorach.
+- [ ] Informacja na stronie: złoty otwarty dostęp, stałe APC 1000 zł pobierane dopiero po przyjęciu, brak opłaty za zgłoszenie, licencja CC BY 4.0, prawa autorskie przy autorach oraz aktualna wysokość rabatu z vouchera dla recenzentów.
 - [ ] Konfiguracja listy kontrolnej zgłoszenia z [Wytycznych dla autorów](author-guidelines.md).
 - [ ] Wymóg dwóch gatunków plików uzupełniających: `AI Disclosure Statement` i `AI prompts and workflow`, według pól z [załącznika do wzoru](ai-disclosure-statement.md).
 - [ ] Wymóg identyfikatora danych, pól etyki i rejestracji (albo uzasadnionego „nie dotyczy”), konfliktów interesów i finansowania.
@@ -101,7 +101,7 @@ Należy użyć aktualnego, wspieranego wydania Open Journal Systems (PKP). Hosti
 - [ ] Członkostwo na firmę wydawcy prawnego.
 - [ ] Prefiks DOI skonfigurowany w OJS.
 - [ ] Depozyt próbny artykułu ćwiczebnego albo pierwszego, otwarty w przeglądarce.
-- [ ] Finansowanie składki rocznej ze środków czasopisma, nie z opłat autorów.
+- [ ] Finansowanie składki rocznej ze środków operacyjnych czasopisma. Autorów nie obciąża się osobną opłatą Crossref ponad APC.
 
 **Archiwizacja.** Przystąpienie do PKP Preservation Network albo innej usługi archiwizacji, którą uzna DOAJ (na przykład CLOCKSS albo ciemne archiwum instytucjonalne). Czasopismo istniejące tylko na jednej maszynie wirtualnej nie jest zabezpieczone.
 
@@ -115,7 +115,7 @@ DOAJ jest realnym celem indeksacji po tym, jak czasopismo ma już dorobek wydawn
 
 Przed wnioskiem należy przeczytać aktualny przewodnik DOAJ i potwierdzić, że działająca strona pokazuje co najmniej:
 
-- ISSN, oświadczenie o otwartym dostępie i APC = 0;
+- ISSN, oświadczenie o otwartym dostępie i publicznie podane APC (1000 zł, pobierane po przyjęciu);
 - cele i zakres, instrukcję dla autorów, opis recenzji (w tym nazwaną rundę AI i decyzję człowieka) oraz politykę etyczną;
 - radę redakcyjną z imionami, nazwiskami i afiliacjami;
 - licencję i zasady praw autorskich przy artykułach;
@@ -129,7 +129,7 @@ Przed wnioskiem należy przeczytać aktualny przewodnik DOAJ i potwierdzić, że
 
 ## 8. Finansowanie
 
-Diamentowy otwarty dostęp przenosi koszt z autorów na wydawcę. W budżecie należy uwzględnić:
+Złoty otwarty dostęp ze stałą opłatą za przetworzenie artykułu (APC) w wysokości 1000 zł, pobieraną dopiero po przyjęciu, jest ogłoszonym modelem czasopisma. Wysokość APC jest publiczna, stała i podana z góry. W budżecie należy uwzględnić:
 
 - opłatę sądową za rejestrację tytułu (aktualna taryfa sądowa);
 - hosting, kopie zapasowe i domenę dla [JOURNAL URL];
@@ -142,7 +142,7 @@ Diamentowy otwarty dostęp przenosi koszt z autorów na wydawcę. W budżecie na
 
 Nadanie ISSN przez Bibliotekę Narodową nie jest opłatą od artykułu. Ewentualne oczekiwania formalne należy sprawdzić na aktualnej stronie Ośrodka.
 
-Możliwe źródła, do wyboru przez wydawcę: instytucja gospodarz, grant badawczy dopuszczający koszty wydawania czasopisma, towarzystwo naukowe albo wkład rzeczowy. Niedopuszczalne jako model: APC wprowadzone po cichu później, płatna gwarancja przyjęcia albo sponsor, który wybiera artykuły.
+Możliwe źródła, do wyboru przez wydawcę: APC, instytucja gospodarz, grant badawczy dopuszczający koszty wydawania czasopisma, towarzystwo naukowe albo wkład rzeczowy. Niedopuszczalne jako model: późniejsza zmiana APC, której wcześniej nie opublikowano na stronie, płatna gwarancja przyjęcia, płatny szybki tor albo sponsor, który wybiera artykuły. Nie stosuje się zwolnień z opłat z powodu braku środków. Recenzent, który ukończy recenzję, otrzymuje voucher rabatowy na APC własnego przyszłego artykułu; wysokość rabatu ustala redakcja i publikuje ją na stronie.
 
 - [ ] Podanie źródła finansowania na stronie przed startem: [FUNDING SOURCE].
 - [ ] Stwierdzenie, że źródło nie ma udziału w decyzjach o przyjęciu.

@@ -221,7 +221,7 @@ def main():
             "Humans are the only authors",
             "Mandatory AI disclosure",
             "AI preliminary review, then human peer review",
-            "Diamond open access",
+            "Gold open access",
         ):
             if title not in en_text:
                 ERRORS.append(f"English home is missing principle: {title}")
@@ -231,7 +231,7 @@ def main():
             "Autorami są wyłącznie ludzie",
             "Obowiązkowe ujawnienie AI",
             "Wstępna recenzja AI, potem recenzja ekspercka człowieka",
-            "Diamentowy otwarty dostęp",
+            "Złoty otwarty dostęp",
         ):
             if title not in pl_text:
                 ERRORS.append(f"Polish home is missing principle: {title}")

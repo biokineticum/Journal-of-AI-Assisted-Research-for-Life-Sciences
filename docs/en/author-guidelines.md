@@ -10,7 +10,7 @@ These are the minimum requirements for a submission. Manuscripts that do not mee
 
 ## 1. Who may submit
 
-Anyone may submit a manuscript that fits the scope. Authors are humans who meet the ICMJE authorship criteria. There is no fee.
+Anyone may submit a manuscript that fits the scope. Authors are humans who meet the ICMJE authorship criteria. There is no submission fee.
 
 The corresponding author writes to the journal from an email the editorial office can verify, holds an ORCID, and is the contact for data, ethics, and the AI disclosure. The office writes to [EMAIL].
 
@@ -232,7 +232,11 @@ After acceptance the corresponding author checks the proofs. Changes at proof st
 
 ## 16. Fees, copyright, and licence
 
-There is no submission fee and no article processing charge.
+There is no submission fee. A fixed article processing charge (APC) of 1000 PLN is charged only after the article is accepted. The charge never influences the editorial decision, and editors and reviewers deciding on a paper do not see payment status. There are no fee waivers.
+
+Reviewers who complete a review receive a discount voucher toward the APC of their own future article. The discount is set by the editorial office and published on the site.
+
+The journal does not charge for colour or for speed. There is no paid fast track, and no paid guarantee of acceptance.
 
 Under this draft, authors retain copyright and grant the journal a licence to publish the version of record under CC BY 4.0. Third-party material is included only when the authors have permission, and it is labelled with its own licence.
 

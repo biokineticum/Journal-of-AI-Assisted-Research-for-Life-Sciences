@@ -10,7 +10,7 @@ To wymogi minimalne zgłoszenia. Maszynopisy, które ich nie spełniają, są zw
 
 ## 1. Kto może zgłosić pracę
 
-Zgłosić maszynopis mieszczący się w zakresie może każdy. Autorami są ludzie spełniający kryteria autorstwa ICMJE. Nie ma opłaty.
+Zgłosić maszynopis mieszczący się w zakresie może każdy. Autorami są ludzie spełniający kryteria autorstwa ICMJE. Nie ma opłaty za zgłoszenie.
 
 Autor korespondencyjny pisze do czasopisma z adresu, który redakcja może zweryfikować, ma ORCID i jest osobą kontaktową w sprawach danych, etyki i ujawnienia AI. Redakcja pisze na adres [EMAIL].
 
@@ -232,7 +232,11 @@ Po przyjęciu autor korespondencyjny sprawdza szczotkę. Zmiany na tym etapie og
 
 ## 16. Opłaty, prawa autorskie i licencja
 
-Nie ma opłaty za zgłoszenie ani opłaty za przetworzenie artykułu.
+Nie ma opłaty za zgłoszenie. Stała opłata za przetworzenie artykułu (APC) w wysokości 1000 zł jest pobierana dopiero po przyjęciu artykułu. Opłata nigdy nie wpływa na decyzję redakcyjną, a redaktorzy i recenzenci rozstrzygający pracę nie widzą statusu płatności. Nie ma zwolnień z opłat.
+
+Recenzent, który ukończy recenzję, otrzymuje voucher rabatowy na APC własnego przyszłego artykułu. Wysokość rabatu ustala redakcja i publikuje ją na stronie.
+
+Czasopismo nie pobiera opłat za kolor ani za szybkość. Nie ma płatnego szybkiego toru ani płatnej gwarancji przyjęcia.
 
 W tym projekcie autorzy zachowują prawa autorskie i udzielają czasopismu licencji na publikację wersji ostatecznej na CC BY 4.0. Materiał osób trzecich włącza się tylko wtedy, gdy autorzy mają zezwolenie, i oznacza się go własną licencją.
 

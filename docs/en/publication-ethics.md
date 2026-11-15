@@ -176,7 +176,9 @@ The journal does not respond to mass, templated demands that lack a specific sch
 
 ## 13. Commercial conduct
 
-The journal is diamond open access. It does not charge authors for submission, publication, colour, or speed.
+The journal is gold open access. It does not charge a submission fee, or a fee for colour or speed. A fixed article processing charge (APC) of 1000 PLN is charged only after the article is accepted. The charge never influences the editorial decision, and editors and reviewers deciding on a paper do not see payment status. There are no fee waivers. There is no paid fast track and no paid guarantee of acceptance.
+
+Reviewers who complete a review receive a discount voucher toward the APC of their own future article. The discount is set by the editorial office and published on the site.
 
 Sponsorship of the journal's operations, if any, is disclosed on the website. Sponsors do not choose articles, reviewers, or decisions. The journal does not publish paid research articles. Notices that are advertisements, if they are ever accepted, are labelled and are not listed as research.
 

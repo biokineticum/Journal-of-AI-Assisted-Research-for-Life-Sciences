@@ -1,6 +1,6 @@
 # Journal of AI-Assisted Research for Life Sciences
 
-Diamond open-access journal for empirical research in the life sciences, with a focus on health and sport science. The working title matches this repository. These pages are **drafts for adoption (version 0.1, 14 November 2026)**. They are not in force until the publisher adopts them.
+Gold open-access journal for empirical research in the life sciences, with a focus on health and sport science. The working title matches this repository. These pages are **drafts for adoption (version 0.1, 14 November 2026)**. They are not in force until the publisher adopts them.
 
 The concept — empirical work conducted by humans, AI allowed in preparing the manuscript only with a full disclosure and with human responsibility — was set by Dariusz Mosler, the owner of this repository. No editorial board has been appointed here. Names, emails, and the legal publisher are placeholders (`[EDITOR-IN-CHIEF NAME]`, `[EMAIL]`, `[PUBLISHER LEGAL NAME]`).
 
@@ -10,7 +10,7 @@ People do the study. A generative tool may help write the paper from the real da
 
 Peer review has two rounds. Round 1 is an AI preliminary review, labelled as such, run only on a local or enterprise model that does not train on submissions. A person on the editorial staff checks the report before it is sent. Round 2 is human expert review. A human editor makes the final decision.
 
-The working model is diamond open access: no article processing charge. The journal is meant to be readable as the opposite of unverified mass-generated text ("AI slop") and of predatory publishing: named humans, real data, public rules, and no metric the journal has not earned.
+The working model is gold open access. There is no submission fee. A fixed article processing charge (APC) of 1000 PLN is charged only after acceptance. Reviewers who complete a review receive a discount voucher toward the APC of their own future article; the discount is set by the editorial office and published on the site. The journal is meant to be readable as the opposite of unverified mass-generated text ("AI slop") and of predatory publishing: named humans, real data, public rules, and no metric the journal has not earned.
 
 English and Polish texts are meant to say the same thing. If they diverge, the publisher resolves the conflict before adoption. The title filed with the Polish court and with the ISSN centre is the English title above, unless the publisher deliberately chooses another string first.
 
@@ -30,7 +30,7 @@ Policies still to be confirmed (licence CC BY 4.0, Vancouver references, single-
 
 ## Wersja polska
 
-*Journal of AI-Assisted Research for Life Sciences* to czasopismo diamentowego otwartego dostępu do badań empirycznych w naukach o życiu, ze szczególnym uwzględnieniem nauk o zdrowiu i nauk o sporcie. Tytuł roboczy jest zgodny z tym repozytorium. Teksty są **projektami do przyjęcia (wersja 0.1, 14 listopada 2026 r.)**. Nie obowiązują, dopóki nie przyjmie ich wydawca.
+*Journal of AI-Assisted Research for Life Sciences* to czasopismo złotego otwartego dostępu do badań empirycznych w naukach o życiu, ze szczególnym uwzględnieniem nauk o zdrowiu i nauk o sporcie. Tytuł roboczy jest zgodny z tym repozytorium. Teksty są **projektami do przyjęcia (wersja 0.1, 14 listopada 2026 r.)**. Nie obowiązują, dopóki nie przyjmie ich wydawca.
 
 Koncepcję — badanie empiryczne przeprowadzone przez ludzi, AI dopuszczona przy przygotowaniu maszynopisu wyłącznie po pełnym ujawnieniu i przy odpowiedzialności człowieka — określił Dariusz Mosler, właściciel tego repozytorium. Rada redakcyjna nie została tu powołana. Nazwiska, adresy e-mail i wydawca prawny są polami zastępczymi (`[EDITOR-IN-CHIEF NAME]`, `[EMAIL]`, `[PUBLISHER LEGAL NAME]`).
 
@@ -38,7 +38,7 @@ Badanie wykonują ludzie. Narzędzie generatywne może pomóc napisać artykuł 
 
 Recenzja ma dwie rundy. Runda 1 to wstępna recenzja AI, wyraźnie tak nazwana, prowadzona wyłącznie na modelu lokalnym albo korporacyjnym, który nie trenuje się na zgłoszeniach. Osoba z redakcji sprawdza raport, zanim zostanie wysłany. Runda 2 to ekspercka recenzja człowieka. Decyzję końcową podejmuje redaktor będący człowiekiem.
 
-Modelem roboczym jest diamentowy otwarty dostęp: bez opłaty za przetworzenie artykułu. Czasopismo ma być czytelne jako przeciwieństwo niezweryfikowanej, masowo generowanej treści („AI slop”) i wydawnictw drapieżnych: nazwani ludzie, rzeczywiste dane, publiczne zasady i żaden wskaźnik, którego czasopismo nie uzyskało.
+Modelem roboczym jest złoty otwarty dostęp. Nie ma opłaty za zgłoszenie. Stała opłata za przetworzenie artykułu (APC) w wysokości 1000 zł jest pobierana dopiero po przyjęciu. Recenzent, który ukończy recenzję, otrzymuje voucher rabatowy na APC własnego przyszłego artykułu; wysokość rabatu ustala redakcja i publikuje ją na stronie. Czasopismo ma być czytelne jako przeciwieństwo niezweryfikowanej, masowo generowanej treści („AI slop”) i wydawnictw drapieżnych: nazwani ludzie, rzeczywiste dane, publiczne zasady i żaden wskaźnik, którego czasopismo nie uzyskało.
 
 Wersje angielska i polska mają mówić to samo. Jeżeli się rozjadą, wydawca rozstrzyga różnicę przed przyjęciem zasad. Tytuł zgłaszany do sądu i do ośrodka ISSN jest tytułem angielskim podanym wyżej, chyba że wydawca świadomie wybierze wcześniej inne brzmienie.
 

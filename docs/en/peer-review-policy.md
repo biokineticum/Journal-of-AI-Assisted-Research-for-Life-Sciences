@@ -115,6 +115,8 @@ Reviewers receive:
 
 Suggested reports are returned within 21 days. The office sends one reminder. A reviewer who cannot finish is replaced. The identity of a replacement is not shared with the authors if the review is anonymised.
 
+A reviewer who completes a review receives a discount voucher toward the APC of their own future article. The discount is set by the editorial office and published on the site.
+
 ## 8. What human reviewers are asked
 
 Reviewers comment on:
@@ -157,7 +159,7 @@ A human editor makes the decision and signs the letter. The editor reads the man
 | Major revision | Substantial changes. Human re-review is the default. Acceptance is not promised. |
 | Reject | The manuscript will not proceed. A new submission of the same study is allowed only if the editor's letter says so. |
 
-There is no paid fast track, and no decision is exchanged for a citation or a fee.
+There is no paid fast track, and no decision is exchanged for a citation or a fee. A fixed article processing charge is billed only after acceptance. Editors and reviewers deciding on a paper do not see payment status.
 
 An editor does not decide a manuscript they wrote, or one where a competing interest makes a fair decision unreasonable. Another editor handles that file. If every editor is conflicted, the journal asks a guest editor from outside the board and records the arrangement.
 
