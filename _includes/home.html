@@ -16,20 +16,21 @@
 {%- endfor -%}
 
 <section class="hero" aria-labelledby="journal-title">
-  <div class="hero-mesh" aria-hidden="true"></div>
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow"><span>{{ ui.kicker }}</span> <span class="eyebrow-dot" aria-hidden="true"></span> <span>{{ ui.field }}</span></p>
-      <h1 id="journal-title" translate="no">{{ site.title }}</h1>
-      <p class="hero-mission">{{ ui.mission_line }}</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="{{ aims_url | relative_url }}">{{ ui.cta_aims }}</a>
-        <a class="btn btn-secondary" href="{{ guidelines_url | relative_url }}">{{ ui.cta_guidelines }}</a>
-        <a class="btn btn-secondary" href="{{ policy_url | relative_url }}">{{ ui.cta_policy }}</a>
-      </div>
-    </div>
-    <div class="hero-art" aria-hidden="true">
-      <img src="{{ '/assets/hero.svg' | relative_url }}" alt="" width="560" height="560">
+  <div class="hero-media">
+    <picture>
+      <source srcset="{{ '/assets/hero.webp' | relative_url }}" type="image/webp">
+      <img src="{{ '/assets/hero.jpg' | relative_url }}" width="1920" height="1080" alt="{{ ui.hero_alt }}">
+    </picture>
+    <div class="hero-shade" aria-hidden="true"></div>
+  </div>
+  <div class="wrap hero-copy">
+    <p class="eyebrow"><span>{{ ui.kicker }}</span> <span class="eyebrow-dot" aria-hidden="true"></span> <span>{{ ui.field }}</span></p>
+    <h1 id="journal-title" translate="no">{{ site.title }}</h1>
+    <p class="hero-mission">{{ ui.mission_line }}</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="{{ aims_url | relative_url }}">{{ ui.cta_aims }}</a>
+      <a class="btn btn-secondary" href="{{ guidelines_url | relative_url }}">{{ ui.cta_guidelines }}</a>
+      <a class="btn btn-secondary" href="{{ policy_url | relative_url }}">{{ ui.cta_policy }}</a>
     </div>
   </div>
 </section>
@@ -37,7 +38,22 @@
 <div class="wrap home-body">
   <div class="issue-row">
     <figure class="cover-figure">
-      <img src="{{ '/assets/cover.svg' | relative_url }}" width="640" height="900" alt="{{ ui.cover_alt }}">
+      <div class="cover-sheet">
+        <div class="cover-mast">
+          <p class="cover-kicker">{{ ui.kicker }}</p>
+          <p class="cover-name" translate="no">{{ site.title }}</p>
+        </div>
+        <div class="cover-art">
+          <img src="{{ '/assets/hero.jpg' | relative_url }}" width="1920" height="1080" alt="{{ ui.hero_alt }}">
+        </div>
+        <p class="cover-issue">{{ ui.cover_issue }}</p>
+        <ul class="cover-lines">
+          {%- for line in ui.cover_lines -%}
+          <li>{{ line }}</li>
+          {%- endfor -%}
+        </ul>
+        <p class="cover-issn"><span>{{ ui.cover_issn }}</span><span>{{ ui.cover_version }}</span></p>
+      </div>
       <figcaption>{{ ui.cover_caption }}</figcaption>
     </figure>
     <aside class="glance" aria-labelledby="glance-title">

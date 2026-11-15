@@ -134,15 +134,30 @@ en:
       text: A labelled preliminary review, checked by a person, then human experts. A human editor decides.
     - label: ISSN
       text: "[placeholder]"
+  hero_alt: >-
+    A figure in the pose of Michelangelo's Adam reaches toward a luminous
+    hand that extends from a digital brain of network lines. Their
+    fingertips meet at a spark.
+  art_credit: >-
+    Cover art: AI-generated reinterpretation of Michelangelo's The Creation
+    of Adam (public domain).
+  cover_issue: Volume 1 · Issue 0
+  cover_lines:
+    - Founding documents, draft
+    - Human-conducted research
+    - Gold open access
+  cover_issn: "ISSN [placeholder]"
+  cover_version: v0.1
   cover_alt: >-
-    Cover for Volume 1, Issue 0, founding documents, draft, of the Journal
-    of AI-Assisted Research for Life Sciences.
+    Cover of Volume 1, Issue 0, founding documents, draft. The artwork shows
+    a figure in the pose of Michelangelo's Adam reaching toward a digital
+    brain.
   cover_caption: Volume 1 · Issue 0 (Founding documents, draft)
   toc_label: On this page
   og_image_alt: >-
-    Journal of AI-Assisted Research for Life Sciences. Gold open-access
-    journal for human-conducted research in health and sport science.
-    Draft, version 0.1.
+    A figure in the pose of Michelangelo's Adam reaches toward a digital
+    hand and brain. Journal of AI-Assisted Research for Life Sciences,
+    draft founding documents.
 
 pl:
   og_locale: pl_PL
@@ -288,12 +303,27 @@ pl:
       text: Wstępna recenzja AI, sprawdzona przez redakcję, a następnie eksperci. Decyzję podejmuje człowiek.
     - label: ISSN
       text: "[placeholder]"
+  hero_alt: >-
+    Postać w pozie Adama Michała Anioła wyciąga dłoń ku świetlistej dłoni,
+    która wyrasta z cyfrowego mózgu zbudowanego z linii sieci. Opuszki
+    palców stykają się przy iskrze.
+  art_credit: >-
+    Grafika okładki: wygenerowana przez AI reinterpretacja „Stworzenia
+    Adama” Michała Anioła (domena publiczna).
+  cover_issue: Tom 1 · zeszyt 0
+  cover_lines:
+    - Dokumenty założycielskie, projekt
+    - Badanie przeprowadzone przez ludzi
+    - Złoty otwarty dostęp
+  cover_issn: "ISSN [placeholder]"
+  cover_version: v0.1
   cover_alt: >-
-    Okładka tomu 1, zeszytu 0: dokumenty założycielskie, projekt czasopisma
-    Journal of AI-Assisted Research for Life Sciences.
+    Okładka tomu 1, zeszytu 0: dokumenty założycielskie, projekt. Grafika
+    pokazuje postać w pozie Adama Michała Anioła sięgającą ku cyfrowemu
+    mózgowi.
   cover_caption: Tom 1 · zeszyt 0 (Dokumenty założycielskie, projekt)
   toc_label: Na tej stronie
   og_image_alt: >-
-    Journal of AI-Assisted Research for Life Sciences. Czasopismo złotego
-    otwartego dostępu do badań przeprowadzonych przez ludzi w naukach o
-    zdrowiu i naukach o sporcie. Projekt, wersja 0.1.
+    Postać w pozie Adama Michała Anioła sięga ku cyfrowej dłoni i mózgowi.
+    Journal of AI-Assisted Research for Life Sciences, projekty dokumentów
+    założycielskich.
