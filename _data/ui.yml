@@ -115,6 +115,34 @@ en:
     accepting submissions. Not a registered journal, not an indexed journal,
     and no editor has been appointed. Placeholders in the texts are
     unresolved.
+  field: Health and sport science
+  mission_line: >-
+    People do the study. AI may help write the paper from real data; it is
+    never the author and it does not decide.
+  cta_aims: Aims and scope
+  cta_guidelines: Author guidelines
+  cta_policy: AI policy
+  glance_heading: Journal at a glance
+  glance:
+    - label: Gold open access
+      text: No submission fee. A fixed APC is charged only after acceptance.
+    - label: Human-conducted research
+      text: People do the study. Models do not generate primary data.
+    - label: AI disclosure
+      text: Every submission includes a statement, including when no tool was used.
+    - label: AI first round, then human review
+      text: A labelled preliminary review, checked by a person, then human experts. A human editor decides.
+    - label: ISSN
+      text: "[placeholder]"
+  cover_alt: >-
+    Cover for Volume 1, Issue 0, founding documents, draft, of the Journal
+    of AI-Assisted Research for Life Sciences.
+  cover_caption: Volume 1 · Issue 0 (Founding documents, draft)
+  toc_label: On this page
+  og_image_alt: >-
+    Journal of AI-Assisted Research for Life Sciences. Gold open-access
+    journal for human-conducted research in health and sport science.
+    Draft, version 0.1.
 
 pl:
   og_locale: pl_PL
@@ -241,3 +269,31 @@ pl:
     nie przyjmuje zgłoszeń. To nie jest czasopismo zarejestrowane ani
     zindeksowane i nie powołano redaktora. Pola zastępcze w tekstach
     pozostają nierozstrzygnięte.
+  field: Nauki o zdrowiu i nauki o sporcie
+  mission_line: >-
+    Badanie wykonują ludzie. AI może pomóc napisać artykuł na podstawie
+    rzeczywistych danych; nie jest autorem i nie decyduje o przyjęciu.
+  cta_aims: Cele i zakres
+  cta_guidelines: Wytyczne dla autorów
+  cta_policy: Polityka AI
+  glance_heading: Czasopismo w skrócie
+  glance:
+    - label: Złoty otwarty dostęp
+      text: Brak opłaty za zgłoszenie. Stała opłata APC jest pobierana dopiero po przyjęciu.
+    - label: Badanie przeprowadzone przez ludzi
+      text: Badanie wykonują ludzie. Modele nie generują danych pierwotnych.
+    - label: Ujawnienie AI
+      text: Każde zgłoszenie zawiera oświadczenie, także gdy nie użyto żadnego narzędzia.
+    - label: Najpierw runda AI, potem recenzja człowieka
+      text: Wstępna recenzja AI, sprawdzona przez redakcję, a następnie eksperci. Decyzję podejmuje człowiek.
+    - label: ISSN
+      text: "[placeholder]"
+  cover_alt: >-
+    Okładka tomu 1, zeszytu 0: dokumenty założycielskie, projekt czasopisma
+    Journal of AI-Assisted Research for Life Sciences.
+  cover_caption: Tom 1 · zeszyt 0 (Dokumenty założycielskie, projekt)
+  toc_label: Na tej stronie
+  og_image_alt: >-
+    Journal of AI-Assisted Research for Life Sciences. Czasopismo złotego
+    otwartego dostępu do badań przeprowadzonych przez ludzi w naukach o
+    zdrowiu i naukach o sporcie. Projekt, wersja 0.1.

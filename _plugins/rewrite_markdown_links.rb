@@ -23,6 +23,9 @@ module RewriteMarkdownLinks
         rewritten = rewrite_href(href, page.relative_path, urls, page.site)
         %(href=#{quote}#{rewritten}#{quote})
       end
+      output.gsub!(%r{<table\b.*?</table>}m) do |table|
+        %(<div class="table-scroll">#{table}</div>)
+      end
       page.output = output
     end
 

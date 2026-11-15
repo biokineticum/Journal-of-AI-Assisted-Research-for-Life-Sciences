@@ -1,56 +1,107 @@
 {%- assign lang = page.lang | default: "en" -%}
 {%- assign ui = site.data.ui[lang] -%}
 {%- assign aims_url = "" -%}
+{%- assign guidelines_url = "" -%}
+{%- assign policy_url = "" -%}
 {%- for candidate in site.pages -%}
   {%- if candidate.lang == lang and candidate.name == "aims-and-scope.md" -%}
     {%- assign aims_url = candidate.url -%}
   {%- endif -%}
+  {%- if candidate.lang == lang and candidate.name == "author-guidelines.md" -%}
+    {%- assign guidelines_url = candidate.url -%}
+  {%- endif -%}
+  {%- if candidate.lang == lang and candidate.name == "ai-use-and-disclosure-policy.md" -%}
+    {%- assign policy_url = candidate.url -%}
+  {%- endif -%}
 {%- endfor -%}
 
-<p class="lede">{{ ui.lede }}</p>
-
-<section aria-labelledby="mission">
-  <h2 id="mission">{{ ui.mission_heading }}</h2>
-  {%- for paragraph in ui.mission -%}
-  <p>{{ paragraph }}</p>
-  {%- endfor -%}
-  <p>{{ ui.scope_lead }} <a href="{{ aims_url | relative_url }}">{{ site.data.policies[0][lang].title }}</a>.</p>
+<section class="hero" aria-labelledby="journal-title">
+  <div class="hero-mesh" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><span>{{ ui.kicker }}</span> <span class="eyebrow-dot" aria-hidden="true"></span> <span>{{ ui.field }}</span></p>
+      <h1 id="journal-title" translate="no">{{ site.title }}</h1>
+      <p class="hero-mission">{{ ui.mission_line }}</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="{{ aims_url | relative_url }}">{{ ui.cta_aims }}</a>
+        <a class="btn btn-secondary" href="{{ guidelines_url | relative_url }}">{{ ui.cta_guidelines }}</a>
+        <a class="btn btn-secondary" href="{{ policy_url | relative_url }}">{{ ui.cta_policy }}</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <img src="{{ '/assets/hero.svg' | relative_url }}" alt="" width="560" height="560">
+    </div>
+  </div>
 </section>
 
-<section aria-labelledby="principles">
-  <h2 id="principles">{{ ui.principles_heading }}</h2>
-  <ol class="principles">
-    {%- for item in ui.principles -%}
-    <li>
-      <h3>{{ item.title }}</h3>
-      <p>{{ item.text }}</p>
-    </li>
+<div class="wrap home-body">
+  <div class="issue-row">
+    <figure class="cover-figure">
+      <img src="{{ '/assets/cover.svg' | relative_url }}" width="640" height="900" alt="{{ ui.cover_alt }}">
+      <figcaption>{{ ui.cover_caption }}</figcaption>
+    </figure>
+    <aside class="glance" aria-labelledby="glance-title">
+      <h2 id="glance-title">{{ ui.glance_heading }}</h2>
+      <dl>
+        {%- for item in ui.glance -%}
+        <div>
+          <dt>{{ item.label }}</dt>
+          <dd>{{ item.text }}</dd>
+        </div>
+        {%- endfor -%}
+      </dl>
+    </aside>
+  </div>
+
+  <div class="measure">
+    <p class="lede">{{ ui.lede }}</p>
+  </div>
+
+  <section class="home-section measure" aria-labelledby="mission">
+    <h2 id="mission">{{ ui.mission_heading }}</h2>
+    {%- for paragraph in ui.mission -%}
+    <p>{{ paragraph }}</p>
     {%- endfor -%}
-  </ol>
-</section>
+    <p>{{ ui.scope_lead }} <a href="{{ aims_url | relative_url }}">{{ site.data.policies[0][lang].title }}</a>.</p>
+  </section>
 
-<section aria-labelledby="documents">
-  <h2 id="documents">{{ ui.documents_heading }}</h2>
-  <ul class="doc-list">
-    {%- for item in site.data.policies -%}
-      {%- assign href = "" -%}
-      {%- assign slug_file = item.slug | append: ".md" -%}
-      {%- for candidate in site.pages -%}
-        {%- if candidate.lang == lang and candidate.name == slug_file -%}
-          {%- assign href = candidate.url -%}
-        {%- endif -%}
+  <section class="home-section" aria-labelledby="principles">
+    <h2 id="principles">{{ ui.principles_heading }}</h2>
+    <ol class="principles">
+      {%- for item in ui.principles -%}
+      <li>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </li>
       {%- endfor -%}
-    <li>
-      <a href="{{ href | relative_url }}">{{ item[lang].title }}</a>
-      <p>{{ item[lang].summary }}</p>
-    </li>
-    {%- endfor -%}
-  </ul>
-</section>
+    </ol>
+  </section>
 
-<section aria-labelledby="status">
-  <h2 id="status">{{ ui.status_heading }}</h2>
-  {%- for paragraph in ui.status -%}
-  <p>{{ paragraph }}</p>
-  {%- endfor -%}
-</section>
+  <section class="home-section" aria-labelledby="documents">
+    <h2 id="documents">{{ ui.documents_heading }}</h2>
+    <ul class="doc-list">
+      {%- for item in site.data.policies -%}
+        {%- assign href = "" -%}
+        {%- assign slug_file = item.slug | append: ".md" -%}
+        {%- for candidate in site.pages -%}
+          {%- if candidate.lang == lang and candidate.name == slug_file -%}
+            {%- assign href = candidate.url -%}
+          {%- endif -%}
+        {%- endfor -%}
+      <li>
+        <a href="{{ href | relative_url }}">{{ item[lang].title }}</a>
+        <p>{{ item[lang].summary }}</p>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </section>
+
+  <section class="home-section" aria-labelledby="status">
+    <h2 id="status">{{ ui.status_heading }}</h2>
+    <div class="status-panel">
+      {%- for paragraph in ui.status -%}
+      <p>{{ paragraph }}</p>
+      {%- endfor -%}
+    </div>
+  </section>
+</div>
