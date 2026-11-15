@@ -1,7 +1,7 @@
 en:
   og_locale: en_GB
   skip: Skip to content
-  kicker: Diamond open access
+  kicker: Gold open access
   tagline: Empirical research in the life sciences, with a focus on health and sport science.
   home: Home
   home_path: /
@@ -17,7 +17,7 @@ en:
     of AI-Assisted Research for Life Sciences. Not in force. The journal is
     not yet accepting submissions.
   lede: >-
-    Diamond open-access journal for empirical research in the life sciences,
+    Gold open-access journal for empirical research in the life sciences,
     with a focus on health and sport science. The working title is the title
     of this repository.
   mission_heading: Mission
@@ -69,12 +69,17 @@ en:
         person on the editorial staff checks the report before it is sent.
         Round 2 is human expert review. A human editor makes the final
         decision. A model does not accept, revise, or reject a manuscript.
-    - title: Diamond open access
+    - title: Gold open access
       text: >-
-        No submission fee and no article processing charge. The working
-        licence for articles is CC BY 4.0, and authors retain copyright.
-        Those are draft defaults until the publisher confirms them. The
-        journal does not display a metric it has not earned.
+        No submission fee. A fixed article processing charge (APC) of
+        1000 PLN is charged only after the article is accepted. Payment
+        does not influence the editorial decision. Reviewers who complete
+        a review receive a discount voucher toward the APC of their own
+        future article; the discount is set by the editorial office and
+        published on the site. The working licence for articles is CC BY
+        4.0, and authors retain copyright. Those are draft defaults until
+        the publisher confirms them. The journal does not display a
+        metric it has not earned.
   documents_heading: Documents
   status_heading: Status of these texts
   status:
@@ -114,7 +119,7 @@ en:
 pl:
   og_locale: pl_PL
   skip: Przejdź do treści
-  kicker: Diamentowy otwarty dostęp
+  kicker: Złoty otwarty dostęp
   tagline: Badania empiryczne w naukach o życiu, ze szczególnym uwzględnieniem nauk o zdrowiu i nauk o sporcie.
   home: Strona główna
   home_path: /pl/
@@ -130,7 +135,7 @@ pl:
     czasopisma Journal of AI-Assisted Research for Life Sciences. Nie
     obowiązują. Czasopismo nie przyjmuje jeszcze zgłoszeń.
   lede: >-
-    Czasopismo diamentowego otwartego dostępu do badań empirycznych w naukach
+    Czasopismo złotego otwartego dostępu do badań empirycznych w naukach
     o życiu, ze szczególnym uwzględnieniem nauk o zdrowiu i nauk o sporcie.
     Tytuł roboczy jest zgodny z tym repozytorium. Oficjalny tytuł roboczy
     jest angielski. Polski opis na tej stronie nie jest drugim tytułem
@@ -189,13 +194,17 @@ pl:
         wysłany. Runda 2 to ekspercka recenzja człowieka. Decyzję końcową
         podejmuje redaktor będący człowiekiem. Model nie przyjmuje, nie
         kieruje do poprawy i nie odrzuca maszynopisu.
-    - title: Diamentowy otwarty dostęp
+    - title: Złoty otwarty dostęp
       text: >-
-        Brak opłaty za zgłoszenie i brak opłaty za przetworzenie artykułu.
-        Roboczą licencją artykułów jest CC BY 4.0, a prawa autorskie zostają
-        przy autorach. Są to ustalenia robocze projektu, dopóki wydawca ich
-        nie potwierdzi. Czasopismo nie eksponuje wskaźnika, którego nie
-        uzyskało.
+        Brak opłaty za zgłoszenie. Stała opłata za przetworzenie artykułu
+        (APC) w wysokości 1000 zł jest pobierana dopiero po przyjęciu
+        artykułu. Opłata nie wpływa na decyzję redakcyjną. Recenzent,
+        który ukończy recenzję, otrzymuje voucher rabatowy na APC
+        własnego przyszłego artykułu; wysokość rabatu ustala redakcja
+        i publikuje ją na stronie. Roboczą licencją artykułów jest
+        CC BY 4.0, a prawa autorskie zostają przy autorach. Są to
+        ustalenia robocze projektu, dopóki wydawca ich nie potwierdzi.
+        Czasopismo nie eksponuje wskaźnika, którego nie uzyskało.
   documents_heading: Dokumenty
   status_heading: Status tych tekstów
   status:

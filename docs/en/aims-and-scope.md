@@ -8,7 +8,7 @@
 
 ## 1. Purpose
 
-The *Journal of AI-Assisted Research for Life Sciences* is a diamond open-access journal. It publishes empirical research in the life sciences, with a focus on health and sport science.
+The *Journal of AI-Assisted Research for Life Sciences* is a gold open-access journal. It publishes empirical research in the life sciences, with a focus on health and sport science.
 
 The journal exists for work in which the study was done by people. Generative tools may help write the manuscript from the real data. They do not replace the study, the authors, or the editor's decision.
 
@@ -78,7 +78,9 @@ A human editor may decline a submission at triage when it is outside the scope o
 
 ## 7. Access, fees, and decisions
 
-The working model is diamond open access: no submission fee and no article processing charge. Inability to pay is not a barrier, because authors are not charged.
+The working model is gold open access. There is no submission fee. A fixed article processing charge (APC) of 1000 PLN is charged only after the article is accepted. The charge never influences the editorial decision, and editors and reviewers deciding on a paper do not see payment status. There are no fee waivers for inability to pay.
+
+Reviewers who complete a review receive a discount voucher toward the APC of their own future article. The discount is set by the editorial office and published on the site.
 
 The working licence for articles is [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). Authors retain copyright. These are draft defaults; the publisher confirms them before the policies are adopted. See the [launch roadmap](launch-roadmap.md).
 

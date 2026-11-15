@@ -10,7 +10,7 @@ Oficjalny tytuł roboczy czasopisma jest angielski i zgodny z nazwą repozytoriu
 
 ## 1. Cel
 
-*Journal of AI-Assisted Research for Life Sciences* jest czasopismem diamentowego otwartego dostępu. Publikuje badania empiryczne w naukach o życiu, ze szczególnym uwzględnieniem nauk o zdrowiu i nauk o sporcie.
+*Journal of AI-Assisted Research for Life Sciences* jest czasopismem złotego otwartego dostępu. Publikuje badania empiryczne w naukach o życiu, ze szczególnym uwzględnieniem nauk o zdrowiu i nauk o sporcie.
 
 Czasopismo jest przeznaczone dla prac, w których badanie wykonali ludzie. Narzędzia generatywne mogą pomóc napisać maszynopis na podstawie rzeczywistych danych. Nie zastępują badania, autorów ani decyzji redaktora.
 
@@ -80,7 +80,9 @@ Redaktor będący człowiekiem może odrzucić zgłoszenie na etapie selekcji, g
 
 ## 7. Dostęp, opłaty i decyzje
 
-Modelem roboczym jest diamentowy otwarty dostęp: brak opłaty za zgłoszenie i brak opłaty za przetworzenie artykułu (APC). Brak środków autora nie jest barierą, ponieważ autorzy nie są obciążani opłatami.
+Modelem roboczym jest złoty otwarty dostęp. Nie ma opłaty za zgłoszenie. Stała opłata za przetworzenie artykułu (APC) w wysokości 1000 zł jest pobierana dopiero po przyjęciu artykułu. Opłata nigdy nie wpływa na decyzję redakcyjną, a redaktorzy i recenzenci rozstrzygający pracę nie widzą statusu płatności. Nie ma zwolnień z opłat z powodu braku środków.
+
+Recenzent, który ukończy recenzję, otrzymuje voucher rabatowy na APC własnego przyszłego artykułu. Wysokość rabatu ustala redakcja i publikuje ją na stronie.
 
 Roboczą licencją artykułów jest [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). Prawa autorskie zostają przy autorach. Są to ustalenia robocze projektu; wydawca potwierdza je przed przyjęciem zasad. Zob. [harmonogram uruchomienia](launch-roadmap.md).
 

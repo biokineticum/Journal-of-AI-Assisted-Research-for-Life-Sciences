@@ -176,7 +176,9 @@ Czasopismo nie odpowiada na masowe, szablonowe żądania pozbawione konkretnego 
 
 ## 13. Postępowanie handlowe
 
-Czasopismo działa w modelu diamentowego otwartego dostępu. Nie pobiera od autorów opłat za zgłoszenie, publikację, kolor ani szybkość.
+Czasopismo działa w modelu złotego otwartego dostępu. Nie pobiera opłaty za zgłoszenie ani opłat za kolor lub szybkość. Stała opłata za przetworzenie artykułu (APC) w wysokości 1000 zł jest pobierana dopiero po przyjęciu artykułu. Opłata nigdy nie wpływa na decyzję redakcyjną, a redaktorzy i recenzenci rozstrzygający pracę nie widzą statusu płatności. Nie ma zwolnień z opłat. Nie ma płatnego szybkiego toru ani płatnej gwarancji przyjęcia.
+
+Recenzent, który ukończy recenzję, otrzymuje voucher rabatowy na APC własnego przyszłego artykułu. Wysokość rabatu ustala redakcja i publikuje ją na stronie.
 
 Ewentualne sponsorowanie działalności czasopisma ujawnia się na stronie. Sponsorzy nie wybierają artykułów, recenzentów ani decyzji. Czasopismo nie publikuje płatnych artykułów naukowych. Ogłoszenia, jeżeli kiedykolwiek zostaną przyjęte, są oznaczone i nie są wykazywane jako prace naukowe.
 

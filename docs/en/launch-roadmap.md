@@ -20,7 +20,7 @@ The policies use the following **working defaults**. The publisher confirms or r
 | Short / running title | Not chosen. Do not invent an abbreviation in public until it is chosen. |
 | Polish parallel title | None. A Polish description on the website is not a second registered title. A separate language edition would usually need its own ISSN. |
 | Article language | English, with optional Polish title and abstract |
-| Access model | Diamond open access: no submission fee, no APC |
+| Access model | Gold open access: no submission fee; fixed APC of 1000 PLN after acceptance; no fee waivers; reviewer discount vouchers (amount set by the editorial office and published on the site) |
 | Article licence | CC BY 4.0; authors retain copyright |
 | Peer-review model | Single-anonymised; two human reviewers after the AI preliminary review |
 | AI preliminary report | Shared with authors, reviewers, and editors; not published with the article |
@@ -72,7 +72,7 @@ Use a current, supported release of Open Journal Systems (PKP). Host it on HTTPS
 - [ ] Install the English locale as the publication language and the Polish locale for the public policies and the interface.
 - [ ] Masthead: title, publisher, address, editor-in-chief, board, [EMAIL], ISSN once assigned.
 - [ ] Publish the adopted aims and scope, AI policy, disclosure template, peer-review policy, author guidelines, and ethics policy in both languages.
-- [ ] State on the site: diamond open access, APC = 0, licence CC BY 4.0, copyright retained by authors.
+- [ ] State on the site: gold open access, a fixed APC of 1000 PLN charged only after acceptance, no submission fee, licence CC BY 4.0, copyright retained by authors, and the current reviewer-voucher discount.
 - [ ] Configure the submission checklist from the [Author guidelines](author-guidelines.md).
 - [ ] Require two supplementary genres: `AI Disclosure Statement` and `AI prompts and workflow`, using the fields in the [template appendix](ai-disclosure-statement.md).
 - [ ] Require the data identifier, ethics and registration fields (or a reasoned "not applicable"), competing interests, and funding.
@@ -101,7 +101,7 @@ Use a current, supported release of Open Journal Systems (PKP). Host it on HTTPS
 - [ ] Membership in the legal publisher's name.
 - [ ] DOI prefix configured in OJS.
 - [ ] A test deposit on a dummy or first article, resolved in a browser.
-- [ ] Fund the annual membership from the journal's funding, not from author fees.
+- [ ] Fund the annual membership from the journal's operating funds. Do not bill authors a separate Crossref charge on top of the APC.
 
 **Preservation.** Join the PKP Preservation Network or another archiving service DOAJ will recognise (for example CLOCKSS or an institutional dark archive). A journal that exists only on one virtual machine is not preserved.
 
@@ -115,7 +115,7 @@ DOAJ is the realistic indexing goal after the journal has a publishing record, n
 
 Before applying, read the current DOAJ guide and confirm that the live site shows at least:
 
-- ISSN, open-access statement, and APC = 0;
+- ISSN, open-access statement, and the publicly stated APC (1000 PLN, charged after acceptance);
 - aims and scope, author instructions, peer-review description (including the labelled AI round and the human decision), and the ethics policy;
 - an editorial board with names and affiliations;
 - licensing and copyright terms on the articles;
@@ -129,7 +129,7 @@ Before applying, read the current DOAJ guide and confirm that the live site show
 
 ## 8. Funding
 
-Diamond open access moves the cost off authors and onto the publisher. Budget for:
+Gold open access with a fixed article processing charge (APC) of 1000 PLN, charged only after acceptance, is the journal's stated model. The APC is public, fixed, and stated up front. Budget for:
 
 - court fee for press registration (use the current court tariff);
 - hosting, backups, and a domain for [JOURNAL URL];
@@ -142,7 +142,7 @@ Diamond open access moves the cost off authors and onto the publisher. Budget fo
 
 ISSN assignment by the National Library is not a per-article charge. Confirm any handling expectation on the Centre's current page.
 
-Possible sources, to be chosen by the publisher: a host institution, a research grant that allows publishing costs of a journal, a scholarly society, or in-kind support. Not acceptable as the business model: APCs introduced quietly later, a paid guarantee of acceptance, or a sponsor who selects articles.
+Possible sources, to be chosen by the publisher: the APC, a host institution, a research grant that allows publishing costs of a journal, a scholarly society, or in-kind support. Not acceptable as the business model: a later change of the APC that is not first published on the site, a paid guarantee of acceptance, a paid fast track, or a sponsor who selects articles. There are no fee waivers for inability to pay. Reviewers who complete a review receive a discount voucher toward the APC of their own future article; the discount is set by the editorial office and published on the site.
 
 - [ ] Name the funding source on the website before launch: [FUNDING SOURCE].
 - [ ] State that the source has no role in acceptance decisions.
