@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="markTitle markDesc">
+  <title id="markTitle">Journal of AI-Assisted Research for Life Sciences</title>
+  <desc id="markDesc">Two fingertips almost touching, one drawn as a hand and one as a neural network, with a spark in the gap.</desc>
+  <defs>
+    <linearGradient id="mark-ground" x1="8" y1="6" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#10243a"/>
+      <stop offset="1" stop-color="#07111c"/>
+    </linearGradient>
+    <linearGradient id="mark-skin" x1="8" y1="20" x2="30" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f3e6cf"/>
+      <stop offset="1" stop-color="#c4a882"/>
+    </linearGradient>
+    <linearGradient id="mark-net" x1="34" y1="16" x2="56" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#99f6e4"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#mark-ground)"/>
+  <path d="M7 30.5c6.2-1.6 12.4-2.2 16.8-.6 1.2.4 1.5 1.6.6 2.4-2.2 1.8-6.6 3.2-11.2 3.6-2.4.2-4.6-.4-6.2-1.4-.8-.5-.9-1.6 0-2.1.6-.3 0-.6 0-1.9z" fill="url(#mark-skin)"/>
+  <path d="M8.2 27.2c4.8-.8 9.6-.2 13.2 1.2" fill="none" stroke="#f8f1e4" stroke-width="0.7" stroke-linecap="round" opacity="0.7"/>
+  <path d="M38.2 31.4 46 22.6M38.2 31.4 50.5 31.2M38.2 31.4 45.2 41.6M46 22.6 54 18.5M50.5 31.2 56.5 27.2M45.2 41.6 52.8 44.2M46 22.6 50.5 31.2M50.5 31.2 45.2 41.6" fill="none" stroke="#1d4e63" stroke-width="0.9" stroke-linecap="round"/>
+  <path d="M34.6 31.2c2.4-.2 4.2-.1 5.6.4" fill="none" stroke="url(#mark-net)" stroke-width="1.7" stroke-linecap="round"/>
+  <circle cx="46" cy="22.6" r="2.15" fill="#5eead4"/>
+  <circle cx="54" cy="18.5" r="1.45" fill="#a5f3fc"/>
+  <circle cx="50.5" cy="31.2" r="2.35" fill="#e0e7ff"/>
+  <circle cx="56.5" cy="27.2" r="1.35" fill="#c4b5fd"/>
+  <circle cx="45.2" cy="41.6" r="2.05" fill="#67e8f9"/>
+  <circle cx="52.8" cy="44.2" r="1.4" fill="#a78bfa"/>
+  <circle cx="38.2" cy="31.4" r="1.7" fill="#f8fafc"/>
+  <path d="M31.2 26.2 32.4 29.2 35.4 30.4 32.4 31.6 31.2 34.6 30 31.6 27 30.4 30 29.2Z" fill="#f8fafc"/>
+  <circle cx="31.2" cy="30.4" r="1.05" fill="#67e8f9"/>
+</svg>

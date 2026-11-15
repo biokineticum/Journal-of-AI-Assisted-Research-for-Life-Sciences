@@ -115,6 +115,49 @@ en:
     accepting submissions. Not a registered journal, not an indexed journal,
     and no editor has been appointed. Placeholders in the texts are
     unresolved.
+  field: Health and sport science
+  mission_line: >-
+    People do the study. AI may help write the paper from real data; it is
+    never the author and it does not decide.
+  cta_aims: Aims and scope
+  cta_guidelines: Author guidelines
+  cta_policy: AI policy
+  glance_heading: Journal at a glance
+  glance:
+    - label: Gold open access
+      text: No submission fee. A fixed APC is charged only after acceptance.
+    - label: Human-conducted research
+      text: People do the study. Models do not generate primary data.
+    - label: AI disclosure
+      text: Every submission includes a statement, including when no tool was used.
+    - label: AI first round, then human review
+      text: A labelled preliminary review, checked by a person, then human experts. A human editor decides.
+    - label: ISSN
+      text: "[placeholder]"
+  hero_alt: >-
+    A figure in the pose of Michelangelo's Adam reaches toward a luminous
+    hand that extends from a digital brain of network lines. Their
+    fingertips meet at a spark.
+  art_credit: >-
+    Cover art: AI-generated reinterpretation of Michelangelo's The Creation
+    of Adam (public domain).
+  cover_issue: Volume 1 · Issue 0
+  cover_lines:
+    - Founding documents, draft
+    - Human-conducted research
+    - Gold open access
+  cover_issn: "ISSN [placeholder]"
+  cover_version: v0.1
+  cover_alt: >-
+    Cover of Volume 1, Issue 0, founding documents, draft. The artwork shows
+    a figure in the pose of Michelangelo's Adam reaching toward a digital
+    brain.
+  cover_caption: Volume 1 · Issue 0 (Founding documents, draft)
+  toc_label: On this page
+  og_image_alt: >-
+    A figure in the pose of Michelangelo's Adam reaches toward a digital
+    hand and brain. Journal of AI-Assisted Research for Life Sciences,
+    draft founding documents.
 
 pl:
   og_locale: pl_PL
@@ -241,3 +284,46 @@ pl:
     nie przyjmuje zgłoszeń. To nie jest czasopismo zarejestrowane ani
     zindeksowane i nie powołano redaktora. Pola zastępcze w tekstach
     pozostają nierozstrzygnięte.
+  field: Nauki o zdrowiu i nauki o sporcie
+  mission_line: >-
+    Badanie wykonują ludzie. AI może pomóc napisać artykuł na podstawie
+    rzeczywistych danych; nie jest autorem i nie decyduje o przyjęciu.
+  cta_aims: Cele i zakres
+  cta_guidelines: Wytyczne dla autorów
+  cta_policy: Polityka AI
+  glance_heading: Czasopismo w skrócie
+  glance:
+    - label: Złoty otwarty dostęp
+      text: Brak opłaty za zgłoszenie. Stała opłata APC jest pobierana dopiero po przyjęciu.
+    - label: Badanie przeprowadzone przez ludzi
+      text: Badanie wykonują ludzie. Modele nie generują danych pierwotnych.
+    - label: Ujawnienie AI
+      text: Każde zgłoszenie zawiera oświadczenie, także gdy nie użyto żadnego narzędzia.
+    - label: Najpierw runda AI, potem recenzja człowieka
+      text: Wstępna recenzja AI, sprawdzona przez redakcję, a następnie eksperci. Decyzję podejmuje człowiek.
+    - label: ISSN
+      text: "[placeholder]"
+  hero_alt: >-
+    Postać w pozie Adama Michała Anioła wyciąga dłoń ku świetlistej dłoni,
+    która wyrasta z cyfrowego mózgu zbudowanego z linii sieci. Opuszki
+    palców stykają się przy iskrze.
+  art_credit: >-
+    Grafika okładki: wygenerowana przez AI reinterpretacja „Stworzenia
+    Adama” Michała Anioła (domena publiczna).
+  cover_issue: Tom 1 · zeszyt 0
+  cover_lines:
+    - Dokumenty założycielskie, projekt
+    - Badanie przeprowadzone przez ludzi
+    - Złoty otwarty dostęp
+  cover_issn: "ISSN [placeholder]"
+  cover_version: v0.1
+  cover_alt: >-
+    Okładka tomu 1, zeszytu 0: dokumenty założycielskie, projekt. Grafika
+    pokazuje postać w pozie Adama Michała Anioła sięgającą ku cyfrowemu
+    mózgowi.
+  cover_caption: Tom 1 · zeszyt 0 (Dokumenty założycielskie, projekt)
+  toc_label: Na tej stronie
+  og_image_alt: >-
+    Postać w pozie Adama Michała Anioła sięga ku cyfrowej dłoni i mózgowi.
+    Journal of AI-Assisted Research for Life Sciences, projekty dokumentów
+    założycielskich.

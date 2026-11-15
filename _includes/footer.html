@@ -1,0 +1,29 @@
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign ui = site.data.ui[lang] -%}
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-id">
+      <a class="footer-brand" href="{{ ui.home_path | relative_url }}">
+        <img src="{{ '/assets/mark.svg' | relative_url }}" width="36" height="36" alt="">
+        <span translate="no">{{ site.title }}</span>
+      </a>
+      <p>{{ ui.footer }}</p>
+      <p class="art-credit">{{ ui.art_credit }}</p>
+    </div>
+    <nav class="footer-docs" aria-label="{{ ui.documents }}">
+      <p class="footer-label">{{ ui.documents }}</p>
+      <a href="{{ ui.home_path | relative_url }}">{{ ui.home }}</a>
+      {%- for item in site.data.policies -%}
+        {%- assign href = "" -%}
+        {%- assign slug_file = item.slug | append: ".md" -%}
+        {%- for candidate in site.pages -%}
+          {%- if candidate.lang == lang and candidate.name == slug_file -%}
+            {%- assign href = candidate.url -%}
+          {%- endif -%}
+        {%- endfor -%}
+      <a href="{{ href | relative_url }}">{{ item[lang].title }}</a>
+      {%- endfor -%}
+      <a class="footer-repo" href="{{ site.github_repo }}">{{ ui.repository }}</a>
+    </nav>
+  </div>
+</footer>

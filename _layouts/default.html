@@ -24,6 +24,11 @@
 {%- else -%}
   {%- capture full_title -%}{{ page_title }} · {{ site.title }}{%- endcapture -%}
 {%- endif -%}
+{%- assign og_image = "/assets/og.jpg" | absolute_url -%}
+{%- assign is_home = false -%}
+{%- if page.name == "index.html" -%}
+  {%- assign is_home = true -%}
+{%- endif -%}
 <!DOCTYPE html>
 <html lang="{{ lang }}">
 <head>
@@ -40,42 +45,71 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:locale" content="{{ ui.og_locale }}">
-  <meta name="theme-color" content="#1b2f29">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:image" content="{{ og_image }}">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ ui.og_image_alt }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ full_title | strip }}">
+  <meta name="twitter:description" content="{{ description | strip }}">
+  <meta name="twitter:image" content="{{ og_image }}">
+  <meta name="twitter:image:alt" content="{{ ui.og_image_alt }}">
+  <meta name="theme-color" content="#07111c">
   <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
-<body>
+<body class="{% if is_home %}page-home{% else %}page-doc{% endif %}">
   <a class="skip-link" href="#main">{{ ui.skip }}</a>
-  <header class="masthead">
-    <div class="wrap masthead-inner">
-      <div class="identity">
-        <p class="kicker">
-          <img class="mark" src="{{ '/assets/favicon.svg' | relative_url }}" width="28" height="28" alt="">
-          <span>{{ ui.kicker }}</span>
-        </p>
-        <a class="wordmark" href="{{ ui.home_path | relative_url }}"><span translate="no">{{ site.title }}</span></a>
-        <p class="tagline">{{ ui.tagline }}</p>
+  <div class="sticky-bar">
+    <header class="masthead">
+      <div class="wrap masthead-inner">
+        <a class="brand" href="{{ ui.home_path | relative_url }}">
+          <img class="brand-mark" src="{{ '/assets/mark.svg' | relative_url }}" width="44" height="44" alt="">
+          <span class="brand-name" translate="no">{{ site.title }}</span>
+        </a>
+        <div class="masthead-tools">
+          <nav class="lang-switch" aria-label="{{ ui.language_label }}">
+            <a href="{{ en_url | relative_url }}" hreflang="en" lang="en"{% if lang == "en" %} aria-current="true"{% endif %}>English</a>
+            <a href="{{ pl_url | relative_url }}" hreflang="pl" lang="pl"{% if lang == "pl" %} aria-current="true"{% endif %}>Polski</a>
+          </nav>
+          <a class="repo-link" href="{{ site.github_repo }}">{{ ui.repository }}</a>
+        </div>
       </div>
-      <div class="masthead-tools">
-        <nav class="lang-switch" aria-label="{{ ui.language_label }}">
-          <a href="{{ en_url | relative_url }}" hreflang="en" lang="en"{% if lang == "en" %} aria-current="true"{% endif %}>English</a>
-          <a href="{{ pl_url | relative_url }}" hreflang="pl" lang="pl"{% if lang == "pl" %} aria-current="true"{% endif %}>Polski</a>
-        </nav>
-        <a class="repo-link" href="{{ site.github_repo }}">{{ ui.repository }}</a>
+    </header>
+    <div class="banner">
+      <div class="wrap">
+        <p><strong>{{ ui.banner_strong }}</strong> {{ ui.banner }}</p>
       </div>
-    </div>
-  </header>
-  <div class="banner">
-    <div class="wrap">
-      <p><strong>{{ ui.banner_strong }}</strong> {{ ui.banner }}</p>
     </div>
   </div>
+  {%- if is_home -%}
+  <main id="main">
+    {{ content }}
+  </main>
+  {%- else -%}
+  {%- assign toc = content | extract_toc -%}
   <div class="wrap shell">
     <div class="sidebar">
       {% include nav.html %}
+      {%- if toc.size > 2 -%}
+      <nav class="toc toc-side" aria-label="{{ ui.toc_label }}">
+        <p class="toc-label">{{ ui.toc_label }}</p>
+        {% include toc-list.html %}
+      </nav>
+      {%- endif -%}
     </div>
     <main id="main" class="content">
       <article class="prose">
+        {%- if toc.size > 2 -%}
+        <details class="toc toc-inline">
+          <summary>{{ ui.toc_label }}</summary>
+          <nav aria-label="{{ ui.toc_label }}">
+            {% include toc-list.html %}
+          </nav>
+        </details>
+        {%- endif -%}
         {{ content }}
         {%- if page.path contains "docs/" -%}
         <p class="back-top"><a href="#main">{{ ui.back_to_top }}</a></p>
@@ -84,11 +118,7 @@
       </article>
     </main>
   </div>
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>{{ ui.footer }}</p>
-      <p><a href="{{ site.github_repo }}">{{ site.github_repo }}</a></p>
-    </div>
-  </footer>
+  {%- endif -%}
+  {% include footer.html %}
 </body>
 </html>

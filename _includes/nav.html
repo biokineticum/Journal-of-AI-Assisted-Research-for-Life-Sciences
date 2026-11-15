@@ -1,6 +1,7 @@
 {%- assign lang = page.lang | default: "en" -%}
 {%- assign ui = site.data.ui[lang] -%}
-<details class="nav-details" open>
+<p class="nav-label" aria-hidden="true">{{ ui.documents }}</p>
+<details class="nav-details">
   <summary>{{ ui.documents }}</summary>
   <nav class="docs-nav" aria-label="{{ ui.documents }}">
     <a href="{{ ui.home_path | relative_url }}"{% if page.name == "index.html" %} aria-current="page"{% endif %}>{{ ui.home }}</a>
