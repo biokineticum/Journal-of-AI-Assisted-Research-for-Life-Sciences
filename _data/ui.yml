@@ -158,6 +158,28 @@ en:
     A figure in the pose of Michelangelo's Adam reaches toward a digital
     hand and brain. Journal of AI-Assisted Research for Life Sciences,
     draft founding documents.
+  news_heading: News
+  news_kicker: Updates
+  news_year_suffix: ""
+  news_status:
+    operational: Done
+    in_progress: In progress
+    submitted: Awaiting decision
+    info: Note
+    attention: Attention
+  months:
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
 
 pl:
   og_locale: pl_PL
@@ -327,3 +349,25 @@ pl:
     Postać w pozie Adama Michała Anioła sięga ku cyfrowej dłoni i mózgowi.
     Journal of AI-Assisted Research for Life Sciences, projekty dokumentów
     założycielskich.
+  news_heading: Aktualności
+  news_kicker: Komunikaty
+  news_year_suffix: " r."
+  news_status:
+    operational: Zakończone
+    in_progress: W toku
+    submitted: Oczekuje na decyzję
+    info: Informacja
+    attention: Uwaga
+  months:
+    - stycznia
+    - lutego
+    - marca
+    - kwietnia
+    - maja
+    - czerwca
+    - lipca
+    - sierpnia
+    - września
+    - października
+    - listopada
+    - grudnia

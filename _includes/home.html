@@ -35,6 +35,53 @@
   </div>
 </section>
 
+{%- assign news_items = nil -%}
+{%- if site.data.news -%}
+  {%- assign news_items = site.data.news | sort: "date" | reverse -%}
+{%- endif -%}
+{%- if news_items and news_items.size > 0 -%}
+<section class="news" aria-labelledby="news-heading">
+  <div class="wrap">
+    <div class="news-panel">
+      <h2 id="news-heading" class="news-heading">{{ ui.news_heading }} <span class="news-sep">/</span> <span class="news-kicker">{{ ui.news_kicker }}</span></h2>
+      <ul class="news-feed">
+        {%- assign news_statuses = "operational|in_progress|submitted|info|attention" | split: "|" -%}
+        {%- for item in news_items -%}
+          {%- assign status = item.status | default: "info" | strip -%}
+          {%- unless news_statuses contains status -%}
+            {%- assign status = "info" -%}
+          {%- endunless -%}
+          {%- assign status_label = ui.news_status[status] | default: status -%}
+          {%- if lang == "pl" -%}
+            {%- assign body = item.text_pl | default: item.text_en -%}
+          {%- else -%}
+            {%- assign body = item.text_en | default: item.text_pl -%}
+          {%- endif -%}
+          {%- if item.date == blank or body == blank -%}
+            {%- continue -%}
+          {%- endif -%}
+          {%- assign month_index = item.date | date: "%m" | plus: 0 | minus: 1 -%}
+          {%- assign month_name = ui.months[month_index] -%}
+          {%- assign day = item.date | date: "%d" | plus: 0 -%}
+          {%- assign year = item.date | date: "%Y" -%}
+          {%- assign iso = item.date | date: "%Y-%m-%d" -%}
+        <li class="news-item" data-status="{{ status }}">
+          <div class="news-meta">
+            <span class="news-signal">
+              <span class="news-dot" aria-hidden="true"></span>
+              <span class="news-badge">{{ status_label }}</span>
+            </span>
+            <time class="news-date" datetime="{{ iso }}">{{ day }} {{ month_name }} {{ year }}{{ ui.news_year_suffix }}</time>
+          </div>
+          <p class="news-text">{{ body }}</p>
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</section>
+{%- endif -%}
+
 <div class="wrap home-body">
   <div class="issue-row">
     <figure class="cover-figure">

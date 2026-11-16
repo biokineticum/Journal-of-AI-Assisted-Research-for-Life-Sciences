@@ -1,0 +1,17 @@
+# Home-page news feed, shown under the hero in both languages.
+# Add the newest entry at the top. The page also sorts by date, newest first.
+#
+# date     YYYY-MM-DD
+# status   operational | in_progress | submitted | info | attention
+#            operational  teal   the step is done
+#            in_progress  amber  work is underway
+#            submitted    amber  filed, waiting on a decision
+#            info         slate  a note
+#            attention    amber  needs a look
+# text_en  short English update
+# text_pl  short Polish update
+
+- date: 2026-11-16
+  status: submitted
+  text_en: Journal registration application submitted to the court in Kraków (Polish press register).
+  text_pl: Złożono wniosek o rejestrację czasopisma w sądzie w Krakowie (rejestr dzienników i czasopism).

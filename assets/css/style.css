@@ -29,6 +29,12 @@
   --header: #07111c;
   --header-ink: #f4f8fc;
   --radius: 0.9rem;
+  --status-amber: #b45309;
+  --status-amber-soft: rgba(180, 83, 9, 0.18);
+  --status-ok: #0f766e;
+  --status-ok-soft: rgba(15, 118, 110, 0.16);
+  --status-info: #3d6f8f;
+  --status-info-soft: rgba(61, 111, 143, 0.16);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -52,6 +58,12 @@
     --banner-ink: #ffe7b8;
     --banner-line: #a8843a;
     --shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+    --status-amber: #fbbf24;
+    --status-amber-soft: rgba(251, 191, 36, 0.18);
+    --status-ok: #2dd4bf;
+    --status-ok-soft: rgba(45, 212, 191, 0.16);
+    --status-info: #93c5fd;
+    --status-info-soft: rgba(147, 197, 253, 0.16);
   }
 }
 
@@ -379,7 +391,133 @@ a:hover { color: var(--link-hover); }
   font-size: 0.88rem;
 }
 
-.home-body { padding: 2.2rem 0 3.5rem; }
+.news {
+  padding: 1.15rem 0 0;
+}
+
+.news-panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 0.9rem 1.15rem 0.3rem;
+}
+
+.news-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.news-sep {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.news-kicker {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.news-feed {
+  list-style: none;
+  margin: 0.35rem 0 0;
+  padding: 0;
+}
+
+.news-item {
+  padding: 0.75rem 0 0.85rem;
+  border-top: 1px solid var(--line);
+}
+
+.news-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.75rem;
+}
+
+.news-signal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-width: 0;
+}
+
+.news-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  flex: none;
+  background: var(--status-info);
+  box-shadow: 0 0 0 3px var(--status-info-soft);
+}
+
+.news-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.55rem;
+  padding: 0.12rem 0.6rem;
+  border-radius: 999px;
+  background: var(--code-bg);
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+}
+
+.news-item[data-status="operational"] .news-dot {
+  background: var(--status-ok);
+  box-shadow: 0 0 0 3px var(--status-ok-soft);
+}
+
+.news-item[data-status="operational"] .news-badge {
+  background: var(--accent-soft);
+  color: var(--link-hover);
+}
+
+.news-item[data-status="in_progress"] .news-dot,
+.news-item[data-status="submitted"] .news-dot,
+.news-item[data-status="attention"] .news-dot {
+  background: var(--status-amber);
+  box-shadow: 0 0 0 3px var(--status-amber-soft);
+}
+
+.news-item[data-status="in_progress"] .news-badge,
+.news-item[data-status="submitted"] .news-badge,
+.news-item[data-status="attention"] .news-badge {
+  background: var(--banner-bg);
+  color: var(--banner-ink);
+  border: 1px solid var(--banner-line);
+}
+
+.news-date {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.news-text {
+  margin: 0.4rem 0 0;
+  padding-left: 1.1rem;
+  line-height: 1.45;
+}
+
+.home-body { padding: 1.6rem 0 3.5rem; }
 
 .issue-row {
   display: grid;
@@ -1053,9 +1191,19 @@ a:hover { color: var(--link-hover); }
 
   .glance dl > div { grid-template-columns: 1fr; gap: 0.15rem; }
 
+  .news-panel { padding: 0.85rem 0.9rem 0.25rem; }
+
   .footer-grid { grid-template-columns: 1fr; }
 
   .prose table { min-width: 34rem; }
+}
+
+@media (max-width: 40rem) {
+  .news-date {
+    margin-left: 1.1rem;
+    flex-basis: 100%;
+    white-space: normal;
+  }
 }
 
 @media print {
@@ -1097,6 +1245,24 @@ a:hover { color: var(--link-hover); }
     background: #fff;
     color: #000;
     border: 1px solid #000;
+  }
+
+  .news-panel {
+    background: #fff;
+    color: #000;
+    box-shadow: none;
+  }
+
+  .news-badge,
+  .news-item[data-status] .news-badge {
+    background: #fff;
+    color: #000;
+    border-color: #000;
+  }
+
+  .news-dot,
+  .news-item[data-status] .news-dot {
+    box-shadow: none;
   }
 
   .btn {
