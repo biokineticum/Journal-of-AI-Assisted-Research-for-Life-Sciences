@@ -239,6 +239,32 @@ def main():
             ERRORS.append("language switcher is missing a language")
         if en_home[1].lang != "en" or pl_home[1].lang != "pl":
             ERRORS.append("home page lang attributes are wrong")
+        for label, text in (("English", en_text), ("Polish", pl_text)):
+            news_at = text.find('class="news"')
+            hero_at = text.find('class="hero"')
+            issue_at = text.find('class="issue-row"')
+            if news_at < 0 or not (hero_at < news_at < issue_at):
+                ERRORS.append(f"{label} news section is not directly under the hero")
+        for needle in (
+            'class="news-feed"',
+            'data-status="submitted"',
+            "Awaiting decision",
+            "Journal registration application submitted to the court in Kraków (Polish press register).",
+            "16 November 2026",
+            'datetime="2026-11-16"',
+        ):
+            if needle not in en_text:
+                ERRORS.append(f"English home is missing the news feed ({needle})")
+        for needle in (
+            'class="news-feed"',
+            'data-status="submitted"',
+            "Oczekuje na decyzję",
+            "Złożono wniosek o rejestrację czasopisma w sądzie w Krakowie (rejestr dzienników i czasopism).",
+            "16 listopada 2026",
+            'datetime="2026-11-16"',
+        ):
+            if needle not in pl_text:
+                ERRORS.append(f"Polish home is missing the news feed ({needle})")
 
     aims = ROOT / "docs/en/aims-and-scope/index.html"
     if aims.is_file():
