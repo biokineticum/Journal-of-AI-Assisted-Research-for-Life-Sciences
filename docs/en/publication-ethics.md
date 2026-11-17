@@ -99,12 +99,12 @@ Staff and board members do not use confidential submissions to train models, to 
 Reviewers follow the [Peer review policy](peer-review-policy.md). In particular they:
 
 - provide an objective, reasoned report, or decline promptly;
-- keep the manuscript confidential and out of public consumer AI tools;
+- keep the manuscript confidential, and do not upload the manuscript, the data, or the code to any external or third-party AI service;
 - disclose competing interests;
 - report suspected fabrication, falsification, plagiarism, undisclosed AI use, or unethical research to the editor, and do not investigate on their own beyond the files they were given;
 - do not use information from the review for their own work until it is public.
 
-A reviewer who used a permitted local or enterprise model tells the editor. The reviewer signs the intellectual judgement with their own name inside the editorial system. A model is not the reviewer.
+A reviewer who used a model at all ran it locally, and tells the editor the model name and version. Uploading the manuscript or the data to an external AI service is a breach of confidentiality. The reviewer signs the intellectual judgement with their own name inside the editorial system. A model is not the reviewer.
 
 ## 9. Duties of editors
 
@@ -112,12 +112,12 @@ Editors:
 
 - decide on the basis of the work's quality, ethics, and fit to the scope, without regard to the authors' nationality, institution, gender, or seniority, except where a competing interest requires another editor;
 - keep a human in charge of triage outcomes, of any query raised by the AI preliminary review, and of the final decision;
-- ensure that the AI preliminary review ran on a permitted deployment and that a human checked the report before it was sent;
+- ensure that the AI preliminary review ran only on open-weight models hosted on infrastructure the journal controls, that no manuscript, dataset, or code was sent to an external AI API, and that a human checked the report before it was sent;
 - invite reviewers who can assess the work and who are not blocked by a conflict;
 - maintain confidentiality;
 - act on integrity concerns even when a paper has already been published, and even when the authors, a reviewer, or a board member would prefer silence;
 - publish corrections, expressions of concern, and retractions in a form that is linked to the article and is free to read;
-- keep a record of every tool, model, and version used in the AI preliminary review, and of the human-checked report. The report is shared with the human reviewers and the editor. It never makes the decision;
+- keep a record of every tool, model, and version used in the AI preliminary review, of the infrastructure they ran on, and of the human-checked report. The report is shared with the human reviewers and the editor. It never makes the decision;
 - do not overturn a sound negative decision because a funder, a sponsor, or the publisher prefers acceptance.
 
 **Editorial independence.** The publisher and any funder of the journal's operations do not overrule the editor on acceptance or rejection of a manuscript. The legal publisher remains responsible for the title under Polish press law once the title is registered. That responsibility is not a right to insert or remove scientific conclusions.
@@ -170,7 +170,7 @@ Honest error is not misconduct. It is still corrected. The editor distinguishes 
 
 **Appeals of a rejection** follow the [Peer review policy](peer-review-policy.md). One appeal, a different editor where possible, a final outcome.
 
-**Complaints about process** — delay, a reviewer comment that is abusive, a suspected undisclosed conflict, a breach of confidentiality, or an AI check that was run on a public consumer model — go to [EMAIL]. The editor-in-chief answers in writing. If the complaint is about the editor-in-chief, a designated board member who is not involved, [DEPUTY EDITOR NAME], answers and may ask the publisher, [PUBLISHER LEGAL NAME], to support an external review.
+**Complaints about process** — delay, a reviewer comment that is abusive, a suspected undisclosed conflict, a breach of confidentiality, or an AI check that sent the manuscript, the data, or the code to an external AI service — go to [EMAIL]. The editor-in-chief answers in writing. If the complaint is about the editor-in-chief, a designated board member who is not involved, [DEPUTY EDITOR NAME], answers and may ask the publisher, [PUBLISHER LEGAL NAME], to support an external review.
 
 **Complaints about published content** are treated as allegations under section 10.
 

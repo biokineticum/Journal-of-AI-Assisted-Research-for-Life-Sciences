@@ -99,12 +99,12 @@ Pracownicy i członkowie rady nie wykorzystują poufnych zgłoszeń do trenowani
 Recenzenci stosują [Politykę recenzji](peer-review-policy.md). W szczególności:
 
 - składają rzeczowy, uzasadniony raport albo niezwłocznie odmawiają;
-- zachowują poufność maszynopisu i nie wprowadzają go do publicznych narzędzi AI dla konsumentów;
+- zachowują poufność maszynopisu i nie wgrywają maszynopisu, danych ani kodu do żadnej zewnętrznej usługi AI, w tym usługi podmiotu trzeciego;
 - ujawniają konflikty interesów;
 - zgłaszają redaktorowi podejrzenie fabrykowania, fałszowania, plagiatu, nieujawnionego użycia AI albo badań nieetycznych i nie prowadzą własnego postępowania poza plikami, które otrzymali;
 - nie wykorzystują informacji z recenzji we własnej pracy, dopóki nie są publiczne.
 
-Recenzent, który użył dopuszczalnego modelu lokalnego lub korporacyjnego, informuje o tym redaktora. Osąd merytoryczny recenzent firmuje własnym nazwiskiem w systemie redakcyjnym. Model nie jest recenzentem.
+Recenzent, który w ogóle użył modelu, uruchomił go lokalnie i podaje redaktorowi nazwę oraz wersję modelu. Wgranie maszynopisu albo danych do zewnętrznej usługi AI jest naruszeniem poufności. Osąd merytoryczny recenzent firmuje własnym nazwiskiem w systemie redakcyjnym. Model nie jest recenzentem.
 
 ## 9. Obowiązki redaktorów
 
@@ -112,12 +112,12 @@ Redaktorzy:
 
 - decydują na podstawie jakości pracy, etyki i zgodności z zakresem, bez względu na obywatelstwo, instytucję, płeć albo staż autorów, z wyjątkiem sytuacji, w której konflikt interesów wymaga innego redaktora;
 - zapewniają, że człowiek odpowiada za wynik selekcji, za każde pytanie wynikłe ze wstępnej recenzji AI i za decyzję końcową;
-- zapewniają, że wstępna recenzja AI przebiegła na dopuszczalnym wdrożeniu i że człowiek sprawdził raport, zanim go wysłano;
+- zapewniają, że wstępna recenzja AI przebiegła wyłącznie na modelach o otwartych wagach hostowanych na infrastrukturze kontrolowanej przez czasopismo, że maszynopisu, zbioru ani kodu nie wysłano do zewnętrznego API AI i że człowiek sprawdził raport, zanim go wysłano;
 - zapraszają recenzentów, którzy potrafią ocenić pracę i których nie wyklucza konflikt;
 - dochowują poufności;
 - działają w sprawach rzetelności także wtedy, gdy artykuł już opublikowano, i także wtedy, gdy autorzy, recenzent albo członek rady woleliby milczenie;
 - publikują sprostowania, wyrażenia zaniepokojenia i retrakcje w postaci powiązanej z artykułem i dostępnej bez opłat;
-- przechowują zapis każdego narzędzia, modelu i wersji użytych we wstępnej recenzji AI oraz raportu sprawdzonego przez człowieka. Raport otrzymują recenzenci będący ludźmi i redaktor. Raport nigdy nie stanowi decyzji;
+- przechowują zapis każdego narzędzia, modelu i wersji użytych we wstępnej recenzji AI, infrastruktury, na której działały, oraz raportu sprawdzonego przez człowieka. Raport otrzymują recenzenci będący ludźmi i redaktor. Raport nigdy nie stanowi decyzji;
 - nie zmieniają zasadnej decyzji odmownej dlatego, że grantodawca, sponsor albo wydawca woli przyjęcie.
 
 **Niezależność redakcyjna.** Wydawca i ewentualny podmiot finansujący działalność czasopisma nie uchylają decyzji redaktora o przyjęciu albo odrzuceniu maszynopisu. Wydawca prawny pozostaje odpowiedzialny za tytuł na gruncie prawa prasowego po rejestracji tytułu. Ta odpowiedzialność nie jest prawem do dopisywania lub usuwania wniosków naukowych.
@@ -170,7 +170,7 @@ Uczciwy błąd nie jest naruszeniem. I tak podlega sprostowaniu. Redaktor rozró
 
 **Odwołania od odrzucenia** prowadzi się według [Polityki recenzji](peer-review-policy.md). Jedno odwołanie, w miarę możliwości inny redaktor, rozstrzygnięcie ostateczne.
 
-**Skargi na postępowanie** — opóźnienie, obraźliwą uwagę recenzenta, podejrzenie nieujawnionego konfliktu, naruszenie poufności albo kontrolę AI wykonaną na publicznym modelu konsumenckim — kieruje się na adres [EMAIL]. Redaktor naczelny odpowiada na piśmie. Jeżeli skarga dotyczy redaktora naczelnego, odpowiada wskazany członek rady, który nie jest w sprawę uwikłany, [DEPUTY EDITOR NAME], i może poprosić wydawcę, [PUBLISHER LEGAL NAME], o wsparcie przeglądu zewnętrznego.
+**Skargi na postępowanie** — opóźnienie, obraźliwą uwagę recenzenta, podejrzenie nieujawnionego konfliktu, naruszenie poufności albo kontrolę AI, która wysłała maszynopis, dane albo kod do zewnętrznej usługi AI — kieruje się na adres [EMAIL]. Redaktor naczelny odpowiada na piśmie. Jeżeli skarga dotyczy redaktora naczelnego, odpowiada wskazany członek rady, który nie jest w sprawę uwikłany, [DEPUTY EDITOR NAME], i może poprosić wydawcę, [PUBLISHER LEGAL NAME], o wsparcie przeglądu zewnętrznego.
 
 **Skargi na treść opublikowaną** traktuje się jako zarzuty według części 10.
 

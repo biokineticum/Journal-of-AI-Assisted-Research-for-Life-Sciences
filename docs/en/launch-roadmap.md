@@ -24,7 +24,7 @@ The policies use the following **working defaults**. The publisher confirms or r
 | Article licence | CC BY 4.0; authors retain copyright |
 | Peer-review model | Single-anonymised; two human reviewers after the AI preliminary review |
 | AI preliminary report | Structured report (summary, strengths, weaknesses, questions, data-consistency findings, checklist), shared with authors, reviewers, and editors; not published with the article. The report never makes the decision |
-| Round 1 architecture | Multi-agent pipeline inspired by ScholarPeer (Google Research blog, 8 April 2026). Design inspiration only, not a vendor dependency. Adapted because that evaluation was on machine-learning papers |
+| Round 1 architecture | Multi-agent pipeline inspired by ScholarPeer (Google Research blog, 8 April 2026). Design inspiration only, not a vendor dependency. Adapted because that evaluation was on machine-learning papers. Open-weight models hosted by the journal only. No external AI API |
 | Data deposit | FAIR deposit of the human-collected dataset and the analysis code, with a persistent identifier, before submission. Reviewers and Round 1 have access at submission. Sensitive health data: as open as possible, as closed as necessary |
 | Model name on the article | Every tool, model, and version is logged in the editorial file; printing the names on the article is undecided |
 | Reference style | Vancouver (NLM / ICMJE) |
@@ -78,12 +78,12 @@ Use a current, supported release of Open Journal Systems (PKP). Host it on HTTPS
 - [ ] Configure the submission checklist from the [Author guidelines](author-guidelines.md).
 - [ ] Require two supplementary genres: `AI Disclosure Statement` and `AI prompts and workflow`, using the fields in the [template appendix](ai-disclosure-statement.md).
 - [ ] Require the data availability statement, the repository identifier, the licence, the codebook, and the README, plus ethics and registration fields (or a reasoned "not applicable"), competing interests, and funding. A submission is not complete while reviewers cannot open the deposit.
-- [ ] Add a review form that includes the AI-oversight questions from the [Peer review policy](peer-review-policy.md), and a required reviewer declaration that the manuscript was not uploaded to a public consumer model.
+- [ ] Add a review form that includes the AI-oversight questions from the [Peer review policy](peer-review-policy.md), and a required reviewer declaration that the manuscript and the data were not uploaded to an external AI service.
 - [ ] Configure a two-stage workflow the staff can actually follow: triage, AI preliminary review, human review, human decision. OJS will not do this by itself; write a one-page internal operating note that names who runs the check and where the report is stored.
 - [ ] In that note, specify Round 1 as the multi-agent pipeline in the [Peer review policy](peer-review-policy.md): literature context, missed baselines and datasets, claim-verification questions, data–manuscript consistency (re-run the deposited code where it runs), reporting and ethics against the EQUATOR guideline, and citation checks. The design is inspired by ScholarPeer. The note states that the journal does not buy or depend on that product, and that the published evaluation was on machine-learning papers.
-- [ ] Log every tool, model, and version used in a Round 1 run, and store that log with the human-checked report.
-- [ ] Before Round 1 runs, confirm that the check and the human reviewers can open the deposit, including any controlled-access route. Do not paste identifiable health data into a public consumer model.
-- [ ] Select the permitted deployment (local or enterprise, with a written no-training and limited-retention agreement) before the first submission is processed. Record the provider and the contract reference in the editorial file.
+- [ ] Log every tool, model, and version used in a Round 1 run, and the infrastructure they ran on, and store that log with the human-checked report.
+- [ ] Before Round 1 runs, confirm that the check and the human reviewers can open the deposit, including any controlled-access route. Controlled-access files are read only on the journal's own machines.
+- [ ] Host the Round 1 models on infrastructure the journal controls (open-weight models, self-hosted) before the first submission is processed. Record the host and the model names and versions in the editorial file. Do not send a submission to an external AI API. Literature and citation lookups, if used, send only a generic query or a bibliographic identifier.
 - [ ] Enable ORCID. Enable the Crossref export plugin only once a membership and a DOI prefix exist.
 - [ ] Publish a privacy notice that meets the GDPR: what author and reviewer data are processed, for how long, on what basis, and that manuscripts are not used to train models.
 - [ ] Plan similarity-checking software ([SIMILARITY-CHECK TOOL]) and say on the site when it is actually in use. Until then the AI report field stays "not yet used".
@@ -139,7 +139,7 @@ Gold open access with a fixed article processing charge (APC) of 1000 PLN, charg
 - court fee for press registration (use the current court tariff);
 - hosting, backups, and a domain for [JOURNAL URL];
 - Crossref membership and deposits (current Crossref schedule);
-- the permitted AI deployment under a no-training contract;
+- the machines that host the journal's own open-weight models for Round 1;
 - similarity-checking software, when the budget allows;
 - editorial time, which is often unpaid at the start and should be acknowledged honestly;
 - legal advice for the registration, the publisher's form, and the GDPR notice;

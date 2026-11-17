@@ -112,8 +112,11 @@ Reviewers must have access to the data at submission. That includes the AI preli
 - The identifier resolves when the manuscript is submitted.
 - For an open deposit, the link in the manuscript and in the cover letter opens the files.
 - For a controlled-access deposit, the authors provide a review token, a time-limited account, or an equivalent route that works for the editorial office and for the reviewers throughout the review. The route is described in the cover letter.
-- The AI consistency check runs only on a permitted deployment, as the [Peer review policy](peer-review-policy.md) defines that term. Identifiable or pseudonymised participant-level data are not pasted into a public consumer model.
+- The AI consistency check runs only on the journal's locally hosted models, on infrastructure the journal controls. See the [Peer review policy](peer-review-policy.md). Identifiable or pseudonymised participant-level data are not sent to an external or third-party AI API.
+- Data under controlled access are processed only inside that local environment. A review token is used to read the files there. The files are not copied to an outside AI service in order to check the manuscript.
 - If the access terms or the ethics approval forbid showing a file to the model, a human member of the office does the numerical check against that file, and the report marks the model step "Not assessed" for that file and says why. The human reviewers still receive access.
+
+**Confidentiality and the GDPR.** This limit is a data-protection safeguard as well as a confidentiality rule. Where the dataset contains personal data, sending it to an external AI provider would be a transfer the journal does not make. The consistency check stays inside the journal's infrastructure. A literature or citation lookup, where the peer-review policy allows one, sends only a generic query or a bibliographic identifier. It does not send the dataset, the manuscript text, or anything that identifies the authors. Human reviewers are under the same prohibition: they do not upload the dataset or the manuscript to an external AI service. The model name, the version, and the infrastructure are written into the review record.
 
 A manuscript is not sent to human peer review while the data link does not resolve, the reviewers cannot open the files, or the controlled-access route is only a promise.
 

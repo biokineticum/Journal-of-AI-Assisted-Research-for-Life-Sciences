@@ -66,9 +66,10 @@ en:
     - title: AI preliminary review, then human peer review
       text: >-
         Round 1 is a labelled multi-agent preliminary review, inspired by
-        the ScholarPeer design and adapted for this journal, run only on a
-        local or enterprise model that does not train on submissions. A
-        person on the editorial staff checks the report before it is sent.
+        the ScholarPeer design and adapted for this journal. It runs only
+        on open-weight models the journal hosts itself. Manuscripts and
+        data are not sent to an external AI service. A person on the
+        editorial staff checks the report before it is sent.
         The report does not decide. Round 2 is human expert review. A human
         editor makes the final decision.
     - title: Gold open access
@@ -259,9 +260,10 @@ pl:
       text: >-
         Runda 1 to wieloskładnikowa wstępna recenzja AI, wyraźnie tak
         nazwana, wzorowana na projekcie ScholarPeer i dostosowana do tego
-        czasopisma, prowadzona wyłącznie na modelu lokalnym albo
-        korporacyjnym, który nie trenuje się na zgłoszeniach. Osoba z
-        redakcji sprawdza raport, zanim zostanie wysłany. Raport nie
+        czasopisma. Działa wyłącznie na modelach o otwartych wagach, które
+        czasopismo samo hostuje. Maszynopisu i danych nie wysyła się do
+        zewnętrznej usługi AI. Osoba z redakcji sprawdza raport, zanim
+        zostanie wysłany. Raport nie
         rozstrzyga. Runda 2 to ekspercka recenzja człowieka. Decyzję
         końcową podejmuje redaktor będący człowiekiem.
     - title: Złoty otwarty dostęp

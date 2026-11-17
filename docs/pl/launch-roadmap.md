@@ -24,7 +24,7 @@ Zasady stosują poniższe **ustalenia robocze**. Wydawca każde z nich potwierdz
 | Licencja artykułu | CC BY 4.0; prawa autorskie zostają przy autorach |
 | Model recenzji | pojedynczo anonimowa; dwóch recenzentów będących ludźmi po wstępnej recenzji AI |
 | Raport wstępnej recenzji AI | Raport ustrukturyzowany (streszczenie, mocne strony, słabe strony, pytania, ustalenia o zgodności danych, lista kontrolna), przekazywany autorom, recenzentom i redaktorom; niepublikowany wraz z artykułem. Raport nigdy nie stanowi decyzji |
-| Architektura rundy 1 | Potok wieloskładnikowy wzorowany na ScholarPeer (blog Google Research, 8 kwietnia 2026 r.). Wyłącznie inspiracja projektowa, nie zależność od dostawcy. Dostosowany, ponieważ tamtą ocenę prowadzono na artykułach z uczenia maszynowego |
+| Architektura rundy 1 | Potok wieloskładnikowy wzorowany na ScholarPeer (blog Google Research, 8 kwietnia 2026 r.). Wyłącznie inspiracja projektowa, nie zależność od dostawcy. Dostosowany, ponieważ tamtą ocenę prowadzono na artykułach z uczenia maszynowego. Wyłącznie modele o otwartych wagach hostowane przez czasopismo. Bez zewnętrznego API AI |
 | Depozyt danych | Depozyt FAIR zbioru zebranego przez ludzi i kodu analizy, z trwałym identyfikatorem, przed zgłoszeniem. Recenzenci i runda 1 mają dostęp w chwili zgłoszenia. Wrażliwe dane zdrowotne: tak otwarte, jak to możliwe, tak zamknięte, jak to konieczne |
 | Nazwa modelu przy artykule | Każde narzędzie, model i wersja są zapisane w dokumentacji redakcyjnej; drukowanie nazw przy artykule jest nierozstrzygnięte |
 | Styl cytowań | Vancouver (NLM / ICMJE) |
@@ -78,12 +78,12 @@ Należy użyć aktualnego, wspieranego wydania Open Journal Systems (PKP). Hosti
 - [ ] Konfiguracja listy kontrolnej zgłoszenia z [Wytycznych dla autorów](author-guidelines.md).
 - [ ] Wymóg dwóch gatunków plików uzupełniających: `AI Disclosure Statement` i `AI prompts and workflow`, według pól z [załącznika do wzoru](ai-disclosure-statement.md).
 - [ ] Wymóg oświadczenia o dostępności danych, identyfikatora repozytorium, licencji, książki kodowej i README oraz pól etyki i rejestracji (albo uzasadnionego „nie dotyczy”), konfliktów interesów i finansowania. Zgłoszenie nie jest kompletne, dopóki recenzenci nie mogą otworzyć depozytu.
-- [ ] Formularz recenzji zawierający pytania o nadzór nad AI z [Polityki recenzji](peer-review-policy.md) oraz obowiązkowe oświadczenie recenzenta, że maszynopisu nie wgrano do publicznego modelu konsumenckiego.
+- [ ] Formularz recenzji zawierający pytania o nadzór nad AI z [Polityki recenzji](peer-review-policy.md) oraz obowiązkowe oświadczenie recenzenta, że maszynopisu i danych nie wgrano do zewnętrznej usługi AI.
 - [ ] Konfiguracja dwuetapowego obiegu, który zespół rzeczywiście wykona: selekcja, wstępna recenzja AI, recenzja ludzka, decyzja człowieka. OJS nie zrobi tego samo; należy napisać jednostronicową notatkę wewnętrzną, kto uruchamia sprawdzenie i gdzie przechowuje się raport.
 - [ ] W tej notatce określić rundę 1 jako potok wieloskładnikowy z [Polityki recenzji](peer-review-policy.md): kontekst literatury, pominięte punkty odniesienia i zbiory, pytania weryfikujące twierdzenia, zgodność danych z maszynopisem (ponowne uruchomienie zdeponowanego kodu tam, gdzie się uruchamia), raportowanie i etyka względem standardu EQUATOR oraz sprawdzenie cytowań. Projekt jest wzorowany na ScholarPeer. Notatka stwierdza, że czasopismo nie kupuje tego produktu i od niego nie zależy oraz że opublikowaną ocenę prowadzono na artykułach z uczenia maszynowego.
-- [ ] Zapis każdego narzędzia, modelu i wersji użytych w przebiegu rundy 1 oraz przechowywanie tego dziennika wraz ze sprawdzonym przez człowieka raportem.
-- [ ] Przed uruchomieniem rundy 1 potwierdzenie, że sprawdzenie i recenzenci będący ludźmi mogą otworzyć depozyt, w tym ewentualną ścieżkę dostępu kontrolowanego. Nie wkleja się identyfikowalnych danych zdrowotnych do publicznego modelu konsumenckiego.
-- [ ] Wybór dopuszczalnego wdrożenia (lokalnego albo korporacyjnego, z pisemną umową o braku trenowania i ograniczonym przechowywaniu) przed opracowaniem pierwszego zgłoszenia. Zapis dostawcy i oznaczenia umowy w dokumentacji redakcyjnej.
+- [ ] Zapis każdego narzędzia, modelu i wersji użytych w przebiegu rundy 1 oraz infrastruktury, na której działały, i przechowywanie tego dziennika wraz ze sprawdzonym przez człowieka raportem.
+- [ ] Przed uruchomieniem rundy 1 potwierdzenie, że sprawdzenie i recenzenci będący ludźmi mogą otworzyć depozyt, w tym ewentualną ścieżkę dostępu kontrolowanego. Pliki o dostępie kontrolowanym czyta się wyłącznie na maszynach czasopisma.
+- [ ] Hostowanie modeli rundy 1 na infrastrukturze kontrolowanej przez czasopismo (modele o otwartych wagach, hostowane samodzielnie) przed opracowaniem pierwszego zgłoszenia. Zapis hosta oraz nazw i wersji modeli w dokumentacji redakcyjnej. Nie wysyła się zgłoszenia do zewnętrznego API AI. Wyszukania literatury i cytowań, jeżeli są użyte, wysyłają wyłącznie ogólne zapytanie albo identyfikator bibliograficzny.
 - [ ] Włączenie ORCID. Wtyczkę eksportu Crossref włącza się dopiero po członkostwie i prefiksie DOI.
 - [ ] Publikacja klauzuli informacyjnej zgodnej z RODO: jakie dane autorów i recenzentów są przetwarzane, jak długo, na jakiej podstawie, oraz że maszynopisy nie służą do trenowania modeli.
 - [ ] Zaplanowanie programu antyplagiatowego ([SIMILARITY-CHECK TOOL]) i podanie na stronie, gdy rzeczywiście działa. Do tego czasu pole raportu AI pozostaje „jeszcze nie użyto”.
@@ -139,7 +139,7 @@ Złoty otwarty dostęp ze stałą opłatą za przetworzenie artykułu (APC) w wy
 - opłatę sądową za rejestrację tytułu (aktualna taryfa sądowa);
 - hosting, kopie zapasowe i domenę dla [JOURNAL URL];
 - członkostwo i depozyty Crossref (aktualny cennik Crossref);
-- dopuszczalne wdrożenie AI na umowie o braku trenowania;
+- maszyny, które hostują własne modele czasopisma o otwartych wagach do rundy 1;
 - program antyplagiatowy, gdy budżet na to pozwoli;
 - czas redakcyjny, na starcie często nieodpłatny, co należy uczciwie powiedzieć;
 - poradę prawną przy rejestracji, formie wydawcy i klauzuli RODO;

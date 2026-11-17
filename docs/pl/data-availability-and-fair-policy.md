@@ -112,8 +112,11 @@ Recenzenci muszą mieć dostęp do danych w chwili zgłoszenia. Dotyczy to wstę
 - Identyfikator otwiera się w momencie zgłoszenia maszynopisu.
 - Przy depozycie otwartym link w maszynopisie i w liście przewodnim otwiera pliki.
 - Przy depozycie o dostępie kontrolowanym autorzy zapewniają token recenzyjny, konto na czas określony albo równoważną drogę, która działa dla redakcji i dla recenzentów przez cały czas recenzji. Drogę opisuje list przewodni.
-- Sprawdzenie zgodności przez AI działa wyłącznie na dopuszczalnym wdrożeniu, w rozumieniu [Polityki recenzji](peer-review-policy.md). Danych identyfikujących albo pseudonimowych na poziomie uczestnika nie wkleja się do publicznego modelu konsumenckiego.
+- Sprawdzenie zgodności przez AI działa wyłącznie na modelach hostowanych lokalnie przez czasopismo, na infrastrukturze, którą czasopismo kontroluje. Zob. [Politykę recenzji](peer-review-policy.md). Danych identyfikujących albo pseudonimowych na poziomie uczestnika nie wysyła się do zewnętrznego API AI, w tym API podmiotu trzeciego.
+- Dane o dostępie kontrolowanym przetwarza się wyłącznie w tym środowisku lokalnym. Token recenzyjny służy do odczytu plików tam. Plików nie kopiuje się do zewnętrznej usługi AI po to, aby sprawdzić maszynopis.
 - Jeżeli warunki dostępu albo zgoda komisji zabraniają pokazania pliku modelowi, członek redakcji będący człowiekiem wykonuje sprawdzenie liczb względem tego pliku, a raport oznacza krok modelu jako „Nie oceniano” dla tego pliku i podaje powód. Recenzenci będący ludźmi i tak otrzymują dostęp.
+
+**Poufność i RODO.** Ta granica jest zabezpieczeniem ochrony danych, a nie tylko zasadą poufności. Gdy zbiór zawiera dane osobowe, wysłanie go do zewnętrznego dostawcy AI byłoby przekazaniem, którego czasopismo nie dokonuje. Sprawdzenie zgodności zostaje wewnątrz infrastruktury czasopisma. Wyszukanie literatury albo cytowania, tam gdzie dopuszcza je polityka recenzji, wysyła wyłącznie ogólne zapytanie albo identyfikator bibliograficzny. Nie wysyła zbioru, tekstu maszynopisu ani niczego, co identyfikuje autorów. Recenzenci będący ludźmi podlegają temu samemu zakazowi: nie wgrywają zbioru ani maszynopisu do zewnętrznej usługi AI. Nazwa modelu, wersja i infrastruktura są wpisywane do dokumentacji recenzji.
 
 Maszynopisu nie wysyła się do recenzji ludzkiej, dopóki link do danych się nie otwiera, recenzenci nie mogą otworzyć plików albo ścieżka dostępu kontrolowanego jest jedynie obietnicą.
 
