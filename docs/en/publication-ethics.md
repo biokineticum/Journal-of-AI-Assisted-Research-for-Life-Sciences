@@ -21,7 +21,7 @@ The journal does not sell decisions. It does not guarantee acceptance. It does n
 Authors:
 
 - present an accurate account of the work and an objective discussion of its importance;
-- can show the raw data behind the results and deposit them as the [Author guidelines](author-guidelines.md) require;
+- can show the raw data behind the results and deposit the human-collected dataset and the analysis code as the [Data availability and FAIR policy](data-availability-and-fair-policy.md) requires, with a Data Availability Statement, and with access for the AI preliminary review and the human reviewers at submission;
 - submit original work, not a manuscript that is under review elsewhere or already published as an article (preprints are allowed);
 - disclose AI use in the mandatory statement, or state that no AI tool was used;
 - disclose competing interests and funding;
@@ -45,8 +45,8 @@ CRediT roles are published. A person who contributed but does not meet authorshi
 
 The following are misconduct:
 
-- **Fabrication** — inventing data, images, quotations, or results, including generation of those materials by an AI tool.
-- **Falsification** — altering primary data, images, or records so that the report misleads, including undisclosed splicing, generative enhancement, or selective deletion.
+- **Fabrication** — inventing data, images, quotations, or results, including generation of those materials by an AI tool, and a data figure or statistical plot produced as a generated image and presented as the output of the analysis.
+- **Falsification** — altering primary data, images, or records so that the report misleads, including undisclosed splicing, generative enhancement, selective deletion, or a number, statistic, or conclusion that does not match the deposited dataset.
 - **Plagiarism** — presenting another person's text, ideas, or data as one's own, including unattributed text taken from a model that reproduced a source.
 - **Undisclosed AI use** — any use covered by the AI policy that is absent from, or misrepresented in, the AI Disclosure Statement.
 - **Citation manipulation** — fabricated references, irrelevant citations inserted to inflate counts, and coerced citation.
@@ -58,7 +58,9 @@ Zero tolerance for undisclosed AI use means the journal always treats the breach
 
 Authors remain responsible for model output they submit. "The tool wrote it" is not a defence to a fabricated citation, a fabricated number, or a plagiarised paragraph.
 
-Image files may be examined for manipulation. Authors supply original captures when asked. Failure to supply them when the authors should have them is treated as an integrity concern.
+Image files may be examined for manipulation. Authors supply original captures when asked, and the code that builds each data figure. Failure to supply them when the authors should have them is treated as an integrity concern.
+
+A statement that the data are available, when the identifier does not resolve or the reviewers cannot open the files at submission, is a breach. Withholding the dataset from the AI preliminary review or from the human reviewers is an incomplete submission and, where the statement says otherwise, an integrity concern. The rule is the [Data availability and FAIR policy](data-availability-and-fair-policy.md). Sensitive health data remain as open as possible and as closed as necessary: a controlled-access route is lawful; a missing deposit is not.
 
 ## 5. Human participants, animals, and safety
 
@@ -115,7 +117,7 @@ Editors:
 - maintain confidentiality;
 - act on integrity concerns even when a paper has already been published, and even when the authors, a reviewer, or a board member would prefer silence;
 - publish corrections, expressions of concern, and retractions in a form that is linked to the article and is free to read;
-- keep a record of the model version and the human-checked AI report;
+- keep a record of every tool, model, and version used in the AI preliminary review, and of the human-checked report. The report is shared with the human reviewers and the editor. It never makes the decision;
 - do not overturn a sound negative decision because a funder, a sponsor, or the publisher prefers acceptance.
 
 **Editorial independence.** The publisher and any funder of the journal's operations do not overrule the editor on acceptance or rejection of a manuscript. The legal publisher remains responsible for the title under Polish press law once the title is registered. That responsibility is not a right to insert or remove scientific conclusions.
@@ -189,6 +191,7 @@ Board members are listed with their affiliations and ORCIDs. A person who has no
 ## 14. Related documents
 
 - [AI Use and Disclosure Policy](ai-use-and-disclosure-policy.md)
+- [Data availability and FAIR policy](data-availability-and-fair-policy.md)
 - [Peer review policy](peer-review-policy.md)
 - [Author guidelines](author-guidelines.md)
 - [Aims and scope](aims-and-scope.md)

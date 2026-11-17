@@ -57,9 +57,9 @@ Po ujawnieniu i po sprawdzeniu wyniku przez autora będącego człowiekiem narz�
 - zaproponowania układu części, którą autorzy następnie sprawdzają;
 - formatowania piśmiennictwa, po weryfikacji każdego źródła przez autorów;
 - proponowania zapytań wyszukiwawczych, podczas gdy ludzie projektują wyszukiwanie, przeglądają rekordy i ekstrahują dane;
-- pisania lub poprawiania kodu analitycznego, który autor będący człowiekiem przegląda, rozumie i uruchamia;
+- pisania lub poprawiania kodu analitycznego, który autor będący człowiekiem przegląda, rozumie i uruchamia, w tym kodu, który generuje ryciny danych i wykresy statystyczne ze zdeponowanych danych surowych;
 - transkrypcji rzeczywistych nagrań, po korekcie transkrypcji przez człowieka na podstawie nagrania i po weryfikacji każdego cytatu;
-- sporządzania wykresów, diagramów i wizualizacji z rzeczywistych danych autorów.
+- szkicowania schematów metodycznych, które nie pokazują obserwacji, oszacowań ani statystyk testowych. Narzędzie w rodzaju opisanego jako PaperVizAgent jest przykładem, nie wymogiem. Użycie jest ujawnione, a autor będący człowiekiem sprawdza schemat względem metod.
 
 Dozwolone użycie nie zmniejsza odpowiedzialności. Akapit w szkicu staje się tekstem autorów z chwilą zgłoszenia.
 
@@ -70,6 +70,8 @@ Następujące działania są podstawą odrzucenia, a po publikacji są rozpatryw
 - generowanie danych pierwotnych albo przedstawianie wyniku modelu jako pomiarów, odpowiedzi w kwestionariuszu, obrazów prób lub cytatów uczestników;
 - modyfikowanie danych pierwotnych w rozumieniu powyższej definicji, w tym generatywna imputacja punktów końcowych;
 - tworzenie lub „ulepszanie” obrazu danych pierwotnych tak, aby pokazywał szczegół, którego zapis nie zawierał;
+- sporządzenie ryciny danych albo wykresu statystycznego jako obrazu wygenerowanego, zamiast kodu uruchomionego na zdeponowanych danych surowych;
+- przedstawienie schematu narysowanego przez AI tak, jakby pokazywał wyniki pomiarów;
 - wskazanie narzędzia AI jako autora;
 - wstawienie cytowania, którego żaden autor będący człowiekiem nie otworzył i nie sprawdził;
 - wymyślenie grantodawcy, numeru zgody komisji, numeru rejestracji, identyfikatora repozytorium, recenzenta albo afiliacji;
@@ -84,9 +86,9 @@ Ujawnienie zastosowania zabronionego nie jest zezwoleniem. Informacja, że model
 
 Liniowa korekta jasności, kontrastu lub kadru jest dopuszczalna, gdy obejmuje cały obraz, nie ukrywa i nie wymyśla cech oraz jest opisana, jeżeli wpływa na interpretację. Sklejenia, jeżeli są nieuniknione, są oznaczone. Identyfikatory usuwa się przez kadr albo jednolitą maskę. Nie usuwa się ich wypełnieniem generatywnym.
 
-**Wykresy i inne wizualizacje rzeczywistych danych** mogą powstawać ze wsparciem AI. Autorzy ujawniają to użycie, sprawdzają, że każdy punkt, słupek, przedział i podpis zgadza się z wynikiem analizy, i deponują dane oraz kod potrzebne do odtworzenia ryciny.
+**Ryciny danych i wykresy statystyczne** — każde przedstawienie obserwacji, oszacowań albo statystyk testowych, w tym wykresy rozrzutu, słupkowe, leśne, krzywe przeżycia i wykresy Blanda–Altmana — powstają z odtwarzalnego kodu na podstawie zdeponowanych danych surowych. Nie są obrazami wygenerowanymi. Model obrazu ich nie rysuje, także wtedy, gdy narzędzie potrafi wyemitować i ilustrację, i wykres. Autorzy deponują skrypt, dane wejściowe, które czyta, i wersje oprogramowania, a autor będący człowiekiem, który skrypt uruchomił, sprawdza każdy punkt, słupek, przedział i podpis względem tego wyniku.
 
-**Schematy**, które nie przedstawiają danych pierwotnych (na przykład schemat przebiegu badania), mogą powstawać ze wsparciem AI, muszą być sprawdzone i muszą znaleźć się w oświadczeniu.
+**Schematy metodyczne**, które nie pokazują obserwacji ani oszacowań (schemat przebiegu badania, sekwencja pomiaru, diagram pojęciowy), mogą powstawać ze wsparciem AI. Narzędzia w rodzaju opisanego jako PaperVizAgent, w tej samej nocie Google Research z kwietnia 2026 r., która opisuje ScholarPeer, są przykładem takiej pomocy. Nie są wymagane, a czasopismo nie zależy od tego produktu. Autorzy ujawniają narzędzie, wersję i numery rycin, a autor będący człowiekiem sprawdza, że schemat zgadza się z metodami. Czasopismo nie przyjmuje ścieżki generowania obrazu dla wykresu statystycznego, także z narzędzia, które taką ścieżkę również oferuje.
 
 Ryciny złożone wskazują, czym jest każdy panel. Czasopismo może poprosić o oryginalne, nieprzetworzone pliki obrazów.
 
@@ -94,11 +96,11 @@ Ryciny złożone wskazują, czym jest każdy panel. Czasopismo może poprosić o
 
 Narzędzia AI nie generują ani nie modyfikują danych pierwotnych.
 
-Dane surowe deponuje się w publicznym repozytorium (na przykład Zenodo, Figshare, Dryad, OSF albo repozytorium dziedzinowe, takie jak Sequence Read Archive). Oświadczenie o dostępności danych podaje nazwę repozytorium i trwały identyfikator. Autorzy potwierdzają, że mają dostęp do danych surowych i że zdeponowane pliki są danymi stojącymi za wynikami.
+Zbiór zebrany przez ludzi i kod analizy deponuje się przed zgłoszeniem według [Dostępności danych i zasad FAIR](data-availability-and-fair-policy.md): zaufane repozytorium, trwały identyfikator (DOI z Zenodo, OSF, Figshare, Dryad albo numer akcesyjny dziedzinowy), bogate metadane, formaty otwarte albo standardowe, książka kodowa, README i jasna licencja (CC BY 4.0 albo CC0 dla danych, chyba że zasada prywatności wymaga innego reżimu otwartego albo kontrolowanego). Oświadczenie o dostępności danych jest wymagane. Podaje repozytorium, identyfikator, licencję i to, co zdeponowano.
 
-Wyjątki ze względu na prywatność, bezpieczeństwo biologiczne lub porównywalną barierę prawną rozstrzyga redaktor będący człowiekiem przed przyjęciem pracy. Nadal wymagane są: największy możliwy zbiór do upublicznienia, książka kodowa i ścieżka dostępu kontrolowanego. Sama formuła „dostępne na uzasadniony wniosek” nie spełnia tej polityki. Wrażliwe dane ludzkie lub genomiczne trafiają do właściwego repozytorium o dostępie kontrolowanym, gdy wymaga tego prawo. Numer akcesyjny jest publikowany.
+Wrażliwe dane zdrowotne są tak otwarte, jak to możliwe, i tak zamknięte, jak to konieczne. Pseudonimizacja w rozumieniu RODO nie jest anonimizacją. Ścieżka dostępu kontrolowanego jest dopuszczalna, gdy ustawa, treść zgody albo bezpieczeństwo biologiczne czynią upublicznienie bezprawnym lub niebezpiecznym. Redaktor i recenzenci, w tym wstępna recenzja AI, i tak mają dostęp w chwili zgłoszenia. Sama formuła „dostępne na uzasadniony wniosek” nie spełnia tej polityki.
 
-Kod analizy jest zdeponowany i czytelny dla badacza z danej dziedziny. Kod pisany ze wsparciem AI jest ujawniony. Odpowiedzialność ponosi autor będący człowiekiem, który kod rozumie i który go uruchomił. Kod, którego autorzy nie potrafią objaśnić, jest niedopuszczalny.
+Kod analizy jest zdeponowany i czytelny dla badacza z danej dziedziny. Kod pisany ze wsparciem AI jest ujawniony. Odpowiedzialność ponosi autor będący człowiekiem, który kod rozumie i który go uruchomił. Kod, którego autorzy nie potrafią objaśnić, jest niedopuszczalny. Skrypty budujące ryciny danych są częścią tego depozytu.
 
 Wybory statystyczne — w tym imputacja — są określone przez ludzi, opisane i odróżnione od danych surowych. Wynik modelu generatywnego nie jest zbiorem imputowanym.
 
@@ -173,7 +175,7 @@ Czytelnik nie powinien domyślać się, które części procesu obejmowały mode
 
 Własne wykorzystanie AI przez czasopismo jest ograniczone, oznaczone i prowadzone wyłącznie na dopuszczalnym wdrożeniu.
 
-**Runda 1 — wstępna recenzja AI.** W zgłoszeniach mieszczących się w zakresie redakcja przeprowadza wstępną recenzję nazwanym modelem i wersją. Recenzja obejmuje kompletność i strukturę, obecność i wystarczalność ujawnienia AI, zgodność tekstu ze zdeponowanymi danymi, sprawdzenie cytowań, plagiat i inne sygnały ostrzegawcze oraz obecność oświadczeń etycznych. Powstaje pisemny raport. Członek redakcji będący człowiekiem czyta raport, zanim zostanie on wysłany, usuwa każdy zarzut, którego nie potrafi potwierdzić, i odnotowuje to sprawdzenie. Raport otrzymują autorzy i redaktorzy, a następnie recenzenci będący ludźmi. Nie jest to decyzja o wartości naukowej, nowości ani o przyjęciu.
+**Runda 1 — wstępna recenzja AI.** W zgłoszeniach mieszczących się w zakresie redakcja przeprowadza wieloskładnikową wstępną recenzję na dopuszczalnym wdrożeniu. Projekt jest wzorowany na ScholarPeer (Yoon i Pfister, blog Google Research, 8 kwietnia 2026 r.). Jest to źródło projektu, a nie zależność od tego produktu ani od dostawcy. ScholarPeer oceniano na artykułach z uczenia maszynowego, więc to czasopismo je dostosowuje i dodaje sprawdzenia dla maszynopisów z nauk o życiu. Składniki to: kontekst literatury (historyk poddziedziny), poszukiwanie pominiętych punktów odniesienia i zbiorów, wielowątkowe pytania i odpowiedzi weryfikujące twierdzenia oraz trzy sprawdzenia właściwe temu czasopismu — zgodność danych z maszynopisem (każda liczba, statystyka i wniosek sprawdzone ponownie względem zdeponowanego zbioru FAIR i kodu, z ponownym przeliczeniem analiz tam, gdzie kod da się uruchomić), zgodność ze standardem raportowania przez EQUATOR Network (CONSORT, STROBE, PRISMA, ARRIVE, SPIRIT i pozostałe wymienione w wytycznych dla autorów) wraz ze zgodą komisji i rejestracją badania, oraz istnienie i trafność cytowań, nakierowane na halucynowane pozycje. Wynikiem jest jeden ustrukturyzowany raport: streszczenie, mocne strony, słabe strony, pytania do autorów, ustalenia o zgodności danych i lista kontrolna. Każde narzędzie, model i wersja użyte w przebiegu są zapisywane w raporcie i ujawniane w dokumentacji redakcyjnej. Członek redakcji będący człowiekiem czyta raport, zanim zostanie on wysłany, usuwa każdy zarzut, którego nie potrafi potwierdzić, i odnotowuje to sprawdzenie. Raport otrzymują recenzenci będący ludźmi i redaktor oraz autorzy. Raport nigdy nie stanowi decyzji. Specyfikacja jest w [Polityce recenzji](peer-review-policy.md).
 
 **Redaktorzy.** Redaktor będący człowiekiem decyduje, czy zgłoszenie przechodzi dalej, co autorzy mają uzupełnić, i jaki jest wynik końcowy. Redaktorzy nie wklejają zgłoszeń do publicznych modeli konsumenckich.
 
@@ -181,7 +183,7 @@ Własne wykorzystanie AI przez czasopismo jest ograniczone, oznaczone i prowadzo
 
 **Wersje poprawione.** Redakcja może użyć dopuszczalnego modelu, aby porównać poprawkę z listem decyzyjnym i z poprzednim tekstem. Redaktor czyta to porównanie i decyduje, czy recenzenci mają zobaczyć poprawkę ponownie.
 
-**Dokumentacja.** Redakcja przechowuje nazwę i wersję modelu, datę, rodzaj wdrożenia, prompt użyty do kontroli redakcyjnej oraz raport po redakcji człowieka.
+**Dokumentacja.** Redakcja przechowuje każde narzędzie, model i wersję użyte w przebiegu, datę, rodzaj wdrożenia, prompt użyty do kontroli redakcyjnej oraz raport po redakcji człowieka.
 
 Czasopismo nie zezwala, aby zgłoszone maszynopisy, recenzje ani listy decyzyjne służyły jako dane treningowe.
 
@@ -197,6 +199,7 @@ Autorzy, którzy sami zauważą pominięcie, niezwłocznie zawiadamiają redakto
 ## 16. Dokumenty powiązane
 
 - [Oświadczenie o wykorzystaniu AI (wzór)](ai-disclosure-statement.md)
+- [Dostępność danych i zasady FAIR](data-availability-and-fair-policy.md)
 - [Polityka recenzji](peer-review-policy.md)
 - [Wytyczne dla autorów](author-guidelines.md)
 - [Etyka publikacyjna](publication-ethics.md)

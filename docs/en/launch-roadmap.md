@@ -23,8 +23,10 @@ The policies use the following **working defaults**. The publisher confirms or r
 | Access model | Gold open access: no submission fee; fixed APC of 1000 PLN after acceptance; no fee waivers; reviewer discount vouchers (amount set by the editorial office and published on the site) |
 | Article licence | CC BY 4.0; authors retain copyright |
 | Peer-review model | Single-anonymised; two human reviewers after the AI preliminary review |
-| AI preliminary report | Shared with authors, reviewers, and editors; not published with the article |
-| Model name on the article | Recorded in the editorial file; printing it on the article is undecided |
+| AI preliminary report | Structured report (summary, strengths, weaknesses, questions, data-consistency findings, checklist), shared with authors, reviewers, and editors; not published with the article. The report never makes the decision |
+| Round 1 architecture | Multi-agent pipeline inspired by ScholarPeer (Google Research blog, 8 April 2026). Design inspiration only, not a vendor dependency. Adapted because that evaluation was on machine-learning papers |
+| Data deposit | FAIR deposit of the human-collected dataset and the analysis code, with a persistent identifier, before submission. Reviewers and Round 1 have access at submission. Sensitive health data: as open as possible, as closed as necessary |
+| Model name on the article | Every tool, model, and version is logged in the editorial file; printing the names on the article is undecided |
 | Reference style | Vancouver (NLM / ICMJE) |
 | Publication rhythm | Continuous publication, one volume per calendar year. The court application asks for frequency: this description has to match the form. |
 | Legal publisher | [PUBLISHER LEGAL NAME] — not yet decided in this repository |
@@ -71,13 +73,16 @@ Use a current, supported release of Open Journal Systems (PKP). Host it on HTTPS
 
 - [ ] Install the English locale as the publication language and the Polish locale for the public policies and the interface.
 - [ ] Masthead: title, publisher, address, editor-in-chief, board, [EMAIL], ISSN once assigned.
-- [ ] Publish the adopted aims and scope, AI policy, disclosure template, peer-review policy, author guidelines, and ethics policy in both languages.
+- [ ] Publish the adopted aims and scope, AI policy, disclosure template, peer-review policy, author guidelines, data availability and FAIR policy, and ethics policy in both languages.
 - [ ] State on the site: gold open access, a fixed APC of 1000 PLN charged only after acceptance, no submission fee, licence CC BY 4.0, copyright retained by authors, and the current reviewer-voucher discount.
 - [ ] Configure the submission checklist from the [Author guidelines](author-guidelines.md).
 - [ ] Require two supplementary genres: `AI Disclosure Statement` and `AI prompts and workflow`, using the fields in the [template appendix](ai-disclosure-statement.md).
-- [ ] Require the data identifier, ethics and registration fields (or a reasoned "not applicable"), competing interests, and funding.
+- [ ] Require the data availability statement, the repository identifier, the licence, the codebook, and the README, plus ethics and registration fields (or a reasoned "not applicable"), competing interests, and funding. A submission is not complete while reviewers cannot open the deposit.
 - [ ] Add a review form that includes the AI-oversight questions from the [Peer review policy](peer-review-policy.md), and a required reviewer declaration that the manuscript was not uploaded to a public consumer model.
-- [ ] Configure a two-stage workflow the staff can actually follow: triage, AI preliminary review, human review, human decision. OJS will not do this by itself; write a one-page internal operating note that names who runs the model and where the report is stored.
+- [ ] Configure a two-stage workflow the staff can actually follow: triage, AI preliminary review, human review, human decision. OJS will not do this by itself; write a one-page internal operating note that names who runs the check and where the report is stored.
+- [ ] In that note, specify Round 1 as the multi-agent pipeline in the [Peer review policy](peer-review-policy.md): literature context, missed baselines and datasets, claim-verification questions, data–manuscript consistency (re-run the deposited code where it runs), reporting and ethics against the EQUATOR guideline, and citation checks. The design is inspired by ScholarPeer. The note states that the journal does not buy or depend on that product, and that the published evaluation was on machine-learning papers.
+- [ ] Log every tool, model, and version used in a Round 1 run, and store that log with the human-checked report.
+- [ ] Before Round 1 runs, confirm that the check and the human reviewers can open the deposit, including any controlled-access route. Do not paste identifiable health data into a public consumer model.
 - [ ] Select the permitted deployment (local or enterprise, with a written no-training and limited-retention agreement) before the first submission is processed. Record the provider and the contract reference in the editorial file.
 - [ ] Enable ORCID. Enable the Crossref export plugin only once a membership and a DOI prefix exist.
 - [ ] Publish a privacy notice that meets the GDPR: what author and reviewer data are processed, for how long, on what basis, and that manuscripts are not used to train models.
@@ -91,7 +96,7 @@ Use a current, supported release of Open Journal Systems (PKP). Host it on HTTPS
 - [ ] Open submissions only after phases A, B, and C are far enough along that an author can read the rules, the board, the licence, and the contact address, and the title is registered before publication.
 - [ ] Write a call for papers that describes the human-data rule and the AI disclosure. Do not promise indexing, impact factors, or decision times the journal has not set.
 - [ ] For the first articles, the editor reads every AI preliminary report and at least two human reviews, and keeps the correspondence.
-- [ ] Publish each article with the AI Disclosure Statement, the prompts supplement, the data identifier, the licence, and the sentence on how the manuscript was reviewed.
+- [ ] Publish each article with the AI Disclosure Statement, the prompts supplement, the Data Availability Statement, the data identifier, the licence, and the sentence on how the manuscript was reviewed.
 - [ ] Proofread the Polish and English policy pages against each other after any last-minute change.
 
 ## 6. Phase E — DOI, preservation, Google Scholar
@@ -150,7 +155,8 @@ Possible sources, to be chosen by the publisher: the APC, a host institution, a 
 ## 9. Claims the journal will not make
 
 - That it has an impact factor, a CiteScore, a DOAJ Seal, or an index membership before the notice is real.
-- That review is "AI-powered" in place of human review. The accurate sentence is: an AI preliminary review, then human peer review, then a human decision.
+- That review is "AI-powered" in place of human review, or that Round 1 is Google's ScholarPeer or any other named product. The accurate sentence is: a multi-agent preliminary review inspired by that published design and adapted for this journal, then human peer review, then a human decision. The AI report is not the decision.
+- That a data figure was drawn by a model. Data figures and statistical plots come from code run on the deposited data. A schematic may be AI-assisted only when it does not display data, and only with disclosure.
 - That acceptance is likely, fast, or for sale.
 - That the editorial board includes a person who has not agreed, or that [EDITOR-IN-CHIEF NAME] has been appointed before they have.
 - That a policy in this repository is in force while its status line still says "draft".
@@ -164,5 +170,6 @@ Possible sources, to be chosen by the publisher: the APC, a host institution, a 
 | AI disclosure statement | [ai-disclosure-statement.md](ai-disclosure-statement.md) | [ai-disclosure-statement.md](../pl/ai-disclosure-statement.md) |
 | Peer review | [peer-review-policy.md](peer-review-policy.md) | [peer-review-policy.md](../pl/peer-review-policy.md) |
 | Author guidelines | [author-guidelines.md](author-guidelines.md) | [author-guidelines.md](../pl/author-guidelines.md) |
+| Data availability and FAIR | [data-availability-and-fair-policy.md](data-availability-and-fair-policy.md) | [data-availability-and-fair-policy.md](../pl/data-availability-and-fair-policy.md) |
 | Publication ethics | [publication-ethics.md](publication-ethics.md) | [publication-ethics.md](../pl/publication-ethics.md) |
 | This checklist | [launch-roadmap.md](launch-roadmap.md) | [launch-roadmap.md](../pl/launch-roadmap.md) |

@@ -10,7 +10,7 @@
 
 Czasopismo prowadzi dwie rundy recenzji o różnych zadaniach.
 
-- **Runda 1** to wstępna recenzja AI. Wykonuje ją model, jest tak nazwana i sprawdza kompletność, ujawnienie, zgodność, cytowania oraz sygnały ostrzegawcze.
+- **Runda 1** to wstępna recenzja AI. Jest to sprawdzenie wieloskładnikowe, wyraźnie tak nazwane, wzorowane na projekcie ScholarPeer i dostosowane do tego czasopisma (część 5). Sprawdza kontekst literatury, pominięte punkty odniesienia i zbiory, twierdzenia, zgodność maszynopisu ze zdeponowanymi danymi, raportowanie i etykę oraz cytowania. Nie rozstrzyga losu pracy.
 - **Runda 2** to recenzja ekspercka ludzi. Recenzenci oceniają metodykę, interpretację i nowość oraz wypowiadają się, czy wykorzystanie AI i nadzór człowieka wyglądają na wystarczające.
 - **Decyzję** podejmuje redaktor będący człowiekiem. Model nie przyjmuje, nie kieruje do poprawy i nie odrzuca maszynopisu.
 
@@ -54,18 +54,46 @@ Jeżeli maszynopis jest poza zakresem, redaktor odrzuca go z krótkim uzasadnien
 
 ### 5.1 Czym jest
 
-Redakcja przeprowadza ustrukturyzowane sprawdzenie nazwanym modelem i wersją na dopuszczalnym wdrożeniu. Sprawdzenie obejmuje pytania ze wzoru raportu na końcu tej polityki. Dotyczy:
+Redakcja przeprowadza ustrukturyzowaną, wieloskładnikową wstępną recenzję na dopuszczalnym wdrożeniu. Projekt jest wzorowany na ScholarPeer, agencie recenzyjnym opisanym przez Jinsunga Yoona i Tomasa Pfistera we wpisie na blogu Google Research „Improving the academic workflow: introducing two AI agents for better figures and peer review” (8 kwietnia 2026 r.): [research.google/blog](https://research.google/blog/improving-the-academic-workflow-introducing-two-ai-agents-for-better-figures-and-peer-review/).
 
-- kompletności i struktury maszynopisu;
-- obecności i wystarczalności ujawnienia AI, w tym pliku z promptami i oświadczenia o weryfikacji;
-- zgodności tekstu, tabel, rycin i zdeponowanych danych, w granicach tego, na co pozwalają pliki;
-- sprawdzenia cytowań (czy wskazane pozycje wydają się istnieć i — w sprawdzeniu próby albo całości — wspierać twierdzenia);
-- plagiatu i innych sygnałów naruszenia rzetelności, łącznie z programem antyplagiatowym czasopisma, gdy ta usługa już działa;
-- obecności i konkretności oświadczeń o etyce, zgodzie, rejestracji i konfliktach interesów.
+Ten wpis jest źródłem projektu. Nie jest zależnością. Czasopismo nie wymaga ScholarPeer, Google ani żadnego innego nazwanego produktu. Składniki poniżej można zrealizować tymi dopuszczalnymi modelami i skryptami, które redakcja zapisze w dzienniku. ScholarPeer, w opisie z tego wpisu, oceniano na artykułach z uczenia maszynowego i na zbiorach do automatycznej recenzji. Nie oceniano go jako recenzenta maszynopisów z nauk o zdrowiu, o sporcie ani z innych nauk o życiu. To czasopismo dostosowuje tę architekturę do takich maszynopisów i dodaje sprawdzenia, których opublikowany opis nie przewiduje.
+
+Każde narzędzie, model i wersja użyte w przebiegu są wpisywane do raportu i do dokumentacji redakcyjnej. Przebieg, który ich nie nazywa, nie jest zakończoną rundą 1.
+
+Potok ma następujące składniki. Każdy wpisuje się do tego samego raportu. Żaden nie rekomenduje przyjęcia ani odrzucenia.
+
+**Kontekst literatury (historyk poddziedziny).** Krótka, oparta na źródłach notatka o poddziedzinie, w której maszynopis się sytuuje, sporządzona z opublikowanej literatury. Jest kontekstem dla późniejszych sprawdzeń. Nie jest przeglądem literatury, który czasopismo publikuje, i nie jest werdyktem o nowości.
+
+**Pominięte punkty odniesienia i zbiory.** Poszukiwanie standardowych zbiorów, komparatorów albo metod odniesienia, których maszynopis nie wymienia. Trafienie jest pytaniem do autorów albo do recenzentów. Nie jest ustaleniem, że autorzy zawiedli.
+
+**Wielowątkowa weryfikacja twierdzeń.** Pytania i odpowiedzi o twierdzenia, obejmujące schemat, pomiar, analizę i interpretację. Każda odpowiedź wskazuje fragment tekstu albo plik. Rozbieżność między odpowiedzią a maszynopisem zapisuje się jako pytanie, nie jako decyzję.
+
+**Zgodność danych z maszynopisem.** Ten składnik jest właściwy temu czasopismu. Każdą liczbę, każdą statystykę i każdy wniosek w maszynopisie sprawdza się względem zdeponowanego zbioru i zdeponowanego kodu, według [Dostępności danych i zasad FAIR](data-availability-and-fair-policy.md). Sprawdzenie obejmuje maszynopis szkicowany z użyciem AI. Tam, gdzie zdeponowany kod da się uruchomić na dopuszczalnym wdrożeniu, analizy przelicza się ponownie, a wynik porównuje z tekstem, tabelami i rycinami danych. Wartość, której nie da się przeliczyć, oznacza się jako „Nie oceniano”, z powodem (brak pliku, kod, który się nie uruchamia, albo dane, których wdrożenie nie może przechowywać). Ustalenia trafiają do części raportu o zgodności danych.
+
+**Raportowanie, etyka i rejestracja.** Ten składnik jest właściwy temu czasopismu. Maszynopis sprawdza się względem standardu raportowania pasującego do schematu. Listą roboczą jest tabela w [Wytycznych dla autorów](author-guidelines.md): CONSORT, STROBE, PRISMA, ARRIVE, SPIRIT i pozostałe tam wymienione. [EQUATOR Network](https://www.equator-network.org/) jest indeksem, z którego redakcja potwierdza, który standard i która aktualna wersja mają zastosowanie. Sprawdzenie pyta także, czy zgoda komisji oraz rejestracja badania lub protokołu są obecne i konkretne, albo czy obecne jest uzasadnione „nie dotyczy”.
+
+**Istnienie i trafność cytowań.** Ten składnik jest właściwy temu czasopismu. Pozycje sprawdza się pod kątem istnienia, a cytowany fragment — pod kątem twierdzenia, przy którym stoi. Celem jest wychwycenie halucynowanych pozycji i cytowań, które nie wspierają zdania. Pozycja, której sprawdzający nie może otworzyć, jest „Nie oceniano”. Nie oznacza się jej jako zmyślonej. Człowiek potwierdza każdą pozycję, którą stawia się autorom jako brakującą albo nietrafną, jak wymaga część 5.3.
+
+Ten sam przebieg nadal obejmuje kompletność i strukturę, obecność i wystarczalność ujawnienia AI (w tym plik z promptami i oświadczenie o weryfikacji) oraz plagiat i inne sygnały naruszenia rzetelności, łącznie z programem antyplagiatowym czasopisma, gdy ta usługa już działa. Te pytania są na liście kontrolnej na końcu tej polityki.
+
+Maszynopisu i zbioru nie wysyła się do publicznego modelu konsumenckiego po to, aby uruchomić te składniki. Wyszukiwanie literatury korzysta ze źródeł opublikowanych. Nie umieszcza maszynopisu, danych ani informacji o uczestnikach w zapytaniu do usługi poza dopuszczalnym wdrożeniem. Jeżeli wdrożenie nie potrafi wyszukiwać, redakcja dostarcza pakiet literatury, a raport to stwierdza.
+
+Wynikiem jest jeden ustrukturyzowany raport:
+
+- streszczenie;
+- mocne strony;
+- słabe strony;
+- pytania do autorów;
+- ustalenia o zgodności danych;
+- lista kontrolna z załącznika.
+
+Sprawdzony raport otrzymują recenzenci będący ludźmi i redaktor, a także autorzy, jak opisuje część 5.4. Raport nigdy nie stanowi decyzji. Decyzję podejmuje redaktor będący człowiekiem.
 
 ### 5.2 Czym nie jest
 
 Wstępna recenzja nie ocenia, czy badanie warto było przeprowadzić, czy schemat był właściwy ani czy interpretacja jest najlepsza z dostępnych. Nie potwierdza, że eksperyment się odbył. Nie uwierzytelnia obrazów. Nie rozstrzyga losu maszynopisu.
+
+Mocne strony, słabe strony i pytania są materiałem dla recenzentów będących ludźmi i dla redaktora. Nie są oceną punktową. Płynnie napisana słabość pozostaje tylko tropem, dopóki człowiek jej nie sprawdzi.
 
 Wynik modelu może być błędny. Cytowanie oznaczone jako zmyślone, ślad plagiatu albo rozbieżność liczbowa są tropem dla człowieka, a nie ustaleniem, dopóki człowiek ich nie sprawdzi.
 
@@ -81,7 +109,7 @@ Autorów nie prosi się o odpowiedź na niepotwierdzony zarzut AI.
 
 ### 5.4 Kto otrzymuje raport
 
-Sprawdzony raport trafia do autorów i do redaktora prowadzącego. Trafia do recenzentów rundy 2 wraz z maszynopisem. Pozostaje w dokumentacji redakcyjnej razem z wersją modelu, datą, rodzajem wdrożenia i promptem redakcji.
+Sprawdzony raport trafia do autorów i do redaktora prowadzącego. Trafia do recenzentów rundy 2 wraz z maszynopisem. Pozostaje w dokumentacji redakcyjnej razem z każdym narzędziem, modelem i wersją użytymi w przebiegu, datą, rodzajem wdrożenia i promptem redakcji. Jedna nazwa modelu, gdy jeden model przygotował narrację i nie użyto innych, jest zapisana właśnie tak.
 
 W tym projekcie raportu nie publikuje się wraz z artykułem. Artykuł stwierdza, że wstępna recenzja AI się odbyła. Rada może później zdecydować o publikowaniu raportów. Ten wybór jest wymieniony w [harmonogramie uruchomienia](launch-roadmap.md).
 
@@ -91,13 +119,13 @@ Model nie rekomenduje przyjęcia ani odrzucenia. Redaktor będący człowiekiem 
 
 - **Przekazać do recenzji ludzkiej.**
 - **Zwrócić do uzupełnienia.** Redaktor wskazuje autorom, czego brakuje (na przykład niepodpisanej weryfikacji, martwego linku do danych, brakującego numeru zgody). To nie jest poprawka naukowa.
-- **Eskalować.** Redaktor podejmuje sygnał naruszenia rzetelności — taki jak potwierdzone przez pracownika zmyślone cytowanie, liczby niezgodne z tabelą albo brak oświadczenia etycznego przy badaniu, które go wymaga — i prowadzi sprawę według [Etyki publikacyjnej](publication-ethics.md). Raport AI jest źródłem sprawdzeń, nie wyrokiem.
+- **Eskalować.** Redaktor podejmuje sygnał naruszenia rzetelności — taki jak potwierdzone przez pracownika zmyślone cytowanie, liczby albo wnioski niezgodne ze zdeponowanymi danymi lub z przeliczoną analizą, rycina danych dostarczona jako obraz wygenerowany albo brak oświadczenia etycznego przy badaniu, które go wymaga — i prowadzi sprawę według [Etyki publikacyjnej](publication-ethics.md). Raport AI jest źródłem sprawdzeń, nie wyrokiem.
 
 ## 6. Między rundami
 
 Autorzy poproszeni o uzupełnienie formalne składają tekst ze śledzeniem zmian i krótką odpowiedź. Redakcja potwierdza, że luki wskazane przez redaktora zostały zamknięte. Dopuszczalny model może pomóc w tym potwierdzeniu. Redaktor przekazuje plik recenzentom.
 
-Maszynopisu nie wysyła się do rundy 2, dopóki brakuje ujawnienia AI, link do danych surowych się nie otwiera albo brakuje wymaganego oświadczenia o etyce lub rejestracji bez przyjętego wyjaśnienia.
+Maszynopisu nie wysyła się do rundy 2, dopóki brakuje ujawnienia AI, identyfikator danych się nie otwiera, recenzenci nie mogą otworzyć depozytu (w tym ścieżki dostępu kontrolowanego) albo brakuje wymaganego oświadczenia o etyce lub rejestracji bez przyjętego wyjaśnienia. Zob. [Dostępność danych i zasady FAIR](data-availability-and-fair-policy.md).
 
 ## 7. Runda 2 — ekspercka recenzja ludzka
 
@@ -109,9 +137,11 @@ Recenzenci otrzymują:
 
 - maszynopis i ryciny;
 - oświadczenie o wykorzystaniu AI i plik z promptami;
-- dostęp do zdeponowanych danych i kodu albo do ścieżki dostępu wyłącznie na czas recenzji;
-- sprawdzony raport wstępnej recenzji AI;
+- dostęp do zdeponowanych danych i kodu albo do ścieżki dostępu wyłącznie na czas recenzji, otwarty już w chwili zgłoszenia;
+- sprawdzony raport wstępnej recenzji AI, w tym ustalenia o zgodności danych;
 - pytania z tej polityki.
+
+Zgłoszenie, którego danych recenzenci nie mogą otworzyć, nie przechodzi do rundy 2.
 
 Proponowany termin raportu to 21 dni. Redakcja wysyła jedno przypomnienie. Recenzenta, który nie może skończyć, zastępuje się. Tożsamości zastępcy nie ujawnia się autorom, jeżeli recenzja jest anonimowa.
 
@@ -122,13 +152,13 @@ Recenzent, który ukończy recenzję, otrzymuje voucher rabatowy na APC własneg
 Recenzenci wypowiadają się o tym:
 
 1. czy schemat badania może odpowiedzieć na pytanie i czy metody są opisane dostatecznie, aby badanie powtórzyć;
-2. czy analiza odpowiada schematowi i czy liczby w tekście zgadzają się z tabelami i rycinami;
+2. czy analiza odpowiada schematowi i czy liczby w tekście zgadzają się z tabelami, rycinami oraz z częścią raportu AI o zgodności danych;
 3. czy interpretacja mieści się w danych;
 4. co badanie wnosi, bez mylenia nowości z powodem, aby pominąć rzetelny wynik zerowy;
 5. czy etyka, zgoda, rejestracja i dostępność danych są wystarczające dla danego schematu;
 6. **czy ujawnione użycie AI jest właściwe i czy nadzór człowieka wygląda na wystarczający** względem tekstu, kodu, rycin, liczb i cytowań;
 7. czy któreś cytowanie nie istnieje albo nie wspiera twierdzenia;
-8. czy jest ślad, że dane pierwotne lub obrazy danych pierwotnych zostały wygenerowane albo zmienione przez model.
+8. czy jest ślad, że dane pierwotne, obrazy danych pierwotnych albo rycina danych zostały wygenerowane albo zmienione przez model. Wykres statystyczny dostarczony jako obraz wygenerowany, a nie jako wynik zdeponowanego kodu, jest takim śladem.
 
 Recenzentów nie prosi się o ponowne uruchomienie każdej analizy. Prosi się ich, aby powiedzieli, jeżeli zdeponowany materiał nie wystarcza do podparcia twierdzeń.
 
@@ -181,11 +211,12 @@ Skargi na postępowanie, stronniczość albo nieujawnione użycie AI prowadzi si
 
 Opublikowany artykuł stwierdza, że recenzja obejmowała wstępną recenzję AI i ekspercką recenzję ludzką oraz że decyzję podjął redaktor będący człowiekiem. Nie podaje nazwisk recenzentów, chyba że podpisali recenzję, a rada zgodziła się ten podpis opublikować.
 
-Nazwa i wersja modelu użytego w rundzie 1 są zapisane w dokumentacji redakcyjnej. Rada przed uruchomieniem decyduje, czy nazwa modelu jest także drukowana przy artykule. Do tej decyzji publiczne zdanie nie wymyśla nazwy modelu. Zob. [harmonogram uruchomienia](launch-roadmap.md).
+Każde narzędzie, model i wersja użyte w rundzie 1 są zapisane w dokumentacji redakcyjnej i w raporcie. Rada przed uruchomieniem decyduje, czy te nazwy są także drukowane przy artykule. Do tej decyzji publiczne zdanie nie wymyśla nazwy modelu. Zob. [harmonogram uruchomienia](launch-roadmap.md).
 
 ## 14. Dokumenty powiązane
 
 - [Polityka wykorzystania i ujawniania AI](ai-use-and-disclosure-policy.md)
+- [Dostępność danych i zasady FAIR](data-availability-and-fair-policy.md)
 - [Etyka publikacyjna](publication-ethics.md)
 - [Wytyczne dla autorów](author-guidelines.md)
 
@@ -207,13 +238,49 @@ Redakcja kopiuje ten wzór dla każdego maszynopisu. Tekst w nawiasach jest zast
 | Identyfikator maszynopisu | [ID] |
 | Tytuł | [TYTUŁ] |
 | Data uruchomienia modelu | [RRRR-MM-DD] |
-| Model i wersja | [MODEL I WERSJA] |
 | Wdrożenie | [lokalne / korporacyjne — dostawca]. Brak trenowania i ograniczone przechowywanie: [tak, oznaczenie umowy] |
 | Wersja promptu redakcji | [identyfikator promptu wewnętrznego, przechowywany w dokumentacji] |
 | Osoba sprawdzająca | [ROLA, nie nazwisko recenzenta publicznego — np. redakcja]. Data sprawdzenia: [RRRR-MM-DD] |
 | Program antyplagiatowy | [NAZWA I WERSJA NARZĘDZIA albo „jeszcze nie użyto”] |
+| Dane widziane przy sprawdzeniu | [depozyt otwarty / ścieżka dostępu kontrolowanego / wyłącznie człowiek dla nazwanych plików]. Identyfikator: [DOI ALBO NUMER AKCESYJNY] |
 
-**Informacja dla autorów i recenzentów.** Model nie decyduje o przyjęciu. Nie ustala, że badanie się odbyło. Sygnały poniżej są pytaniami tylko tam, gdzie osoba sprawdzająca je potwierdziła. Pozycje oznaczone „nie potwierdzono” nie wymagają odpowiedzi.
+**Narzędzia, modele i wersje użyte w tym przebiegu.** Jeden wiersz na składnik. Jeżeli jeden model wykonał każdy składnik, należy to napisać w każdym wierszu. Składnik, którego nie uruchomiono, oznacza się „nie uruchomiono” z powodem.
+
+| Składnik | Narzędzie lub model | Wersja | Co mógł zobaczyć |
+| --- | --- | --- | --- |
+| Kontekst literatury (historyk poddziedziny) | | | Wyłącznie literatura opublikowana / pakiet literatury od redakcji |
+| Pominięte punkty odniesienia i zbiory | | | |
+| Wielowątkowa weryfikacja twierdzeń | | | |
+| Zgodność danych z maszynopisem | | | Zdeponowany zbiór i kod, w granicach warunków dostępu |
+| Raportowanie, etyka i rejestracja | | | Maszynopis, lista kontrolna, standard EQUATOR: [NAZWA, WERSJA] |
+| Istnienie i trafność cytowań | | | |
+| Złożenie narracji tego raportu | | | |
+
+**Informacja dla autorów i recenzentów.** Model nie decyduje o przyjęciu. Nie ustala, że badanie się odbyło. Mocne strony, słabe strony i pytania nie są oceną punktową. Sygnały poniżej są pytaniami tylko tam, gdzie osoba sprawdzająca je potwierdziła. Pozycje oznaczone „nie potwierdzono” nie wymagają odpowiedzi.
+
+### Streszczenie
+
+[Pięć do dziesięciu zdań. Czego dotyczy maszynopis, co sprawdzono względem depozytu i czego nie sprawdzono.]
+
+### Mocne strony
+
+[Punkty, które osoba sprawdzająca godzi się zostawić w raporcie. Bez pochwały, której sprawdzający nie przeczytał.]
+
+### Słabe strony
+
+[Punkty. Każdy wskazuje fragment, plik albo wiersz listy kontrolnej. Pozycje niepotwierdzone tu nie występują.]
+
+### Pytania do autorów
+
+[Pytania numerowane, które wynikają z potwierdzonych luk. Żadnego pytania, które powtarza niepotwierdzony zarzut.]
+
+### Ustalenia o zgodności danych
+
+| Pozycja w maszynopisie | Wartość wydrukowana | Wartość z depozytu albo z ponownego przeliczenia | Przeliczono ponownie? | Wynik |
+| --- | --- | --- | --- | --- |
+| [np. streszczenie, punkt końcowy główny] | | | [tak / nie przeliczono — powód] | [zgodne / rozbieżne / nie oceniano] |
+
+Analizy przeliczone ponownie: [lista skryptów albo „żadna — powód”]. Wnioski, które nie wynikają z przeliczonych albo zdeponowanych liczb: [brak / lista].
 
 ### Lista kontrolna
 
@@ -226,15 +293,15 @@ Należy użyć wartości **Spełnione**, **Luka** albo **Nie oceniano**. Przy ka
 | 3 | Oświadczenie o wykorzystaniu AI jest obecne i podaje narzędzia, wersje, tryb dostępu, zastosowania, plik z promptami oraz osoby, które wykonały weryfikację. | | |
 | 4 | Oświadczenie zgadza się z maszynopisem (narzędzia wspomniane w tekście są ujawnione; ujawnione zastosowania widać tam, gdzie je wskazano). | | |
 | 5 | Jeżeli zadeklarowano brak AI, nic w pliku tej deklaracji nie zaprzecza. | | |
-| 6 | Oświadczenie o dostępności danych podaje repozytorium i identyfikator. Identyfikator się otwiera albo opisano, dlaczego się nie otwiera. | | |
-| 7 | Sprawdzenie wyrywkowe: liczby w streszczeniu i wynikach zgadzają się z tabelami i rycinami. Wymienić każdą rozbieżność. | | |
-| 8 | Sprawdzenie wyrywkowe: kompetentny czytelnik może powiązać opisane analizy ze zdeponowanymi plikami. | | |
-| 9 | Cytowania: podać, ile sprawdzono i jaką metodą. Wymienić pozycje, które wydają się nie istnieć albo nie wspierać twierdzenia, tylko jeżeli listę potwierdziła osoba sprawdzająca. | | |
+| 6 | Oświadczenie o dostępności danych podaje repozytorium, trwały identyfikator, licencję i pliki (zbiór, kod, książkę kodową, README). Identyfikator się otwiera. Wstępna recenzja AI i recenzenci będący ludźmi mogą otworzyć depozyt albo ścieżka dostępu kontrolowanego jest opisana i dla nich otwarta. | | |
+| 7 | Każdą liczbę, statystykę i wniosek w streszczeniu, wynikach, tabelach, rycinach i dyskusji sprawdzono względem zdeponowanego zbioru i kodu. Podać, które analizy przeliczono ponownie i których nie dało się przeliczyć. Wymienić każdą rozbieżność. | | |
+| 8 | Obecne są formaty otwarte albo standardowe, książka kodowa i README, a kompetentny czytelnik mógłby powtórzyć opisane analizy z depozytu. | | |
+| 9 | Cytowania: podać, ile sprawdzono pod kątem istnienia i tego, czy cytowany fragment wspiera twierdzenie, oraz jaką metodą. Wymienić pozycje, które wydają się nie istnieć albo nie wspierać twierdzenia, tylko jeżeli listę potwierdziła osoba sprawdzająca. Pozycji nieotwartej nie oznacza się jako zmyślonej. | | |
 | 10 | Badanie podobieństwa / plagiatu: narzędzie, wynik punktowy jeżeli jest, oraz wniosek osoby sprawdzającej. Zbieżność ograniczoną do szablonowych metod należy tak opisać. | | |
 | 11 | Etyka, zgoda, dobrostan zwierząt, zezwolenia oraz rejestracja badania lub protokołu są obecne i konkretne albo obecne jest uzasadnione „nie dotyczy”. | | |
 | 12 | Konflikty interesów i finansowanie są podane, w tym „brak”, jeżeli takie jest twierdzenie. | | |
-| 13 | Zasady rycin: obrazy danych pierwotnych są przedstawione jako oryginalne zapisy; wykresy wspomagane przez AI są ujawnione; żaden oczywisty artefakt generatywny nie pozostaje bez opisu. Model nie może uwierzytelnić obrazu. | | |
-| 14 | Wskazano właściwy standard raportowania (CONSORT, STROBE, ARRIVE, PRISMA albo inny z wytycznych dla autorów), a lista kontrolna jest dołączona, gdy standard jej oczekuje. | | |
+| 13 | Zasady rycin: obrazy danych pierwotnych są oryginalnymi zapisami; schemat metodyczny wspomagany przez AI jest ujawniony i nie pokazuje danych; ryciny danych i wykresy statystyczne pochodzą ze zdeponowanego kodu i nie są obrazami wygenerowanymi. Model nie może uwierzytelnić obrazu. | | |
+| 14 | Wskazano właściwy standard raportowania z EQUATOR Network (CONSORT, STROBE, ARRIVE, PRISMA, SPIRIT albo inny z wytycznych dla autorów), wersja jest aktualna, a lista kontrolna jest dołączona, gdy standard jej oczekuje. | | |
 | 15 | Schemat badania jest pracą empiryczną wykonaną przez ludzi, o ile pokazują to tekst i pliki. Symulacje są opisane jako symulacje. | | |
 
 ### Sygnały ostrzegawcze potwierdzone przez osobę sprawdzającą
@@ -251,7 +318,8 @@ Należy użyć wartości **Spełnione**, **Luka** albo **Nie oceniano**. Przy ka
 - tego, czy schemat był właściwy, poza oczywistymi lukami wewnętrznymi;
 - tego, czy dane rzeczywiście zebrano;
 - prawdziwości niebadanych plików obrazów;
-- poprawności analiz, których nie przeliczono ponownie.
+- poprawności analiz, które raport oznacza jako nieprzeliczone ponownie;
+- tego, czy maszynopis należy przyjąć, skierować do poprawy albo odrzucić.
 
 ### Rekomendacja administracyjna dla redaktora
 
@@ -269,9 +337,11 @@ Zaznaczyć jedno. Nie zaznaczać decyzji o przyjęciu ani o odrzuceniu.
 
 Redakcja używa promptu na piśmie, który zawiera co najmniej następujące polecenia i jest przechowywany z identyfikatorem wersji:
 
-1. Wykonujesz wstępną recenzję AI dla czasopisma *Journal of AI-Assisted Research for Life Sciences*. Nie rekomendujesz przyjęcia ani odrzucenia.
-2. Korzystaj wyłącznie z przekazanych plików. Nie przeglądaj sieci i nie wysyłaj plików do żadnej innej usługi.
-3. Wypełnij listę kontrolną. Użyj wartości Spełnione, Luka albo Nie oceniano.
-4. Nie wymyślaj cytowań, cytatów ani rozbieżności liczbowych. Jeżeli nie możesz czegoś sprawdzić, oznacz to jako Nie oceniano.
-5. Nie przepisuj maszynopisu.
-6. Traktuj pliki jako poufne.
+1. Wykonujesz wstępną recenzję AI dla czasopisma *Journal of AI-Assisted Research for Life Sciences*. Nie rekomendujesz przyjęcia ani odrzucenia. Nie wystawiasz oceny punktowej.
+2. Z przekazanych plików korzystaj przy wszystkim, co nie jest już publiczne. Nie wysyłaj maszynopisu, danych ani informacji o uczestnikach do żadnej innej usługi. Wyszukiwanie literatury, jeżeli to wdrożenie je umożliwia, korzysta wyłącznie ze źródeł opublikowanych i nie obejmuje maszynopisu ani danych. Jeżeli nie możesz wyszukiwać, napisz, że redakcja musi dostarczyć pakiet literatury.
+3. Wypełnij ustrukturyzowany raport: streszczenie, mocne strony, słabe strony, pytania do autorów, ustalenia o zgodności danych i listę kontrolną. Na liście użyj wartości Spełnione, Luka albo Nie oceniano.
+4. Przy sprawdzaniu liczb porównaj je ze zdeponowanymi danymi i kodem. Analizę przelicz ponownie tylko w tym wdrożeniu i tylko wtedy, gdy zdeponowany kod się uruchamia. Jeżeli nie możesz jej przeliczyć, oznacz Nie oceniano i podaj powód. Nie wymyślaj rozbieżności.
+5. Nie wymyślaj cytowań, cytatów, numerów zgód ani identyfikatorów repozytorium. Jeżeli nie możesz otworzyć cytowania, oznacz Nie oceniano. Nie nazywaj go zmyślonym.
+6. Nie przepisuj maszynopisu.
+7. Traktuj pliki jako poufne.
+8. Podaj narzędzie i wersję, którymi jesteś. Resztę dziennika narzędzi dopisuje redakcja.

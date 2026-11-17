@@ -21,7 +21,7 @@ Czasopismo nie sprzedaje decyzji. Nie gwarantuje przyjęcia. Nie eksponuje wska�
 Autorzy:
 
 - przedstawiają rzetelny opis pracy i rzeczowe omówienie jej znaczenia;
-- potrafią pokazać dane surowe stojące za wynikami i deponują je tak, jak wymagają [Wytyczne dla autorów](author-guidelines.md);
+- potrafią pokazać dane surowe stojące za wynikami i deponują zbiór zebrany przez ludzi oraz kod analizy tak, jak wymaga [Dostępność danych i zasady FAIR](data-availability-and-fair-policy.md), z oświadczeniem o dostępności danych oraz z dostępem dla wstępnej recenzji AI i recenzentów będących ludźmi w chwili zgłoszenia;
 - zgłaszają pracę oryginalną, a nie maszynopis recenzowany gdzie indziej albo już opublikowany jako artykuł (preprinty są dopuszczalne);
 - ujawniają użycie AI w obowiązkowym oświadczeniu albo stwierdzają, że nie użyto żadnego narzędzia AI;
 - ujawniają konflikty interesów i finansowanie;
@@ -45,8 +45,8 @@ Role CRediT są publikowane. Osobę, która wniosła wkład, lecz nie spełnia k
 
 Naruszeniem są:
 
-- **Fabrykowanie** — wymyślanie danych, obrazów, cytatów albo wyników, w tym generowanie tych materiałów przez narzędzie AI.
-- **Fałszowanie** — zmiana danych pierwotnych, obrazów lub zapisów tak, aby raport wprowadzał w błąd, w tym nieujawnione sklejanie, ulepszanie generatywne albo wybiórcze usuwanie.
+- **Fabrykowanie** — wymyślanie danych, obrazów, cytatów albo wyników, w tym generowanie tych materiałów przez narzędzie AI, oraz rycina danych albo wykres statystyczny sporządzony jako obraz wygenerowany i przedstawiony jako wynik analizy.
+- **Fałszowanie** — zmiana danych pierwotnych, obrazów lub zapisów tak, aby raport wprowadzał w błąd, w tym nieujawnione sklejanie, ulepszanie generatywne, wybiórcze usuwanie albo liczba, statystyka lub wniosek, które nie zgadzają się ze zdeponowanym zbiorem.
 - **Plagiat** — przedstawianie cudzego tekstu, cudzych myśli lub cudzych danych jako własnych, w tym nieoznaczonego tekstu przejętego z modelu, który odtworzył źródło.
 - **Nieujawnione użycie AI** — każde użycie objęte polityką AI, którego brakuje w oświadczeniu albo które jest w oświadczeniu przedstawione niezgodnie z prawdą.
 - **Manipulacja cytowaniami** — zmyślone pozycje, cytowania nieistotne wstawione w celu podbicia liczników oraz cytowania wymuszone.
@@ -58,7 +58,9 @@ Zerowa tolerancja dla nieujawnionego użycia AI oznacza, że czasopismo zawsze t
 
 Autorzy odpowiadają za wynik modelu, który zgłaszają. „Napisało to narzędzie” nie jest obroną wobec zmyślonego cytowania, zmyślonej liczby albo plagiatu.
 
-Pliki obrazów mogą być badane pod kątem manipulacji. Autorzy dostarczają oryginalne zapisy, gdy zostaną o nie poproszeni. Niedostarczenie ich, gdy autorzy powinni je mieć, traktuje się jako sygnał naruszenia rzetelności.
+Pliki obrazów mogą być badane pod kątem manipulacji. Autorzy dostarczają oryginalne zapisy, gdy zostaną o nie poproszeni, oraz kod, który buduje każdą rycinę danych. Niedostarczenie ich, gdy autorzy powinni je mieć, traktuje się jako sygnał naruszenia rzetelności.
+
+Oświadczenie, że dane są dostępne, podczas gdy identyfikator się nie otwiera albo recenzenci nie mogą otworzyć plików w chwili zgłoszenia, jest naruszeniem. Zatrzymanie zbioru przed wstępną recenzją AI albo przed recenzentami będącymi ludźmi jest zgłoszeniem niekompletnym, a gdy oświadczenie mówi inaczej — sygnałem naruszenia rzetelności. Zasadą jest [Dostępność danych i zasady FAIR](data-availability-and-fair-policy.md). Wrażliwe dane zdrowotne pozostają tak otwarte, jak to możliwe, i tak zamknięte, jak to konieczne: ścieżka dostępu kontrolowanego jest zgodna z prawem; brak depozytu nie jest.
 
 ## 5. Uczestnicy badań, zwierzęta i bezpieczeństwo
 
@@ -115,7 +117,7 @@ Redaktorzy:
 - dochowują poufności;
 - działają w sprawach rzetelności także wtedy, gdy artykuł już opublikowano, i także wtedy, gdy autorzy, recenzent albo członek rady woleliby milczenie;
 - publikują sprostowania, wyrażenia zaniepokojenia i retrakcje w postaci powiązanej z artykułem i dostępnej bez opłat;
-- przechowują zapis wersji modelu i raportu AI sprawdzonego przez człowieka;
+- przechowują zapis każdego narzędzia, modelu i wersji użytych we wstępnej recenzji AI oraz raportu sprawdzonego przez człowieka. Raport otrzymują recenzenci będący ludźmi i redaktor. Raport nigdy nie stanowi decyzji;
 - nie zmieniają zasadnej decyzji odmownej dlatego, że grantodawca, sponsor albo wydawca woli przyjęcie.
 
 **Niezależność redakcyjna.** Wydawca i ewentualny podmiot finansujący działalność czasopisma nie uchylają decyzji redaktora o przyjęciu albo odrzuceniu maszynopisu. Wydawca prawny pozostaje odpowiedzialny za tytuł na gruncie prawa prasowego po rejestracji tytułu. Ta odpowiedzialność nie jest prawem do dopisywania lub usuwania wniosków naukowych.
@@ -189,6 +191,7 @@ Członków rady wymienia się z afiliacjami i ORCID. Osoby, która nie zgodziła
 ## 14. Dokumenty powiązane
 
 - [Polityka wykorzystania i ujawniania AI](ai-use-and-disclosure-policy.md)
+- [Dostępność danych i zasady FAIR](data-availability-and-fair-policy.md)
 - [Polityka recenzji](peer-review-policy.md)
 - [Wytyczne dla autorów](author-guidelines.md)
 - [Cele i zakres](aims-and-scope.md)

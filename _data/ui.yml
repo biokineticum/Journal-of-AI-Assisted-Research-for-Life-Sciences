@@ -26,7 +26,8 @@ en:
       People do the study. A generative tool may help write the paper from
       the real data, the code, and the notes. It does not generate or modify
       primary data, it is never an author, and it does not decide acceptance.
-      Raw data are deposited in a public repository.
+      The human-collected dataset and the analysis code are deposited under
+      the FAIR principles, as open as possible and as closed as necessary.
     - >-
       Readers should be able to see what was done, who is accountable, which
       tools were used, and where the raw data are. That is the journal’s
@@ -45,11 +46,11 @@ en:
     - title: AI-assisted writing from real data
       text: >-
         Generative tools may help draft or revise text, edit language,
-        translate, write analysis code that a human reviews, and build plots
-        from the real dataset. They do not generate or modify primary data.
-        Primary-data images are original captures. Plots drawn from the real
-        data may be AI-assisted if that use is disclosed and a human has
-        checked them.
+        translate, and write analysis code that a human reviews. They do not
+        generate or modify primary data. Primary-data images are original
+        captures. A schematic that does not display data may be AI-assisted
+        if that use is disclosed. Data figures and statistical plots are
+        produced by code from the deposited raw data, not as generated images.
     - title: Humans are the only authors
       text: >-
         Named people take responsibility for the content, the numbers, the
@@ -64,11 +65,12 @@ en:
         who checked the facts, the numbers, and the citations.
     - title: AI preliminary review, then human peer review
       text: >-
-        Round 1 is an AI preliminary review, labelled as such, run only on a
+        Round 1 is a labelled multi-agent preliminary review, inspired by
+        the ScholarPeer design and adapted for this journal, run only on a
         local or enterprise model that does not train on submissions. A
         person on the editorial staff checks the report before it is sent.
-        Round 2 is human expert review. A human editor makes the final
-        decision. A model does not accept, revise, or reject a manuscript.
+        The report does not decide. Round 2 is human expert review. A human
+        editor makes the final decision.
     - title: Gold open access
       text: >-
         No submission fee. A fixed article processing charge (APC) of
@@ -131,7 +133,7 @@ en:
     - label: AI disclosure
       text: Every submission includes a statement, including when no tool was used.
     - label: AI first round, then human review
-      text: A labelled preliminary review, checked by a person, then human experts. A human editor decides.
+      text: A labelled multi-agent preliminary review, checked by a person, then human experts. The report does not decide.
     - label: ISSN
       text: "[placeholder]"
   hero_alt: >-
@@ -211,8 +213,9 @@ pl:
       Badanie wykonują ludzie. Narzędzie generatywne może pomóc napisać
       artykuł na podstawie rzeczywistych danych, kodu i notatek. Nie generuje
       ani nie modyfikuje danych pierwotnych, nigdy nie jest autorem i nie
-      decyduje o przyjęciu. Dane surowe deponuje się w publicznym
-      repozytorium.
+      decyduje o przyjęciu. Zbiór zebrany przez ludzi i kod analizy
+      deponuje się według zasad FAIR: tak otwarte, jak to możliwe, i tak
+      zamknięte, jak to konieczne.
     - >-
       Czytelnik ma widzieć, co zostało zrobione, kto odpowiada za treść,
       jakich narzędzi użyto i gdzie leżą dane surowe. Takie są zasady
@@ -233,12 +236,13 @@ pl:
     - title: Pisanie wspomagane przez AI na podstawie rzeczywistych danych
       text: >-
         Narzędzia generatywne mogą pomóc szkicować lub poprawiać tekst,
-        redagować język, tłumaczyć, pisać kod analityczny sprawdzany przez
-        człowieka oraz sporządzać wykresy z rzeczywistego zbioru. Nie
-        generują ani nie modyfikują danych pierwotnych. Obrazy danych
-        pierwotnych są oryginalnymi zapisami. Wykresy z rzeczywistych danych
-        mogą powstawać ze wsparciem AI, jeżeli to wsparcie jest ujawnione, a
-        człowiek je sprawdził.
+        redagować język, tłumaczyć oraz pisać kod analityczny sprawdzany
+        przez człowieka. Nie generują ani nie modyfikują danych pierwotnych.
+        Obrazy danych pierwotnych są oryginalnymi zapisami. Schemat, który
+        nie pokazuje danych, może powstawać ze wsparciem AI, jeżeli to
+        wsparcie jest ujawnione. Ryciny danych i wykresy statystyczne
+        powstają z kodu na podstawie zdeponowanych danych surowych, a nie
+        jako obrazy wygenerowane.
     - title: Autorami są wyłącznie ludzie
       text: >-
         Wskazani z imienia i nazwiska ludzie odpowiadają za treść, liczby,
@@ -253,12 +257,13 @@ pl:
         zastosowanie oraz osoby, które sprawdziły fakty, liczby i cytowania.
     - title: Wstępna recenzja AI, potem recenzja ekspercka człowieka
       text: >-
-        Runda 1 to wstępna recenzja AI, wyraźnie tak nazwana, prowadzona
-        wyłącznie na modelu lokalnym albo korporacyjnym, który nie trenuje
-        się na zgłoszeniach. Osoba z redakcji sprawdza raport, zanim zostanie
-        wysłany. Runda 2 to ekspercka recenzja człowieka. Decyzję końcową
-        podejmuje redaktor będący człowiekiem. Model nie przyjmuje, nie
-        kieruje do poprawy i nie odrzuca maszynopisu.
+        Runda 1 to wieloskładnikowa wstępna recenzja AI, wyraźnie tak
+        nazwana, wzorowana na projekcie ScholarPeer i dostosowana do tego
+        czasopisma, prowadzona wyłącznie na modelu lokalnym albo
+        korporacyjnym, który nie trenuje się na zgłoszeniach. Osoba z
+        redakcji sprawdza raport, zanim zostanie wysłany. Raport nie
+        rozstrzyga. Runda 2 to ekspercka recenzja człowieka. Decyzję
+        końcową podejmuje redaktor będący człowiekiem.
     - title: Złoty otwarty dostęp
       text: >-
         Brak opłaty za zgłoszenie. Stała opłata za przetworzenie artykułu
@@ -322,7 +327,7 @@ pl:
     - label: Ujawnienie AI
       text: Każde zgłoszenie zawiera oświadczenie, także gdy nie użyto żadnego narzędzia.
     - label: Najpierw runda AI, potem recenzja człowieka
-      text: Wstępna recenzja AI, sprawdzona przez redakcję, a następnie eksperci. Decyzję podejmuje człowiek.
+      text: Wieloskładnikowa wstępna recenzja AI, sprawdzona przez redakcję, a następnie eksperci. Raport nie rozstrzyga.
     - label: ISSN
       text: "[placeholder]"
   hero_alt: >-

@@ -157,8 +157,8 @@ def main():
                 ERRORS.append(f"{path}: Markdown link was not rewritten: {href}")
 
     source_docs = sorted((REPO / "docs").rglob("*.md"))
-    if len(source_docs) != 14:
-        ERRORS.append(f"expected 14 policy files, found {len(source_docs)}")
+    if len(source_docs) != 16:
+        ERRORS.append(f"expected 16 policy files, found {len(source_docs)}")
 
     for source in source_docs:
         rel = source.relative_to(REPO).as_posix()
@@ -198,6 +198,7 @@ def main():
             f"{BASE}/docs/en/ai-disclosure-statement/",
             f"{BASE}/docs/en/peer-review-policy/",
             f"{BASE}/docs/en/author-guidelines/",
+            f"{BASE}/docs/en/data-availability-and-fair-policy/",
             f"{BASE}/docs/en/publication-ethics/",
             f"{BASE}/docs/en/launch-roadmap/",
             f"{BASE}/pl/",
@@ -206,6 +207,7 @@ def main():
                 ERRORS.append(f"English home is missing href {href}")
         for href in (
             f"{BASE}/docs/pl/aims-and-scope/",
+            f"{BASE}/docs/pl/data-availability-and-fair-policy/",
             f"{BASE}/docs/pl/launch-roadmap/",
             f"{BASE}/",
         ):
