@@ -28,10 +28,10 @@
 - slug: peer-review-policy
   en:
     title: Peer review policy
-    summary: The two review rounds, confidentiality, the human decision, and the template for the AI preliminary-review report.
+    summary: The two review rounds, the ScholarPeer-inspired first round, confidentiality, the human decision, and the report template.
   pl:
     title: Polityka recenzji
-    summary: Dwie rundy recenzji, poufność, decyzja człowieka oraz wzór raportu wstępnej recenzji AI.
+    summary: Dwie rundy recenzji, pierwsza runda wzorowana na ScholarPeer, poufność, decyzja człowieka oraz wzór raportu.
 
 - slug: author-guidelines
   en:
@@ -40,6 +40,14 @@
   pl:
     title: Wytyczne dla autorów
     summary: Rodzaje artykułów, wymagania dotyczące danych i etyki oraz lista kontrolna zgłoszenia.
+
+- slug: data-availability-and-fair-policy
+  en:
+    title: Data availability and FAIR policy
+    summary: Mandatory FAIR deposition of the human-collected dataset and the analysis code, the data availability statement, and controlled access for sensitive health data.
+  pl:
+    title: Dostępność danych i zasady FAIR
+    summary: Obowiązkowy depozyt FAIR zbioru zebranego przez ludzi i kodu analizy, oświadczenie o dostępności danych oraz dostęp kontrolowany dla wrażliwych danych zdrowotnych.
 
 - slug: publication-ethics
   en:

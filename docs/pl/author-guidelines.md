@@ -6,7 +6,7 @@
 
 **Język:** polski · [English version](../en/author-guidelines.md)
 
-To wymogi minimalne zgłoszenia. Maszynopisy, które ich nie spełniają, są zwracane albo odrzucane na etapie selekcji. Zob. także [Cele i zakres](aims-and-scope.md), [Politykę wykorzystania i ujawniania AI](ai-use-and-disclosure-policy.md) oraz [Etykę publikacyjną](publication-ethics.md).
+To wymogi minimalne zgłoszenia. Maszynopisy, które ich nie spełniają, są zwracane albo odrzucane na etapie selekcji. Zob. także [Cele i zakres](aims-and-scope.md), [Politykę wykorzystania i ujawniania AI](ai-use-and-disclosure-policy.md), [Dostępność danych i zasady FAIR](data-availability-and-fair-policy.md) oraz [Etykę publikacyjną](publication-ethics.md).
 
 ## 1. Kto może zgłosić pracę
 
@@ -20,9 +20,9 @@ Zgłoszenie jest kompletne tylko wtedy, gdy spełnione są wszystkie poniższe w
 
 1. Pracę empiryczną wykonali ludzie albo maszynopis jest przeglądem systematycznym lub listem w rozumieniu poniżej.
 2. [Oświadczenie o wykorzystaniu AI](ai-disclosure-statement.md) jest kompletne, a plik z promptami jest dołączony, jeżeli użyto narzędzia.
-3. Dane surowe są zdeponowane i identyfikator się otwiera albo redaktor już zatwierdził wyjątek dostępu kontrolowanego, a recenzenci mogą dotrzeć do danych.
+3. Zbiór zebrany przez ludzi i kod analizy są zdeponowane według [Dostępności danych i zasad FAIR](data-availability-and-fair-policy.md). Identyfikator się otwiera. Wstępna recenzja AI i recenzenci będący ludźmi mogą otworzyć depozyt w chwili zgłoszenia, w tym ścieżkę dostępu kontrolowanego, którą redaktor już przyjął.
 4. Tam, gdzie mają zastosowanie, podane są etyka, zgoda, dobrostan zwierząt, zezwolenia i rejestracja.
-5. Obrazy danych pierwotnych są oryginalnymi zapisami.
+5. Obrazy danych pierwotnych są oryginalnymi zapisami. Ryciny danych i wykresy statystyczne powstają z kodu na podstawie zdeponowanych danych, a nie jako obrazy wygenerowane.
 6. Podane są konflikty interesów, finansowanie i wkład autorów.
 7. Zastosowano standard raportowania pasujący do schematu, a jego listę kontrolną wgrano tam, gdzie taka lista istnieje.
 
@@ -70,7 +70,7 @@ Należy użyć części właściwych dla rodzaju artykułu, w tej kolejności.
 5. **Metody** — schemat, miejsce, uczestnicy lub materiał, kryteria włączenia i wyłączenia, zmienne, pomiar, uzasadnienie liczebności próby, plan analizy, oprogramowanie i wersje, odstępstwa od protokołu oraz etyka. Kod wspomagany przez AI jest wskazany tutaj i w oświadczeniu.
 6. **Wyniki** — kto został włączony, ustalenia i niepewność. Bez interpretacji należącej do Dyskusji. Bez danych, których nie ma w zdeponowanym zbiorze.
 7. **Dyskusja** — co oznaczają ustalenia, porównanie z wcześniejszymi pracami, ograniczenia i wniosek mieszczący się w schemacie.
-8. **Oświadczenie o dostępności danych** — zob. część 7.
+8. **Oświadczenie o dostępności danych** — wymagane; zob. część 7.
 9. **Oświadczenie etyczne** — zob. część 8.
 10. **Odesłanie do użycia AI** — jedno zdanie wymagane przez politykę AI.
 11. **Wkład autorów** — role CRediT.
@@ -104,32 +104,36 @@ Badania interwencyjne rejestruje się w publicznym rejestrze przed włączeniem 
 
 ## 7. Dostępność danych
 
-### 7.1 Co się deponuje
+Pełna zasada jest w [Dostępności danych i zasadach FAIR](data-availability-and-fair-policy.md). Ta część jest minimum, które zgłoszenie już musi spełniać. Zbiór to dane zebrane przez ludzi, na których opiera się artykuł. Maszynopis może być napisany z użyciem AI. Liczby w nim sprawdza się względem tego depozytu.
 
-Dane surowe deponuje się przed zgłoszeniem: nagrania, arkusze, obrazy lub transkrypcje potrzebne do powtórzenia analiz oraz książkę kodową określającą każdą zmienną, jednostkę i kod braku danych. Deponuje się kod analizy, a przy rycinie zbudowanej skryptem — to, co potrzebne do jej odtworzenia.
+### 7.1 Co się deponuje, przed zgłoszeniem
 
-Właściwe repozytoria to między innymi Zenodo, Figshare, Dryad, OSF oraz repozytoria dziedzinowe (na przykład Sequence Read Archive, Gene Expression Omnibus albo repozytorium o dostępie kontrolowanym, takie jak European Genome-phenome Archive, gdy danych nie można zgodnie z prawem upublicznić). Repozytorium nadaje trwały identyfikator. Zbiór cytuje się w piśmiennictwie.
+Deponuje się zbiór potrzebny do powtórzenia opisanych analiz, kod analizy (w tym każdy skrypt, który buduje rycinę danych albo wykres statystyczny), słownik danych (książkę kodową) i README. Repozytorium jest zaufane i nadaje trwały identyfikator. Ustalenie robocze to DOI. Właściwe repozytoria to między innymi Zenodo, OSF, Figshare, Dryad oraz repozytoria dziedzinowe (na przykład Sequence Read Archive, Gene Expression Omnibus albo repozytorium o dostępie kontrolowanym, takie jak European Genome-phenome Archive, gdy danych nie można zgodnie z prawem upublicznić). Zbiór cytuje się w piśmiennictwie.
 
-Oświadczenie podaje repozytorium, identyfikator, licencję i datę depozytu. W liście przewodnim autorzy potwierdzają, że potrafią otworzyć pliki surowe i że te pliki są danymi stojącymi za tabelami i rycinami.
+Identyfikator jest aktywny w chwili zgłoszenia. Wstępna recenzja AI i recenzenci będący ludźmi mogą otworzyć pliki albo ścieżka dostępu kontrolowanego jest już dla nich otwarta. Formuła „zostanie zdeponowane po przyjęciu” nie spełnia tych wytycznych.
 
-### 7.2 Licencja i wyjątki
+### 7.2 FAIR
 
-Dane powinny być udostępnione na licencji CC BY 4.0 albo CC0, chyba że repozytorium lub zasada prywatności wymaga innej licencji otwartej albo dostępu kontrolowanego. Kod powinien mieć licencję zatwierdzoną przez OSI (na przykład MIT, Apache-2.0 albo GPL).
+Depozyt spełnia zasady FAIR (odnajdywalne, dostępne, interoperacyjne, nadające się do ponownego użycia):
 
-Redaktor będący człowiekiem może dopuścić dostęp kontrolowany, gdy ustawa, treść zgody albo bezpieczeństwo biologiczne czynią upublicznienie bezprawnym lub niebezpiecznym. Autorzy wówczas:
+- **Odnajdywalne.** Zaufane repozytorium, trwały identyfikator i bogate metadane (tytuł, twórcy będący ludźmi, opis, rok, słowa kluczowe albo dziedzina, licencja).
+- **Dostępne.** Otwarte tam, gdzie jest to zgodne z prawem i bezpieczne. Tam, gdzie nie jest — ścieżka kontrolowana, którą może przejść wykwalifikowany badacz. Recenzenci mają dostęp w chwili zgłoszenia w obu przypadkach.
+- **Interoperacyjne.** Formaty otwarte albo standardowe (CSV albo TSV dla tabel, kod jako zwykły tekst, format obrazu otwarty, gdy pozwala na to urządzenie). Plik własnościowy może towarzyszyć kopii otwartej. Nie zastępuje jej. Zrzut ekranu nie jest zbiorem.
+- **Nadające się do ponownego użycia.** Jasna licencja (CC BY 4.0 albo CC0 dla danych, chyba że repozytorium lub zasada prywatności wymaga innego reżimu otwartego albo kontrolowanego; licencja zatwierdzona przez OSI dla kodu, na przykład MIT, Apache-2.0 albo GPL), książka kodowa i README, które mówią, jak uruchomić analizę.
 
-- deponują największy możliwy podzbiór do upublicznienia oraz książkę kodową;
-- podają numer akcesyjny albo pisemną procedurę dostępu, którą może przejść wykwalifikowany badacz;
-- zapewniają redaktorowi i recenzentom dostęp przez cały czas recenzji;
-- wyjaśniają barierę w oświadczeniu o dostępności danych.
+### 7.3 Oświadczenie o dostępności danych
+
+Oświadczenie jest wymagane. Podaje repozytorium, identyfikator, licencję, co zdeponowano, czy dostęp jest otwarty czy kontrolowany, a jeżeli kontrolowany — barierę i procedurę. Stwierdza, że pliki są danymi i kodem stojącymi za tabelami, rycinami danych i wnioskami. W liście przewodnim autorzy potwierdzają, że potrafią otworzyć pliki surowe.
 
 Formuła „dostępne u autorów na uzasadniony wniosek”, bez rekordu w repozytorium, nie spełnia tych wytycznych.
 
-Jeżeli po publikacji wykryto błąd, autorzy wersjonują rekord w repozytorium, a czasopismo łączy sprostowanie z oboma identyfikatorami. Pierwotnego depozytu nie nadpisuje się po cichu.
+### 7.4 Wrażliwe dane zdrowotne
 
-### 7.3 Czego w depozycie być nie może
+Dane zdrowotne i dane osób uprawiających sport, które mogą wskazać osobę, są tak otwarte, jak to możliwe, i tak zamknięte, jak to konieczne. Nie wymaga się upublicznienia identyfikowalnych albo pseudonimowych danych jednostkowych, gdy zabrania tego RODO (rozporządzenie (UE) 2016/679), zgoda albo bezpieczeństwo uczestnika. Pseudonimizacja nie jest anonimizacją: jeżeli osobę nadal da się wyodrębnić, plik nie jest anonimowy. Depozytem publicznym są wtedy podzbiór zanonimizowany albo tabele zbiorcze podpierające opublikowane liczby, oraz książka kodowa, README i kod. Pełniejszy plik zachowuje trwały identyfikator i ścieżkę dostępu kontrolowanego. Redaktor i obie rundy recenzji i tak otrzymują dostęp. Danych identyfikowalnych nie wkleja się do publicznego modelu konsumenckiego.
 
 Nie deponuje się nazwisk, danych kontaktowych, wizerunków twarzy ani innych identyfikatorów bezpośrednich, chyba że zgoda komisji i zgoda uczestnika obejmują publikację tych danych. Nie deponuje się danych wygenerowanych przez model i nie oznacza się ich jako obserwacji z badania.
+
+Jeżeli po publikacji wykryto błąd, autorzy wersjonują rekord w repozytorium, a czasopismo łączy sprostowanie z oboma identyfikatorami. Pierwotnego depozytu nie nadpisuje się po cichu.
 
 ## 8. Etyka, zgoda i rejestracja
 
@@ -151,7 +155,8 @@ Oświadczenie etyczne jest konkretne. „Badanie zatwierdziła komisja lokalna�
 
 - Obrazy danych pierwotnych są oryginalnymi zapisami. Nie są generowane przez AI ani generatywnie „ulepszane”. Zob. [Politykę wykorzystania i ujawniania AI](ai-use-and-disclosure-policy.md).
 - Na prośbę redakcji składa się oryginalne pliki obrazów, w tym nieprzetworzone bloty i mikrofotografie.
-- Wykresy mogą powstawać ze wsparciem AI wyłącznie z rzeczywistych danych, po ujawnieniu i sprawdzeniu przez człowieka oraz po depozycie kodu i danych.
+- Schematy metodyczne, które nie pokazują obserwacji ani oszacowań, mogą powstawać ze wsparciem AI (narzędzia w rodzaju opisanego jako PaperVizAgent są przykładem, nie wymogiem). Ujawnia się narzędzie, wersję i numery rycin. Autor będący człowiekiem sprawdza, że schemat zgadza się z metodami.
+- Ryciny danych i wykresy statystyczne powstają z odtwarzalnego kodu na podstawie zdeponowanych danych surowych. Nigdy nie składa się ich jako obrazów wygenerowanych. Skrypt jest w depozycie, autor będący człowiekiem go uruchomił, a rycina zgadza się z tym wynikiem.
 - Każda oś ma wielkość i jednostkę. Słupki błędu są zdefiniowane (odchylenie standardowe, błąd standardowy albo przedział ufności), a liczebność próby jest na rycinie lub w legendzie.
 - Tabele są tekstem, nie obrazem. Bez powodu nie powtarzają tych samych liczb, które już pokazuje rycina.
 - Oznacza się każdy panel, który został sklejony. Podaje się każdą korektę jasności lub kontrastu, która wpływa na sposób odczytania obrazu.
@@ -214,10 +219,10 @@ Autorzy zaznaczają tę listę w OJS. Maszynopis, który nie spełnia pozycji, n
 - [ ] Wszyscy autorzy są ludźmi, spełniają kryteria ICMJE i zatwierdzili maszynopis oraz ujawnienie AI.
 - [ ] Oświadczenie o wykorzystaniu AI jest wgrane i zgadza się z maszynopisem.
 - [ ] Plik z promptami i przebiegiem pracy jest wgrany albo nie użyto żadnego narzędzia AI.
-- [ ] Dane surowe są zdeponowane, identyfikator się otwiera i autorzy mają dostęp do plików surowych — albo wniosek o dostęp kontrolowany jest wyjaśniony w liście przewodnim.
+- [ ] Zbiór i kod analizy są zdeponowane, identyfikator się otwiera, książka kodowa i README są obecne, a autorzy — i recenzenci — mogą otworzyć pliki, albo ścieżka dostępu kontrolowanego jest już otwarta i wyjaśniona w liście przewodnim.
 - [ ] W maszynopisie są: oświadczenie o dostępności danych, oświadczenie etyczne, finansowanie, konflikty interesów i role CRediT.
 - [ ] Lista kontrolna standardu dla danego schematu jest wgrana tam, gdzie istnieje.
-- [ ] Obrazy danych pierwotnych są oryginalnymi zapisami. Każdy wykres wspomagany przez AI jest ujawniony i sprawdzony.
+- [ ] Obrazy danych pierwotnych są oryginalnymi zapisami. Każdy schemat wspomagany przez AI jest ujawniony i sprawdzony. Ryciny danych i wykresy statystyczne pochodzą ze zdeponowanego kodu, a nie z obrazu wygenerowanego.
 - [ ] Każde cytowanie zostało otwarte i wspiera twierdzenie.
 - [ ] Preprint, jeżeli istnieje, jest podany w liście przewodnim.
 - [ ] Autorzy akceptują warunki praw autorskich i licencji opublikowane na stronie czasopisma w chwili zgłoszenia (ustalenie robocze tego projektu: prawa zostają przy autorach, licencja CC BY 4.0).
@@ -246,5 +251,6 @@ Preprinty na serwerach publicznych (na przykład bioRxiv, medRxiv, SportRxiv lub
 
 - [Oświadczenie o wykorzystaniu AI (wzór)](ai-disclosure-statement.md)
 - [Polityka wykorzystania i ujawniania AI](ai-use-and-disclosure-policy.md)
+- [Dostępność danych i zasady FAIR](data-availability-and-fair-policy.md)
 - [Polityka recenzji](peer-review-policy.md)
 - [Etyka publikacyjna](publication-ethics.md)

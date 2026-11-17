@@ -6,7 +6,7 @@
 
 **Language:** English · [Wersja polska](../pl/author-guidelines.md)
 
-These are the minimum requirements for a submission. Manuscripts that do not meet them are returned or rejected at triage. See also the [Aims and scope](aims-and-scope.md), the [AI Use and Disclosure Policy](ai-use-and-disclosure-policy.md), and [Publication ethics](publication-ethics.md).
+These are the minimum requirements for a submission. Manuscripts that do not meet them are returned or rejected at triage. See also the [Aims and scope](aims-and-scope.md), the [AI Use and Disclosure Policy](ai-use-and-disclosure-policy.md), the [Data availability and FAIR policy](data-availability-and-fair-policy.md), and [Publication ethics](publication-ethics.md).
 
 ## 1. Who may submit
 
@@ -20,9 +20,9 @@ A submission is complete only when all of the following are true:
 
 1. The empirical work was conducted by humans, or the manuscript is a systematic review or a letter as defined below.
 2. The [AI Disclosure Statement](ai-disclosure-statement.md) is complete, and the prompts file is attached if a tool was used.
-3. Raw data are deposited and the identifier resolves, or the editor has already approved a controlled-access exception and the reviewers can reach the data.
+3. The human-collected dataset and the analysis code are deposited under the [Data availability and FAIR policy](data-availability-and-fair-policy.md). The identifier resolves. The AI preliminary review and the human reviewers can open the deposit at submission, including a controlled-access route the editor has already accepted.
 4. Ethics, consent, animal welfare, permits, and registration are reported where they apply.
-5. Primary-data images are original captures.
+5. Primary-data images are original captures. Data figures and statistical plots are produced by code from the deposited data, not as generated images.
 6. Competing interests, funding, and author contributions are stated.
 7. The reporting guideline that fits the design is followed, and its checklist is uploaded where one exists.
 
@@ -70,7 +70,7 @@ Use the parts that apply to the article type, in this order.
 5. **Methods** — design, setting, participants or materials, inclusion and exclusion criteria, variables, measurement, sample-size justification, analysis plan, software and versions, deviations from any protocol, and ethics. AI-assisted code is identified here and in the disclosure statement.
 6. **Results** — who was included, the findings, and the uncertainty. No interpretation that belongs in the Discussion. No data that are absent from the deposited set.
 7. **Discussion** — what the findings mean, comparison with prior work, limitations, and a conclusion that stays within the design.
-8. **Data Availability Statement** — see section 7.
+8. **Data Availability Statement** — required; see section 7.
 9. **Ethics statement** — see section 8.
 10. **AI-use pointer** — the one-line statement required by the AI policy.
 11. **Author contributions** — CRediT roles.
@@ -104,32 +104,36 @@ Clinical trials of interventions are registered in a public registry before the 
 
 ## 7. Data availability
 
-### 7.1 What is deposited
+The full rule is the [Data availability and FAIR policy](data-availability-and-fair-policy.md). This section is the minimum a submission must already meet. The dataset is the human-collected data behind the article. The manuscript may be AI-written. The numbers in it are checked against this deposit.
 
-Deposit the raw data before submission: the recordings, spreadsheets, images, or transcripts needed to repeat the analyses, plus a codebook that defines every variable, unit, and missing-data code. Deposit the analysis code and, for a figure built with a script, whatever is needed to rebuild it.
+### 7.1 What is deposited, before submission
 
-Suitable repositories include Zenodo, Figshare, Dryad, OSF, and domain repositories (for example the Sequence Read Archive, Gene Expression Omnibus, or a controlled-access repository such as the European Genome-phenome Archive when the data cannot legally be public). The repository assigns a persistent identifier. Cite the dataset in the reference list.
+Deposit the dataset needed to repeat the reported analyses, the analysis code (including every script that builds a data figure or a statistical plot), a data dictionary (codebook), and a README. The repository is a trusted one and assigns a persistent identifier. A DOI is the working default. Suitable repositories include Zenodo, OSF, Figshare, Dryad, and domain repositories (for example the Sequence Read Archive, Gene Expression Omnibus, or a controlled-access repository such as the European Genome-phenome Archive when the data cannot legally be public). Cite the dataset in the reference list.
 
-The statement names the repository, the identifier, the licence, and the date of deposit. Authors confirm in the cover letter that they can open the raw files and that those files are the data behind the tables and figures.
+The identifier is live at submission. The AI preliminary review and the human reviewers can open the files, or the controlled-access route is already open to them. "To be deposited on acceptance" does not meet these guidelines.
 
-### 7.2 Licence and exceptions
+### 7.2 FAIR
 
-Data should be released under CC BY 4.0 or CC0, unless a repository or a privacy rule requires another open or controlled-access licence. Code should carry an OSI-approved licence (for example MIT, Apache-2.0, or GPL).
+The deposit follows the FAIR principles (Findable, Accessible, Interoperable, Reusable):
 
-A human editor may allow controlled access when a statute, a consent form, or biosecurity makes public release unlawful or unsafe. The authors then:
+- **Findable.** A trusted repository, a persistent identifier, and rich metadata (title, human creators, description, year, keywords or subject, licence).
+- **Accessible.** Open where that is lawful and safe. Where it is not, a controlled route a qualified researcher can follow. Reviewers have access at submission either way.
+- **Interoperable.** Open or standard formats (CSV or TSV for tables, plain-text code, an open image format where the instrument allows it). A proprietary file may accompany the open copy. It does not replace it. A screenshot is not the dataset.
+- **Reusable.** A clear licence (CC BY 4.0 or CC0 for data, unless a repository or a privacy rule requires another open or controlled-access regime; an OSI-approved licence for code, such as MIT, Apache-2.0, or GPL), a codebook, and a README that says how to run the analysis.
 
-- deposit the maximum shareable subset and the codebook;
-- give an accession number or a written access procedure a qualified researcher can follow;
-- provide the editor and the reviewers with access for the whole review;
-- explain the barrier in the Data Availability Statement.
+### 7.3 Data availability statement
+
+The statement is required. It names the repository, the identifier, the licence, what was deposited, whether access is open or controlled, and — if controlled — the barrier and the procedure. It states that the files are the data and the code behind the tables, the data figures, and the conclusions. Authors confirm in the cover letter that they can open the raw files.
 
 "Available from the authors on reasonable request", with no repository record, does not meet these guidelines.
 
-If an error is found after publication, the authors version the repository record and the journal links the correction to both identifiers. The original deposit is not overwritten in silence.
+### 7.4 Sensitive health data
 
-### 7.3 What must not be in the deposit
+Health and athlete data that can identify a person are as open as possible and as closed as necessary. Public release of identifiable or pseudonymised microdata is not required where the GDPR (Regulation (EU) 2016/679), the consent, or participant safety forbids it. Pseudonymisation is not anonymisation: if a person can still be singled out, the file is not anonymous. The public deposit is then the anonymised subset or the aggregate tables that support the published numbers, plus the codebook, the README, and the code. The fuller file keeps a persistent identifier and a controlled-access route. The editor and both review rounds still receive access. Identifiable data are not pasted into a public consumer model.
 
 Do not deposit names, contact details, facial images, or other direct identifiers unless the ethics approval and the consent cover publication of those data. Do not deposit data generated by a model and label them as the study's observations.
+
+If an error is found after publication, the authors version the repository record and the journal links the correction to both identifiers. The original deposit is not overwritten in silence.
 
 ## 8. Ethics, consent, and registration
 
@@ -151,7 +155,8 @@ The ethics statement is specific. "The study was approved by the local committee
 
 - Primary-data images are original captures. They are not AI-generated and are not generatively enhanced. See the [AI Use and Disclosure Policy](ai-use-and-disclosure-policy.md).
 - Submit original image files when the office asks, including unprocessed blots and micrographs.
-- Plots may be AI-assisted only from the real data, with disclosure and a human check, and with code and data deposited.
+- Methodology and schematic diagrams, which do not display observations or estimates, may be AI-assisted (tools of the kind described as PaperVizAgent are an example, not a requirement). Disclose the tool, the version, and the figure numbers. A human author checks that the diagram matches the methods.
+- Data figures and statistical plots are generated by reproducible code from the deposited raw data. They are never submitted as generated images. The script is in the deposit, a human author has run it, and the figure matches that output.
 - Each axis has a quantity and a unit. Error bars are defined (standard deviation, standard error, or confidence interval) and the sample size is on the figure or in the legend.
 - Tables are text, not images. They do not repeat the same numbers already shown in a figure without a reason.
 - Identify any panel that has been spliced. State any adjustment of brightness or contrast that affects how the image should be read.
@@ -214,10 +219,10 @@ Authors tick this list in OJS. A manuscript that fails an item is not complete.
 - [ ] All authors are humans, meet the ICMJE criteria, and have approved the manuscript and the AI disclosure.
 - [ ] The AI Disclosure Statement is uploaded and matches the manuscript.
 - [ ] The prompts and workflow file is uploaded, or no AI tool was used.
-- [ ] Raw data are deposited, the identifier resolves, and the authors can access the raw files — or a controlled-access request is explained in the cover letter.
+- [ ] The dataset and the analysis code are deposited, the identifier resolves, the codebook and README are present, and the authors — and the reviewers — can open the files, or a controlled-access route is already open and is explained in the cover letter.
 - [ ] The Data Availability Statement, ethics statement, funding, competing interests, and CRediT roles are in the manuscript.
 - [ ] The reporting checklist for the design is uploaded where one exists.
-- [ ] Primary-data images are original captures. Any AI-assisted plot is disclosed and checked.
+- [ ] Primary-data images are original captures. Any AI-assisted schematic is disclosed and checked. Data figures and statistical plots come from the deposited code, not from a generated image.
 - [ ] Every citation was opened and supports the claim.
 - [ ] A preprint, if one exists, is linked in the cover letter.
 - [ ] The authors agree to the copyright and licence terms published on the journal website at the time of submission (working default in this draft: authors retain copyright, licence CC BY 4.0).
@@ -246,5 +251,6 @@ Preprints on public servers (for example bioRxiv, medRxiv, SportRxiv, or OSF) ar
 
 - [AI Disclosure Statement (template)](ai-disclosure-statement.md)
 - [AI Use and Disclosure Policy](ai-use-and-disclosure-policy.md)
+- [Data availability and FAIR policy](data-availability-and-fair-policy.md)
 - [Peer review policy](peer-review-policy.md)
 - [Publication ethics](publication-ethics.md)

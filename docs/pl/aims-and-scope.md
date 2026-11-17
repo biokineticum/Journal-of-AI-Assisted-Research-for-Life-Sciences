@@ -35,7 +35,7 @@ Językiem publikacji artykułów jest angielski. Można dołączyć polski tytu�
 
 ## 3. Co oznacza tu „wspomaganie przez AI”
 
-Autorzy mogą korzystać ze sztucznej inteligencji przy przygotowaniu maszynopisu **na podstawie danych, kodu i ustaleń, które ludzie uzyskali i sprawdzili**. Typowe zastosowania to szkic tekstu, redakcja językowa, tłumaczenie, pisanie kodu analitycznego sprawdzanego przez człowieka oraz wykresy z rzeczywistego zbioru danych.
+Autorzy mogą korzystać ze sztucznej inteligencji przy przygotowaniu maszynopisu **na podstawie danych, kodu i ustaleń, które ludzie uzyskali i sprawdzili**. Typowe zastosowania to szkic tekstu, redakcja językowa, tłumaczenie oraz pisanie kodu analitycznego sprawdzanego przez człowieka. Ryciny danych pochodzą z tego kodu. Schemat, który nie pokazuje danych, może powstawać ze wsparciem AI, a to użycie jest ujawnione.
 
 Samo badanie jest pracą ludzi: projekt, zbieranie danych, pomiary, obrazowanie, praca w terenie, wywiady oraz analiza, za którą autorzy odpowiadają. Narzędzie, które pisze prawdopodobny artykuł bez takiego badania, leży poza zakresem czasopisma.
 
@@ -49,10 +49,10 @@ Każde zgłoszenie empiryczne spełnia łącznie następujące warunki:
 
 1. Eksperyment, zbieranie danych albo analiza zostały rzeczywiście przeprowadzone przez ludzi. Ponowna analiza istniejącego zbioru jest dopuszczalna, gdy autorzy mieli prawo z niego korzystać, a źródło jest wskazane.
 2. AI nie wygenerowała ani nie zmodyfikowała danych pierwotnych.
-3. Dane surowe są zdeponowane w publicznym repozytorium. Udokumentowany wyjątek jest możliwy tylko wtedy, gdy prawo lub prywatność uczestników uniemożliwia pełne upublicznienie. Redaktorzy i recenzenci i tak otrzymują dostęp. Zob. [Wytyczne dla autorów](author-guidelines.md).
+3. Zbiór zebrany przez ludzi i kod analizy są zdeponowane tak, jak wymaga [Dostępność danych i zasady FAIR](data-availability-and-fair-policy.md). Udokumentowana ścieżka dostępu kontrolowanego jest możliwa tylko wtedy, gdy prawo lub prywatność uczestników uniemożliwia upublicznienie. Wstępna recenzja AI i recenzenci będący ludźmi mają dostęp w chwili zgłoszenia.
 4. Tam, gdzie mają zastosowanie, podane są: zgoda komisji, świadoma zgoda uczestników, zgoda na badania na zwierzętach, zezwolenia oraz rejestracja badania lub protokołu.
 5. Do zgłoszenia dołączone jest wypełnione oświadczenie o wykorzystaniu AI, także wtedy, gdy żadnego narzędzia nie użyto.
-6. Obrazy danych pierwotnych (mikroskopia, bloty, żele, fotografie prób, skany aparatury, obrazy kliniczne) są oryginalnymi zapisami. Wykresy sporządzone z rzeczywistych danych mogą powstawać ze wsparciem AI, jeżeli to wsparcie jest ujawnione, a człowiek je sprawdził.
+6. Obrazy danych pierwotnych (mikroskopia, bloty, żele, fotografie prób, skany aparatury, obrazy kliniczne) są oryginalnymi zapisami. Schematy metodyczne mogą powstawać ze wsparciem AI, jeżeli to wsparcie jest ujawnione. Ryciny danych i wykresy statystyczne powstają z odtwarzalnego kodu na podstawie zdeponowanych danych surowych, a nie jako obrazy wygenerowane.
 
 ## 5. Rodzaje artykułów
 
@@ -86,7 +86,7 @@ Recenzent, który ukończy recenzję, otrzymuje voucher rabatowy na APC własneg
 
 Roboczą licencją artykułów jest [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). Prawa autorskie zostają przy autorach. Są to ustalenia robocze projektu; wydawca potwierdza je przed przyjęciem zasad. Zob. [harmonogram uruchomienia](launch-roadmap.md).
 
-Recenzja ma dwie rundy. Runda 1 to wstępna recenzja AI, wyraźnie tak nazwana. Runda 2 to recenzja ekspertów będących ludźmi. Decyzję końcową podejmuje redaktor będący człowiekiem. Zob. [Polityka recenzji](peer-review-policy.md).
+Recenzja ma dwie rundy. Runda 1 to wstępna recenzja AI, wyraźnie tak nazwana: sprawdzenie wieloskładnikowe wzorowane na ScholarPeer i dostosowane do tego czasopisma. Raport otrzymują recenzenci będący ludźmi i redaktor. Raport nie rozstrzyga. Runda 2 to recenzja ekspertów będących ludźmi. Decyzję końcową podejmuje redaktor będący człowiekiem. Zob. [Polityka recenzji](peer-review-policy.md).
 
 Czasopismo nie sprzedaje autorstwa, cytowań ani decyzji. Nie eksponuje wskaźników, których nie uzyskało.
 
@@ -96,5 +96,6 @@ Czasopismo nie sprzedaje autorstwa, cytowań ani decyzji. Nie eksponuje wskaźni
 - [Oświadczenie o wykorzystaniu AI (wzór)](ai-disclosure-statement.md)
 - [Polityka recenzji](peer-review-policy.md)
 - [Wytyczne dla autorów](author-guidelines.md)
+- [Dostępność danych i zasady FAIR](data-availability-and-fair-policy.md)
 - [Etyka publikacyjna](publication-ethics.md)
 - [Harmonogram uruchomienia](launch-roadmap.md)

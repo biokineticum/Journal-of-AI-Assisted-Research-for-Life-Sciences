@@ -23,8 +23,10 @@ Zasady stosują poniższe **ustalenia robocze**. Wydawca każde z nich potwierdz
 | Model dostępu | złoty otwarty dostęp: brak opłaty za zgłoszenie; stałe APC 1000 zł po przyjęciu; brak zwolnień z opłat; vouchery rabatowe dla recenzentów (wysokość ustala redakcja i publikuje ją na stronie) |
 | Licencja artykułu | CC BY 4.0; prawa autorskie zostają przy autorach |
 | Model recenzji | pojedynczo anonimowa; dwóch recenzentów będących ludźmi po wstępnej recenzji AI |
-| Raport wstępnej recenzji AI | przekazywany autorom, recenzentom i redaktorom; niepublikowany wraz z artykułem |
-| Nazwa modelu przy artykule | zapisana w dokumentacji redakcyjnej; drukowanie jej przy artykule jest nierozstrzygnięte |
+| Raport wstępnej recenzji AI | Raport ustrukturyzowany (streszczenie, mocne strony, słabe strony, pytania, ustalenia o zgodności danych, lista kontrolna), przekazywany autorom, recenzentom i redaktorom; niepublikowany wraz z artykułem. Raport nigdy nie stanowi decyzji |
+| Architektura rundy 1 | Potok wieloskładnikowy wzorowany na ScholarPeer (blog Google Research, 8 kwietnia 2026 r.). Wyłącznie inspiracja projektowa, nie zależność od dostawcy. Dostosowany, ponieważ tamtą ocenę prowadzono na artykułach z uczenia maszynowego. Wyłącznie modele o otwartych wagach hostowane przez czasopismo. Bez zewnętrznego API AI |
+| Depozyt danych | Depozyt FAIR zbioru zebranego przez ludzi i kodu analizy, z trwałym identyfikatorem, przed zgłoszeniem. Recenzenci i runda 1 mają dostęp w chwili zgłoszenia. Wrażliwe dane zdrowotne: tak otwarte, jak to możliwe, tak zamknięte, jak to konieczne |
+| Nazwa modelu przy artykule | Każde narzędzie, model i wersja są zapisane w dokumentacji redakcyjnej; drukowanie nazw przy artykule jest nierozstrzygnięte |
 | Styl cytowań | Vancouver (NLM / ICMJE) |
 | Rytm publikacji | publikacja ciągła, jeden tom na rok kalendarzowy. Wniosek do sądu pyta o częstotliwość: ten opis musi być zgodny z formularzem. |
 | Wydawca prawny | [PUBLISHER LEGAL NAME] — w tym repozytorium jeszcze nierozstrzygnięty |
@@ -71,14 +73,17 @@ Należy użyć aktualnego, wspieranego wydania Open Journal Systems (PKP). Hosti
 
 - [ ] Język angielski jako język publikacji oraz polska wersja językowa dla zasad publicznych i interfejsu.
 - [ ] Stopka: tytuł, wydawca, adres, redaktor naczelny, rada, [EMAIL], ISSN po nadaniu.
-- [ ] Publikacja przyjętych celów i zakresu, polityki AI, wzoru oświadczenia, polityki recenzji, wytycznych dla autorów i etyki publikacyjnej w obu językach.
+- [ ] Publikacja przyjętych celów i zakresu, polityki AI, wzoru oświadczenia, polityki recenzji, wytycznych dla autorów, dostępności danych i zasad FAIR oraz etyki publikacyjnej w obu językach.
 - [ ] Informacja na stronie: złoty otwarty dostęp, stałe APC 1000 zł pobierane dopiero po przyjęciu, brak opłaty za zgłoszenie, licencja CC BY 4.0, prawa autorskie przy autorach oraz aktualna wysokość rabatu z vouchera dla recenzentów.
 - [ ] Konfiguracja listy kontrolnej zgłoszenia z [Wytycznych dla autorów](author-guidelines.md).
 - [ ] Wymóg dwóch gatunków plików uzupełniających: `AI Disclosure Statement` i `AI prompts and workflow`, według pól z [załącznika do wzoru](ai-disclosure-statement.md).
-- [ ] Wymóg identyfikatora danych, pól etyki i rejestracji (albo uzasadnionego „nie dotyczy”), konfliktów interesów i finansowania.
-- [ ] Formularz recenzji zawierający pytania o nadzór nad AI z [Polityki recenzji](peer-review-policy.md) oraz obowiązkowe oświadczenie recenzenta, że maszynopisu nie wgrano do publicznego modelu konsumenckiego.
-- [ ] Konfiguracja dwuetapowego obiegu, który zespół rzeczywiście wykona: selekcja, wstępna recenzja AI, recenzja ludzka, decyzja człowieka. OJS nie zrobi tego samo; należy napisać jednostronicową notatkę wewnętrzną, kto uruchamia model i gdzie przechowuje się raport.
-- [ ] Wybór dopuszczalnego wdrożenia (lokalnego albo korporacyjnego, z pisemną umową o braku trenowania i ograniczonym przechowywaniu) przed opracowaniem pierwszego zgłoszenia. Zapis dostawcy i oznaczenia umowy w dokumentacji redakcyjnej.
+- [ ] Wymóg oświadczenia o dostępności danych, identyfikatora repozytorium, licencji, książki kodowej i README oraz pól etyki i rejestracji (albo uzasadnionego „nie dotyczy”), konfliktów interesów i finansowania. Zgłoszenie nie jest kompletne, dopóki recenzenci nie mogą otworzyć depozytu.
+- [ ] Formularz recenzji zawierający pytania o nadzór nad AI z [Polityki recenzji](peer-review-policy.md) oraz obowiązkowe oświadczenie recenzenta, że maszynopisu i danych nie wgrano do zewnętrznej usługi AI.
+- [ ] Konfiguracja dwuetapowego obiegu, który zespół rzeczywiście wykona: selekcja, wstępna recenzja AI, recenzja ludzka, decyzja człowieka. OJS nie zrobi tego samo; należy napisać jednostronicową notatkę wewnętrzną, kto uruchamia sprawdzenie i gdzie przechowuje się raport.
+- [ ] W tej notatce określić rundę 1 jako potok wieloskładnikowy z [Polityki recenzji](peer-review-policy.md): kontekst literatury, pominięte punkty odniesienia i zbiory, pytania weryfikujące twierdzenia, zgodność danych z maszynopisem (ponowne uruchomienie zdeponowanego kodu tam, gdzie się uruchamia), raportowanie i etyka względem standardu EQUATOR oraz sprawdzenie cytowań. Projekt jest wzorowany na ScholarPeer. Notatka stwierdza, że czasopismo nie kupuje tego produktu i od niego nie zależy oraz że opublikowaną ocenę prowadzono na artykułach z uczenia maszynowego.
+- [ ] Zapis każdego narzędzia, modelu i wersji użytych w przebiegu rundy 1 oraz infrastruktury, na której działały, i przechowywanie tego dziennika wraz ze sprawdzonym przez człowieka raportem.
+- [ ] Przed uruchomieniem rundy 1 potwierdzenie, że sprawdzenie i recenzenci będący ludźmi mogą otworzyć depozyt, w tym ewentualną ścieżkę dostępu kontrolowanego. Pliki o dostępie kontrolowanym czyta się wyłącznie na maszynach czasopisma.
+- [ ] Hostowanie modeli rundy 1 na infrastrukturze kontrolowanej przez czasopismo (modele o otwartych wagach, hostowane samodzielnie) przed opracowaniem pierwszego zgłoszenia. Zapis hosta oraz nazw i wersji modeli w dokumentacji redakcyjnej. Nie wysyła się zgłoszenia do zewnętrznego API AI. Wyszukania literatury i cytowań, jeżeli są użyte, wysyłają wyłącznie ogólne zapytanie albo identyfikator bibliograficzny.
 - [ ] Włączenie ORCID. Wtyczkę eksportu Crossref włącza się dopiero po członkostwie i prefiksie DOI.
 - [ ] Publikacja klauzuli informacyjnej zgodnej z RODO: jakie dane autorów i recenzentów są przetwarzane, jak długo, na jakiej podstawie, oraz że maszynopisy nie służą do trenowania modeli.
 - [ ] Zaplanowanie programu antyplagiatowego ([SIMILARITY-CHECK TOOL]) i podanie na stronie, gdy rzeczywiście działa. Do tego czasu pole raportu AI pozostaje „jeszcze nie użyto”.
@@ -91,7 +96,7 @@ Należy użyć aktualnego, wspieranego wydania Open Journal Systems (PKP). Hosti
 - [ ] Otwarcie zgłoszeń dopiero wtedy, gdy fazy A, B i C są na tyle zaawansowane, że autor może przeczytać zasady, skład rady, licencję i adres kontaktowy, a tytuł jest zarejestrowany przed publikacją.
 - [ ] Nabór opisujący zasadę ludzkich danych i ujawnienie AI. Bez obietnic indeksacji, wskaźników wpływu ani terminów decyzji, których czasopismo nie ustaliło.
 - [ ] Przy pierwszych artykułach redaktor czyta każdy raport wstępnej recenzji AI i co najmniej dwie recenzje ludzkie oraz zachowuje korespondencję.
-- [ ] Publikacja każdego artykułu z oświadczeniem o wykorzystaniu AI, plikiem promptów, identyfikatorem danych, licencją i zdaniem o sposobie recenzji.
+- [ ] Publikacja każdego artykułu z oświadczeniem o wykorzystaniu AI, plikiem promptów, oświadczeniem o dostępności danych, identyfikatorem danych, licencją i zdaniem o sposobie recenzji.
 - [ ] Zestawienie polskiej i angielskiej wersji zasad po każdej zmianie w ostatniej chwili.
 
 ## 6. Faza E — DOI, archiwizacja, Google Scholar
@@ -134,7 +139,7 @@ Złoty otwarty dostęp ze stałą opłatą za przetworzenie artykułu (APC) w wy
 - opłatę sądową za rejestrację tytułu (aktualna taryfa sądowa);
 - hosting, kopie zapasowe i domenę dla [JOURNAL URL];
 - członkostwo i depozyty Crossref (aktualny cennik Crossref);
-- dopuszczalne wdrożenie AI na umowie o braku trenowania;
+- maszyny, które hostują własne modele czasopisma o otwartych wagach do rundy 1;
 - program antyplagiatowy, gdy budżet na to pozwoli;
 - czas redakcyjny, na starcie często nieodpłatny, co należy uczciwie powiedzieć;
 - poradę prawną przy rejestracji, formie wydawcy i klauzuli RODO;
@@ -150,7 +155,8 @@ Możliwe źródła, do wyboru przez wydawcę: APC, instytucja gospodarz, grant b
 ## 9. Czego czasopismo nie będzie twierdzić
 
 - Że ma wskaźnik wpływu, CiteScore, odznakę DOAJ albo członkostwo w indeksie, zanim informacja będzie prawdziwa.
-- Że recenzja jest „napędzana przez AI” zamiast recenzji ludzkiej. Zdanie zgodne ze stanem rzeczy brzmi: wstępna recenzja AI, potem recenzja ludzka, potem decyzja człowieka.
+- Że recenzja jest „napędzana przez AI” zamiast recenzji ludzkiej albo że runda 1 jest ScholarPeer Google albo jakimkolwiek innym nazwanym produktem. Zdanie zgodne ze stanem rzeczy brzmi: wieloskładnikowa wstępna recenzja wzorowana na tamtym opublikowanym projekcie i dostosowana do tego czasopisma, potem recenzja ludzka, potem decyzja człowieka. Raport AI nie jest decyzją.
+- Że rycinę danych narysował model. Ryciny danych i wykresy statystyczne pochodzą z kodu uruchomionego na zdeponowanych danych. Schemat może powstawać ze wsparciem AI tylko wtedy, gdy nie pokazuje danych, i tylko po ujawnieniu.
 - Że przyjęcie jest prawdopodobne, szybkie albo na sprzedaż.
 - Że w radzie jest osoba, która się nie zgodziła, albo że [EDITOR-IN-CHIEF NAME] został powołany, zanim to nastąpiło.
 - Że zasada w tym repozytorium obowiązuje, dopóki jej wiersz statusu mówi „projekt”.
@@ -164,5 +170,6 @@ Możliwe źródła, do wyboru przez wydawcę: APC, instytucja gospodarz, grant b
 | Oświadczenie o wykorzystaniu AI | [ai-disclosure-statement.md](../en/ai-disclosure-statement.md) | [ai-disclosure-statement.md](ai-disclosure-statement.md) |
 | Recenzja | [peer-review-policy.md](../en/peer-review-policy.md) | [peer-review-policy.md](peer-review-policy.md) |
 | Wytyczne dla autorów | [author-guidelines.md](../en/author-guidelines.md) | [author-guidelines.md](author-guidelines.md) |
+| Dostępność danych i FAIR | [data-availability-and-fair-policy.md](../en/data-availability-and-fair-policy.md) | [data-availability-and-fair-policy.md](data-availability-and-fair-policy.md) |
 | Etyka publikacyjna | [publication-ethics.md](../en/publication-ethics.md) | [publication-ethics.md](publication-ethics.md) |
 | Ta lista | [launch-roadmap.md](../en/launch-roadmap.md) | [launch-roadmap.md](launch-roadmap.md) |

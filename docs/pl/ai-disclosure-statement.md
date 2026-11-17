@@ -53,7 +53,7 @@ Zaznaczyć każde zastosowanie, które miało miejsce. Przy każdym zaznaczeniu 
 - [ ] **E.** Tłumaczenie. Z języka [język] na język [język]. Szczegóły: [ ]
 - [ ] **F.** Proponowanie lub formatowanie cytowań. Szczegóły: [ ]. Każde źródło zostało otwarte i sprawdzone przez autora będącego człowiekiem (potwierdzenie w części 6).
 - [ ] **G.** Pisanie lub poprawianie kodu analitycznego. Pliki: [ ]. Autor będący człowiekiem, który kod przejrzał i uruchomił: [IMIĘ I NAZWISKO].
-- [ ] **H.** Sporządzanie wykresów lub wizualizacji z danych autorów. Numery rycin: [ ].
+- [ ] **H.** Schematy metodyczne, które nie pokazują obserwacji, oszacowań ani statystyk testowych. Numery rycin: [ ]. Ryciny danych i wykresy statystyczne nie są użyciem H. Powstają ze zdeponowanego kodu, a nie jako obrazy wygenerowane.
 - [ ] **I.** Formatowanie tabel lub wykazu piśmiennictwa. Szczegóły: [ ]
 - [ ] **J.** Pomoc ograniczona do zapytań w wyszukiwaniu literatury. Ludzie zaprojektowali ostateczne wyszukiwanie, przeglądali rekordy i ekstrahowali dane. Szczegóły: [ ]
 - [ ] **K.** Transkrypcja rzeczywistych nagrań. Człowiek poprawił transkrypcję na podstawie nagrania. Szczegóły: [ ]
@@ -67,7 +67,8 @@ Każde pole jest wymagane, także gdy w części 1 zaznaczono, że nie użyto na
 - [ ] Żadne narzędzie AI nie wygenerowało danych pierwotnych.
 - [ ] Żadne narzędzie AI nie zmodyfikowało danych pierwotnych: nie utworzyło, nie imputowało, nie usunęło, nie zastąpiło ani wybiórczo nie zmieniło obserwacji. Ewentualne czyszczenie lub przekształcenie określili autorzy, jest opisane w Metodach i znajduje się w zdeponowanym kodzie.
 - [ ] Obrazy danych pierwotnych (mikroskopia, bloty, żele, fotografie prób, skany, obrazy kliniczne lub terenowe) są oryginalnymi zapisami i nie zostały wygenerowane ani zmienione generatywnie.
-- [ ] Każdy wykres wspomagany przez AI korzysta wyłącznie z rzeczywistych danych, został sprawdzony względem wyniku analizy i można go odtworzyć ze zdeponowanych danych i kodu. Numery rycin albo „nie dotyczy”: [ ].
+- [ ] Każdy schemat wspomagany przez AI nie pokazuje danych, został sprawdzony względem metod i jest nazwany wyżej. Numery rycin albo „nie dotyczy”: [ ].
+- [ ] Ryciny danych i wykresy statystyczne powstały z odtwarzalnego kodu na podstawie zdeponowanych danych surowych. Nie są obrazami wygenerowanymi. Skrypt i numery rycin albo „nie dotyczy”: [ ].
 - [ ] Żadne narzędzie AI nie jest wskazane jako autor ani przedstawione jako osoba, która wykonała badanie.
 - [ ] W maszynopisie nie ma cytowania, którego autor będący człowiekiem nie otworzył i co do którego nie potwierdził, że źródło istnieje i wspiera twierdzenie.
 
@@ -119,11 +120,11 @@ Poniższy przykład pokazuje oczekiwany poziom szczegółowości. To nie jest rz
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | ExampleLLM | Example Provider | ExampleLLM-Large 2.1 | Wdrożenie korporacyjne, umowa o braku trenowania z dnia 2026-03-01 | 2026-04-02 do 2026-04-09 | A, C, D, H |
 
-**Zastosowania:** A — szkic Wyników i Dyskusji na podstawie notatek autorów z analizy oraz wyniku zdeponowanego skryptu R `cmj_analysis.R`. C — szkic streszczenia z tych samych notatek. D — redakcja językowa Wstępu i Metod. H — szkic ryciny 2 (wysokość wyskoku według tygodnia) ze zdeponowanego pliku CSV; autor sprawdził każdy punkt względem `cmj_analysis.R`.
+**Zastosowania:** A — szkic Wyników i Dyskusji na podstawie notatek autorów z analizy oraz wyniku zdeponowanego skryptu R `cmj_analysis.R`. C — szkic streszczenia z tych samych notatek. D — redakcja językowa Wstępu i Metod. H — szkic ryciny 3, schematu czterotygodniowej sekwencji pomiarów, który nie pokazuje pomiarów. Rycina 2 (wysokość wyskoku według tygodnia) powstała ze skryptu `cmj_analysis.R` i zdeponowanego pliku CSV, a nie z modelu.
 
 **Potwierdzenia:** wszystkie zaznaczone. Pliki z platformy tensometrycznej i dziennik sesji są danymi pierwotnymi. Model nie imputował żadnej obserwacji. Rycina 1 jest fotografią zestawu pomiarowego wykonaną przez autorów.
 
-**Plik przebiegu:** `AI-workflow.md`, zawierający prompt do Wyników, prompt do ryciny, reprezentatywny prompt redakcji językowej oraz adnotację, że zaproponowane cytowanie nieistniejącej pracy odrzucono po sprawdzeniu cytowań.
+**Plik przebiegu:** `AI-workflow.md`, zawierający prompt do Wyników, prompt do schematu, reprezentatywny prompt redakcji językowej oraz adnotację, że zaproponowane cytowanie nieistniejącej pracy odrzucono po sprawdzeniu cytowań.
 
 **Weryfikacja:** sprawdzenie liczb — [IMIĘ I NAZWISKO AUTORA]; sprawdzenie cytowań — [IMIĘ I NAZWISKO AUTORA]; wartości porównane z zapisem R w pliku `cmj_analysis_log.txt`.
 
@@ -140,6 +141,7 @@ Plik oświadczenia jest pełnym zapisem. Formularz zgłoszenia w Open Journal Sy
 | Kody użyć i miejsce zastosowania | długi tekst | tak, jeżeli użyto narzędzi | Część 3 |
 | AI nie wygenerowała ani nie zmodyfikowała danych pierwotnych | pole wyboru | tak | Część 4 |
 | Obrazy danych pierwotnych są oryginalnymi zapisami | pole wyboru | tak | Część 4 |
+| Ryciny danych i wykresy statystyczne pochodzą ze zdeponowanego kodu, a nie z obrazu wygenerowanego | pole wyboru | tak | Część 4 |
 | AI nie jest autorem | pole wyboru | tak | Część 4 |
 | Każde cytowanie zostało otwarte i sprawdzone przez autora będącego człowiekiem | pole wyboru | tak | Część 4 |
 | Wgrano plik z promptami i przebiegiem pracy | pole wyboru | tak, jeżeli użyto narzędzi | Część 5 |
@@ -149,4 +151,4 @@ Plik oświadczenia jest pełnym zapisem. Formularz zgłoszenia w Open Journal Sy
 
 Nazwy gatunków plików uzupełniających: `AI Disclosure Statement` oraz `AI prompts and workflow`.
 
-Oświadczenie o dostępności danych, zgody komisji, świadoma zgoda, rejestracja i konflikty interesów są osobnymi polami wymaganymi. Określają je [Wytyczne dla autorów](author-guidelines.md). Niniejsze oświadczenie ich nie zastępuje.
+Oświadczenie o dostępności danych, zgody komisji, świadoma zgoda, rejestracja i konflikty interesów są osobnymi polami wymaganymi. Określają je [Wytyczne dla autorów](author-guidelines.md) oraz [Dostępność danych i zasady FAIR](data-availability-and-fair-policy.md). Niniejsze oświadczenie ich nie zastępuje.
